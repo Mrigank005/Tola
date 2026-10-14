@@ -1,0 +1,9 @@
+route,rs_per_gram,basis
+"GOLDTEN, take delivery (10 g bar)",15198.0,DDR + 3% GST. No premium (reference contract).
+"GOLDGUINEA, take delivery (8 g bar/coin)",15315.0,DDR + GST + premium paid at entry (lost at settlement). No making charge in spec.
+"GOLDPETAL, take delivery (1 g bar/coin)",15450.0,DDR + GST + entry premium + Rs 100/g making charge (GST on making charge not modelled).
+"GOLDPETAL, trade and exit before tender",9.0,"Cost of the premium only (avg change over holding): Rs/g, not a purchase price."
+"Retail 1 g coin, Augmont (live page 13 Oct)",16060.0,Incl. GST.
+"Retail 8 g coin, Augmont (live page 13 Oct)",15771.0,"Incl. GST, per gram."
+"Retail 1 g coin, MMTC-PAMP (search snippet)",16404.0,Incl. GST; unverified snippet.
+"Retail 1 g coin, Tanishq (search snippet)",16382.0,Incl. GST; page blocked (403); unverified.

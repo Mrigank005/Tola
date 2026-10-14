@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PS03 Gold Research Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single research-note column (max 1040px); gold = PS03/our scope, steel = second series & links; tables scroll inside their own wrappers */
+:root {
+  --bg: #f4f5f7; --surface: #ffffff; --surface-2: #eceef2; --fg: #161a22; --muted: #5a6170; --faint: #8a90a0; --line: #d9dce3;
+  --gold: #8f6508; --gold-soft: #f3e8cf; --steel: #3e4fa8; --steel-soft: #e3e6f6;
+  --s1: #9a6a00; --s2: #3e4fa8; --tender: rgba(178, 58, 58, 0.09);
+  --good: #1f7a4d; --good-soft: #e1f1e8; --bad: #b23a3a; --bad-soft: #f7e3e3; --warn: #8a5a00; --warn-soft: #fbefd5;
+  --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1217; --surface: #171b22; --surface-2: #1f242d; --fg: #e5e8ee; --muted: #9aa2b1; --faint: #6f7787; --line: #2c323d;
+    --gold: #e0b04a; --gold-soft: #2e2615; --steel: #9aa6f0; --steel-soft: #1f2440;
+    --s1: #b8861c; --s2: #7480e0; --tender: rgba(239, 125, 125, 0.10);
+    --good: #5cc48f; --good-soft: #15291f; --bad: #ef7d7d; --bad-soft: #2f1a1a; --warn: #e8b85a; --warn-soft: #2e2512;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1217; --surface: #171b22; --surface-2: #1f242d; --fg: #e5e8ee; --muted: #9aa2b1; --faint: #6f7787; --line: #2c323d;
+  --gold: #e0b04a; --gold-soft: #2e2615; --steel: #9aa6f0; --steel-soft: #1f2440;
+  --s1: #b8861c; --s2: #7480e0; --tender: rgba(239, 125, 125, 0.10);
+  --good: #5cc48f; --good-soft: #15291f; --bad: #ef7d7d; --bad-soft: #2f1a1a; --warn: #e8b85a; --warn-soft: #2e2512;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15.5px; line-height: 1.6; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 88px; display: grid; gap: 64px; }
+@media (max-width: 520px) { .wrap { padding-inline: 16px; padding-block: 24px 56px; gap: 48px; } body { font-size: 15px; } }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.12; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 850; font-stretch: 82%; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.45rem, 3vw, 1.95rem); font-weight: 800; font-stretch: 88%; }
+h3 { font-size: 1.1rem; font-weight: 700; font-stretch: 95%; }
+p { margin: 0; max-width: 70ch; }
+a { color: var(--steel); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+code, .mono { font-family: var(--mono); font-size: 0.87em; }
+.eyebrow { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.eyebrow.gold { color: var(--gold); }
+.muted { color: var(--muted); }
+.stack { display: grid; gap: 14px; }
+.stack-lg { display: grid; gap: 26px; }
+.sec-head { display: grid; gap: 8px; }
+ul.clean { margin: 0; padding-left: 1.15em; display: grid; gap: 7px; }
+ul.clean li { max-width: 72ch; }
+
+header.top { display: grid; gap: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--mono); font-size: 0.75rem; padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: var(--surface); }
+.chip.alert { color: var(--warn); background: var(--warn-soft); border-color: transparent; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 14px; }
+nav.toc a { color: var(--muted); text-decoration: none; }
+nav.toc a:hover { color: var(--fg); text-decoration: underline; }
+
+.thesis { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 14px; }
+.thesis .big { font-family: var(--display); font-stretch: 90%; font-weight: 750; font-size: clamp(1.2rem, 2.6vw, 1.55rem); line-height: 1.3; max-width: 60ch; text-wrap: balance; }
+
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 10px 13px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+thead th { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; background: var(--surface-2); white-space: nowrap; }
+td.n, th.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.c, th.c { text-align: center; }
+.hl { background: var(--gold-soft); }
+.spec td:nth-child(-n+3), .spec td:nth-child(5) { white-space: nowrap; }
+.y { color: var(--good); font-weight: 600; } .x { color: var(--faint); } .p { color: var(--warn); }
+
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 860px) { .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .grid2, .grid3 { grid-template-columns: 1fr; } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.card .eyebrow { color: var(--gold); }
+.card ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; font-size: 0.92rem; }
+.card p { font-size: 0.93rem; }
+
+/* chart */
+.figure { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
+.fig-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { font: 500 0.82rem var(--mono); background: var(--surface); color: var(--muted); border: 0; padding: 7px 12px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--gold-soft); color: var(--fg); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { width: 18px; height: 2px; border-radius: 2px; display: inline-block; }
+.legend i.box { height: 10px; width: 14px; background: var(--tender); border: 1px dashed var(--bad); }
+.chart-box { position: relative; overflow-x: auto; }
+.chart-box svg { display: block; width: 100%; min-width: 560px; height: auto; }
+.chart-box svg text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+.chart-box .grid line { stroke: var(--line); stroke-width: 1; }
+.chart-box .zero { stroke: var(--faint); stroke-width: 1; stroke-dasharray: 3 3; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 0.8rem; line-height: 1.45; box-shadow: 0 4px 14px rgba(0,0,0,0.12); min-width: 170px; font-variant-numeric: tabular-nums; }
+.tip b { font-family: var(--mono); font-weight: 500; }
+.tip .k { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.stats > div { padding: 12px 14px 0 0; display: grid; gap: 2px; }
+.stats .v { font-family: var(--display); font-weight: 800; font-stretch: 90%; font-size: 1.45rem; font-variant-numeric: tabular-nums; }
+.stats .l { font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
+@media (max-width: 640px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 10px; } }
+.btn-link { font: 500 0.82rem var(--mono); color: var(--steel); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; justify-self: start; }
+.note { font-size: 0.85rem; color: var(--muted); max-width: 80ch; }
+
+/* anatomy */
+.anatomy { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; }
+.anatomy .step { flex: 1 1 140px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: grid; gap: 4px; align-content: start; }
+.anatomy .step .k { font-family: var(--mono); font-size: 0.7rem; color: var(--gold); letter-spacing: 0.05em; }
+.anatomy .step strong { font-family: var(--display); font-stretch: 92%; font-size: 0.98rem; }
+.anatomy .step span { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+.anatomy .step.res { background: var(--gold-soft); border-color: transparent; }
+.anatomy .step.new { border-color: var(--gold); }
+@media (max-width: 600px) { .anatomy .step { flex-basis: 100%; } }
+
+/* scope */
+.scope-banner { background: var(--gold-soft); border-radius: 10px; padding: 18px 20px; display: grid; gap: 8px; }
+.scope-banner strong { font-family: var(--display); font-stretch: 90%; font-size: 1.1rem; }
+.feat { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.feat:last-child { border-bottom: 0; }
+.feat .id { font-family: var(--mono); font-size: 0.82rem; color: var(--gold); padding-top: 2px; }
+.feat h3 { font-size: 1rem; }
+.feat p, .feat li { font-size: 0.9rem; }
+.feat ul { margin: 6px 0 0; padding-left: 1.1em; display: grid; gap: 4px; }
+.list-box { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.list-box.stretch .id { color: var(--steel); }
+.pipe { display: flex; flex-wrap: wrap; gap: 8px; }
+.pipe .stage { flex: 1 1 130px; min-width: 0; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 11px; display: grid; gap: 3px; align-content: start; }
+.pipe .stage .k { font-family: var(--mono); font-size: 0.68rem; color: var(--gold); letter-spacing: 0.06em; }
+.pipe .stage strong { font-family: var(--display); font-stretch: 92%; font-size: 0.95rem; }
+.pipe .stage span { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+@media (max-width: 600px) { .pipe .stage { flex-basis: 100%; } }
+.timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+.timeline > div { padding: 14px 16px; display: grid; gap: 6px; align-content: start; border-right: 1px solid var(--line); }
+.timeline > div:last-child { border-right: 0; }
+.timeline .when { font-family: var(--mono); font-size: 0.76rem; color: var(--gold); }
+.timeline ul { margin: 0; padding-left: 1.05em; display: grid; gap: 3px; font-size: 0.86rem; }
+@media (max-width: 760px) { .timeline { grid-template-columns: 1fr 1fr; } .timeline > div:nth-child(2) { border-right: 0; } .timeline > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }
+@media (max-width: 480px) { .timeline { grid-template-columns: 1fr; } .timeline > div { border-right: 0; border-bottom: 1px solid var(--line); } .timeline > div:last-child { border-bottom: 0; } }
+.sev { font-family: var(--mono); font-size: 0.7rem; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+.sev.h { background: var(--bad-soft); color: var(--bad); }
+.sev.m { background: var(--warn-soft); color: var(--warn); }
+.sev.l { background: var(--good-soft); color: var(--good); }
+.checkpoint { border: 2px solid var(--gold); border-radius: 10px; padding: 20px; display: grid; gap: 10px; background: var(--surface); }
+footer { color: var(--muted); font-size: 0.84rem; border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="eyebrow">Hack in Hills ’26 · PS03 Commodity Derivatives Intelligence · research brief</span>
+  <h1>Same gram of gold, five different prices</h1>
+  <p class="muted">What we learned from repos, papers, patents, products, articles and live MCX data. Ends with the scope we propose to build, which is awaiting your approval.</p>
+  <div class="chips">
+    <span class="chip">Researched 13 Oct 2026</span>
+    <span class="chip">169 sources · 11 competitor repos reviewed</span>
+    <span class="chip">Live MCX data probed</span>
+    <span class="chip">G0: GO on both pairs</span>
+    <span class="chip alert">Round 2 due 31 Oct · 18 days left</span>
+  </div>
+  <nav class="toc" aria-label="Sections">
+    <a href="#space">1 · Problem space</a>
+    <a href="#findings">2 · Key findings</a>
+    <a href="#landscape">3 · Landscape &amp; gaps</a>
+    <a href="#toolkit">4 · Repos, data, techniques</a>
+    <a href="#scope">5 · Proposed scope</a>
+  </nav>
+</header>
+
+<!-- ============ 1 ============ -->
+<section id="space" class="stack-lg" aria-labelledby="s1">
+  <div class="sec-head">
+    <span class="eyebrow gold">1 · The problem space</span>
+    <h2 id="s1">What “commodity derivatives intelligence” means here</h2>
+  </div>
+  <div class="thesis">
+    <p class="big">Commodity derivatives intelligence turns raw exchange prints (settlements, volume, open interest, expiries) into an explanation of <em>why</em> prices differ and a decision about what to do.</p>
+    <p>MCX lists gold in five sizes. A gram of gold should cost the same in each, but it doesn’t, and the reasons stack up:</p>
+    <ul class="clean">
+      <li>quotation unit and purity (995 vs 999);</li>
+      <li>expiry date (around the 5th of the month vs month-end, which means different carry);</li>
+      <li><strong>which spot price each contract settles to</strong>;</li>
+      <li>delivery terms (bar vs coin, making charges, tender windows);</li>
+      <li>the cost and difficulty of trading small lots.</li>
+    </ul>
+    <p>Intelligence means separating the fair parts of a gap from the part someone is overpaying, and only calling it an opportunity when it survives costs.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="spec">
+      <thead><tr><th>Contract</th><th>Lot</th><th>Quoted per</th><th>Purity · delivery</th><th>Expiry</th><th>Settles to (2026 spec)</th><th class="n">Close 9 Oct 2026, Nov/Oct contract</th></tr></thead>
+      <tbody>
+        <tr><td>GOLD</td><td>1 kg</td><td>10 g</td><td>995 · 1 kg bar</td><td>~5th</td><td>Ahmedabad spot, <strong>3-day average</strong></td><td class="n">₹1,51,499 (Dec)</td></tr>
+        <tr><td>GOLDM</td><td>100 g</td><td>10 g</td><td>995 · bars</td><td>~5th</td><td>Ahmedabad spot, <strong>3-day average</strong></td><td class="n">₹1,50,130 (Nov)</td></tr>
+        <tr class="hl"><td>GOLDTEN</td><td>10 g</td><td>10 g</td><td>999 · 10 g</td><td>month-end</td><td>Ahmedabad 995 × 999/995, single poll</td><td class="n">₹1,50,459 (Oct)</td></tr>
+        <tr class="hl"><td>GOLDGUINEA</td><td>8 g</td><td>8 g</td><td>999 · 8 g bar/coin</td><td>month-end</td><td>Ahmedabad 995 × 999/995 × 8/10, single poll</td><td class="n">₹1,20,750 (Oct)</td></tr>
+        <tr class="hl"><td>GOLDPETAL</td><td>1 g</td><td>1 g</td><td>999 · 1 g bar/coin, ₹100/g making charge</td><td>month-end</td><td><strong>Mumbai</strong> 995 × 999/995 × 1/10, single poll</td><td class="n">₹15,101 (Oct)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">The three highlighted rows settle to the same 999-equivalent price per gram (₹14,820.6/g for GOLDTEN and GOLDGUINEA on 30 Sep 2026; GOLDPETAL’s Mumbai poll was ₹14,819). Tender window: last 3 trading days with 8.34% extra margin in the 2026 specs; it was 5 days and 5% in the 2025 specs. Sources: MCX spec PDFs and the bhavcopy and polled-spot APIs, all pulled 13 Oct 2026.</p>
+
+  <div class="grid3">
+    <div class="card"><span class="eyebrow">Who needs it</span><h3>Retail and small investors</h3><p>The fastest-growing group: bullion rose from 44% to 57% of MCX ADT (Q2 FY26 vs Q2 FY25, per MCX’s release) on the back of the mini variants. They choose <em>which</em> contract to hold, with no view of which is rich or cheap.</p></div>
+    <div class="card"><span class="eyebrow">Who needs it</span><h3>Prop and arbitrage desks</h3><p>They need relative value that holds up after real costs, contract-keyed history, and tender-aware exits. Today that means paid feeds plus in-house spreadsheets.</p></div>
+    <div class="card"><span class="eyebrow">Who needs it</span><h3>Exchange and regulator</h3><p>Is each variant fairly priced against its settlement reference? SEBI’s Feb 2026 circular made polled spot the ETF valuation benchmark, so fairness to that reference now has policy weight.</p></div>
+  </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section id="findings" class="stack-lg" aria-labelledby="s2">
+  <div class="sec-head">
+    <span class="eyebrow gold">2 · Key findings</span>
+    <h2 id="s2">The small contracts carry a premium that only settlement removes</h2>
+    <p class="muted">Our own probe of real MCX data, and the lead the scope is built around. GOLDGUINEA and GOLDPETAL settle to the same per-gram price as GOLDTEN, yet they traded above it for most of the contract’s life. <strong>G0 result: GO on both pairs.</strong> Across all 18 same-expiry cycles (Apr 2025 – Sep 2026), GOLDGUINEA trades at +79 bp and GOLDPETAL at +94 bp over GOLDTEN on VWAP, and every cycle is positive. The chart shows the two probe cycles; the full G0 table is in §5.</p>
+  </div>
+
+  <figure class="figure" aria-labelledby="fig1-t">
+    <div class="fig-head">
+      <div class="stack" style="gap:4px">
+        <h3 id="fig1-t">Premium over GOLDTEN at the same expiry, basis points per gram</h3>
+        <span class="note">Daily close per gram, small contract ÷ GOLDTEN − 1. Shaded area is the 3-day staggered-delivery tender window.</span>
+      </div>
+      <div class="seg" role="group" aria-label="Contract cycle">
+        <button type="button" id="b-sep" aria-pressed="true">Sep 2026 expiry</button>
+        <button type="button" id="b-aug" aria-pressed="false">Aug 2026 expiry</button>
+      </div>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i style="background:var(--s1)"></i>GOLDGUINEA − GOLDTEN</span>
+      <span><i style="background:var(--s2)"></i>GOLDPETAL − GOLDTEN</span>
+      <span><i class="box"></i>Tender window</span>
+    </div>
+    <div class="chart-box" id="chart-box">
+      <svg id="chart" viewBox="0 0 760 300" role="img" aria-labelledby="fig1-t fig1-d"><desc id="fig1-d">Line chart of GOLDGUINEA and GOLDPETAL premium over GOLDTEN in basis points, by trading day, for the selected contract cycle.</desc></svg>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <button type="button" class="btn-link" id="tbl-toggle" aria-expanded="false" aria-controls="tbl-wrap">Show data table</button>
+    <div class="tbl-wrap" id="tbl-wrap" hidden><table id="tbl"></table></div>
+    <p class="note">These are the two probe cycles, the most recent and among the lowest-premium cycles. The full 18-cycle result is in §5 G0. Their apparent fade toward tender did <em>not</em> generalise. Tender-window closes are thin (GOLDGUINEA traded 20 lots on 30 Sep) and are not fills. Raw data: <code>data_probe/same_expiry_convergence_aug_sep_2026.csv</code>.</p>
+  </figure>
+
+  <div class="grid3">
+    <div class="card">
+      <span class="eyebrow">GitHub · 01</span>
+      <h3>11 teams already built the standard pipeline</h3>
+      <ul>
+        <li>Normalize → carry → z-score → walk-forward → “no edge” is now the baseline.</li>
+        <li>gold-rv is strongest: three years of real data, frozen-parameter test, t = 1.89, pitch deck.</li>
+        <li>Everyone <em>assumes</em> slippage. gold-rv’s break-even is 3.8 bp against an assumed 5 bp.</li>
+        <li><code>curl_cffi</code> + <code>bidask</code> (EDGE spread estimator) are the two libraries that change our outcome.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Papers · 02</span>
+      <h3>Contract design is a price component</h3>
+      <ul>
+        <li>Delivery options lower futures prices (Gay–Manaster 1984; Boyle 1989).</li>
+        <li>Limits to arbitrage explain persistent gaps (Shleifer–Vishny 1997).</li>
+        <li>Spot vs term premia justify our P&amp;L split (Szymanowska et al. 2014).</li>
+        <li>Foundation models don’t beat HAR (Brini 2026), so we skip ML forecasting.</li>
+        <li>We found no paper on cross-size MCX gold pricing.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Patents · 03</span>
+      <h3>No US-filing blockers; one useful contrast</h3>
+      <p class="muted" style="font-size:.85rem">Searched US filings on Google Patents only. Indian filings were not searched.</p>
+      <ul>
+        <li>CME holds an active patent (US8255305B2, to 2030) on <em>implied ratio spreads between mini and full-size contracts</em>. It links sizes inside the matching engine. MCX has no such link, which may help explain the premium.</li>
+        <li>Z-score stat-arb filings were abandoned (prior art).</li>
+        <li>Avoid framing the product as auto-execution, chart-pattern alerts or a composite strategy score.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Landscape · 04</span>
+      <h3>Big tools are generic; Indian apps show price only</h3>
+      <ul>
+        <li>Bloomberg CCRV/HS and LSEG CURVE/CFPD do curves and spreads, but know nothing of polled spot or coin delivery.</li>
+        <li>Dhan, Groww and Quantsapp show price, OI and expiry. Dhan’s “premium over spot” has no stated formula.</li>
+        <li>Gro Intelligence shut down in 2024: “AI insights” without a named decision-maker failed.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Articles · 05</span>
+      <h3>A booming, shifting market</h3>
+      <ul>
+        <li>Bullion’s share of MCX ADT rose from 44% to 57% (Q2 FY26 vs Q2 FY25, per MCX’s release) ✅.</li>
+        <li>Q4 FY26 revenue +205%. Secondary sources mislabel this as full-year growth; FY26 revenue roughly doubled.</li>
+        <li>COMEX gold peaked at $5,586 on 29 Jan 2026, then fell 10.8% on Fri 30 Jan (exchange data; blogs say “31 Jan”, which was a Saturday).</li>
+        <li>Import duty went 15→6% (Jul 2024), then back to 15% (May 2026). SEBI is overhauling commodity rules.</li>
+        <li class="muted">The verification status of every slide claim is in 05 §F.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Data · 06</span>
+      <h3>MCX is reachable, the right way</h3>
+      <ul>
+        <li>Plain HTTP gets an Akamai 403; Chrome-TLS impersonation gets 200.</li>
+        <li><code>mcxlib</code>’s POST endpoints are dead. The new GET endpoints include a <strong>full-history call per contract</strong>, so the full backfill is about 400 requests.</li>
+        <li>A per-contract <strong>polled spot archive</strong> exists, the settlement reference nobody uses.</li>
+        <li>Holidays return empty data; dates come back MM/DD/YYYY; symbols are space-padded.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section id="landscape" class="stack-lg" aria-labelledby="s3">
+  <div class="sec-head">
+    <span class="eyebrow gold">3 · Competitive landscape</span>
+    <h2 id="s3">Where the other PS03 teams stop</h2>
+    <p class="muted">From the public READMEs and code of Hack in Hills ’26 PS03 repos (✓ present · ~ partial or assumed · – absent). The bottom four rows are what nobody has.</p>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Capability</th><th class="c">gold-rv</th><th class="c">auraspread</th><th class="c">GoldLens</th><th class="c">goldparity</th><th class="c">AurumIQ</th><th class="c">GOLDINTEL</th><th class="c">radar</th><th class="c">Others (3)</th></tr></thead>
+      <tbody>
+        <tr><td>Real MCX data</td><td class="c y">✓</td><td class="c p">~</td><td class="c p">~</td><td class="c y">✓</td><td class="c p">~</td><td class="c p">~</td><td class="c y">✓</td><td class="c p">~</td></tr>
+        <tr><td>Normalization + carry adjustment</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td><td class="c p">~</td><td class="c y">✓</td><td class="c p">~</td><td class="c p">~</td></tr>
+        <tr><td>Walk-forward, t+1 fills, statutory costs</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td><td class="c p">~</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td><td class="c p">~</td></tr>
+        <tr><td>Automated daily fetch</td><td class="c x">–</td><td class="c p">~</td><td class="c p">~</td><td class="c x">–</td><td class="c p">~</td><td class="c p">~</td><td class="c x">–</td><td class="c x">–</td></tr>
+        <tr class="hl"><td><strong>Exchange polled-spot (settlement reference)</strong></td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td></tr>
+        <tr class="hl"><td><strong>Versioned specs (tender 5→3, margin, making charge)</strong></td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td></tr>
+        <tr class="hl"><td><strong>Measured slippage from OHLC</strong></td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c p">~</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td></tr>
+        <tr class="hl"><td><strong>Decision tool for a named user</strong></td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td><td class="c x">–</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <span class="eyebrow">Gaps we can exploit</span>
+      <ul>
+        <li><strong>Settlement-reference blindness.</strong> Everyone compares futures with futures. We compare each contract with the price it actually settles to.</li>
+        <li><strong>Specs treated as constant.</strong> gold-rv’s unexplained ~250 bp GOLDPETAL shift (Dec 2024–Mar 2025) lines up in time with the Dec 2024 GOLDPETAL circular (₹100/g making charge). That is a <em>hypothesis</em>. The charge is paid buyer → seller at delivery, on top of a DDR the futures price converges to anyway, so the price mechanism isn’t obvious. Tested in S1.</li>
+        <li><strong>Assumed costs.</strong> A measured spread estimate can flip, or firm up, the “no edge” verdict.</li>
+        <li><strong>No user.</strong> Every build is a terminal for arbitrageurs that concludes there is no arbitrage. A retail chooser stays useful whatever the verdict.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Wider market</span>
+      <ul>
+        <li><strong>Global terminals</strong> (Bloomberg, LSEG): curve and spread tools, priced for institutions, no MCX contract-design layer.</li>
+        <li><strong>Alt-data</strong> (Kpler, Vortexa, ChAI): flows-driven intelligence for energy and metals. Gold isn’t shipping-driven.</li>
+        <li><strong>Indian retail apps</strong> (Dhan, Groww, Zerodha, Quantsapp, Sensibull, Opstra): price, OI, options. No cross-contract fairness.</li>
+        <li><strong>Data vendors</strong> (TrueData, Global Datafeeds): paid feeds. Our fallback if scraping breaks.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section id="toolkit" class="stack-lg" aria-labelledby="s4">
+  <div class="sec-head">
+    <span class="eyebrow gold">4 · What we’ll actually use</span>
+    <h2 id="s4">Repos, datasets and techniques</h2>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <span class="eyebrow">Repos</span>
+      <ul>
+        <li><code>curl_cffi</code> (MIT, 6.7k★): Chrome-TLS fetcher, required for MCX.</li>
+        <li><code>bidask</code> (MIT): EDGE spread from OHLC.</li>
+        <li><code>arch</code>: block bootstrap, HAR/GARCH.</li>
+        <li><code>quantstats</code> (Apache): tear sheets.</li>
+        <li><code>duckdb</code> + Parquet: storage.</li>
+        <li><code>echarts</code> / <code>lightweight-charts</code>: desk-style charts.</li>
+        <li><code>pysystemtrade</code> (GPL): design reference only.</li>
+        <li><code>OpenTerminalUI</code>, <code>brent-spread-backtester</code> (MIT): UI patterns.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Datasets</span>
+      <ul>
+        <li>MCX bhavcopy, date-wise (daily refresh).</li>
+        <li>MCX bhavcopy, contract-wise (one-call backfill per contract).</li>
+        <li>MCX polled spot archive, per contract and session.</li>
+        <li>MCX spec PDFs, hand-curated into a versioned YAML.</li>
+        <li>FBIL T-bill rates (carry sanity check).</li>
+        <li>IBJA 999/995 AM/PM (independent spot check).</li>
+        <li>Event list: import duty changes, Jan 2026 crash, SEBI circulars.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Techniques</span>
+      <ul>
+        <li>Fine-gram normalization with dated spec versions.</li>
+        <li>Basis to own polled spot, implied carry per contract curve.</li>
+        <li>Premium vs days-to-tender curves, pooled across cycles.</li>
+        <li>OU half-life against days left before tender.</li>
+        <li>Walk-forward, t+1 fills, fine-gram lot matching, exit before tender.</li>
+        <li>Abdi–Ranaldo / EDGE costs + statutory fees.</li>
+        <li>Spot-premium vs term-premium P&amp;L split; beta to gold.</li>
+        <li>Deflated Sharpe, block bootstrap, random-entry null, truncation (look-ahead) test.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section id="scope" class="stack-lg" aria-labelledby="s5">
+  <div class="sec-head">
+    <span class="eyebrow gold">5 · Proposed hackathon scope</span>
+    <h2 id="s5">Tola: the fair-price desk for MCX gold</h2>
+    <p class="muted">A tola is the traditional Indian gold weight, 11.66 g. The name is a placeholder.</p>
+  </div>
+
+  <div class="scope-banner">
+    <strong>The problem we solve</strong>
+    <p>The same gram of gold costs a different amount in each MCX contract. Nobody tells the person buying which part of that gap is fair (purity, carry, settlement reference, delivery terms) and which part is a premium they pay for small lots. Tola decomposes every gap against the exchange’s own settlement references. It then tests whether the unexplained part can be traded after <em>measured</em> costs, and turns the result into a decision: which contract to hold, when to roll, when to stay out.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="card"><span class="eyebrow">Primary user</span><h3>Active retail and HNI gold traders</h3><p>People choosing between GOLDM, GOLDTEN, GOLDGUINEA and GOLDPETAL to express a gold view or accumulate grams. The decision: which contract and expiry is cheapest to hold for N days.</p></div>
+    <div class="card"><span class="eyebrow">Secondary user</span><h3>Prop relative-value desks</h3><p>Small-lot premium signals with honest, cost-measured backtests and quiet-by-default alerts.</p></div>
+    <div class="card"><span class="eyebrow">Impact angle</span><h3>Exchange and SEBI</h3><p>A public “contract fairness” view: how far each variant trades from its settlement reference, and whether retail pays for small lots.</p></div>
+  </div>
+
+  <div class="stack">
+    <h3>How a price gap breaks down</h3>
+    <div class="anatomy" role="list">
+      <div class="step" role="listitem"><span class="k">1 · UNIT</span><strong>Per fine gram</strong><span>Divide by quote grams × purity, using the dated spec version.</span></div>
+      <div class="step" role="listitem"><span class="k">2 · CARRY</span><strong>Expiry gap</strong><span>Implied carry from each contract’s own curve (5th vs month-end).</span></div>
+      <div class="step new" role="listitem"><span class="k">3 · REFERENCE</span><strong>Settlement spot</strong><span>Ahmedabad vs Mumbai poll; single poll vs 3-day average. Measured from polled-spot data.</span></div>
+      <div class="step new" role="listitem"><span class="k">4 · DELIVERY</span><strong>Contract terms</strong><span>Bar vs coin, tender window and margin, making charge. Annotated, not subtracted: whether these move pre-expiry prices is a hypothesis (S1).</span></div>
+      <div class="step res" role="listitem"><span class="k">5 · RESIDUAL</span><strong>Small-lot premium</strong><span>What’s left. Measured at +79 to +94 bp (G0: GO), then tested for tradability in M4.</span></div>
+    </div>
+    <p class="note">Steps 1–2 are what every competitor does. Steps 3–5 are new, and each uses exchange data or spec documents we verified. The ₹100/g making charge goes into the chooser’s <em>take-delivery</em> cost either way.</p>
+  </div>
+
+  <div class="stack">
+    <h3>G0 · Premium gate: go/no-go by Fri 16 Oct</h3>
+    <p class="note">If the premium is a <code>Close</code>-timing artefact, the headline goes. So we test it before building on it. The rule was frozen in <code>g0_gate/G0_PREREGISTRATION.md</code> before the backfill ran.</p>
+    <ul class="clean note">
+      <li><strong>Backfill:</strong> every same-expiry GOLDTEN / GOLDGUINEA / GOLDPETAL cycle from Apr 2025 to Sep 2026 (about 18 cycles), plus GOLDGUINEA vs GOLDPETAL back to 2020 as context.</li>
+      <li><strong>Re-measure on four marks:</strong> <code>Close</code>, <code>Open</code>, (H+L)/2 and <strong>VWAP</strong> = Value × 10⁵ ÷ (Volume × lot grams). <code>Value</code> is ₹ lakh, verified on real rows. VWAP ignores last-trade timing, so it directly tests the Close artefact. Polled-spot basis was dropped as a mark because GOLDTEN and GOLDGUINEA share the same poll, so it cancels; it stays a GOLDPETAL-only diagnostic.</li>
+      <li><strong>Exclude:</strong> the last 5 trading days, zero-OHLC days, and days with either leg under ₹1 Cr turnover. A cycle survives with ≥10 eligible days.</li><li><strong>Statistics:</strong> cluster bootstrap that resamples whole cycles; pooled mean = mean of cycle means.</li>
+    </ul>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Outcome</th><th>Criteria</th><th>What we pitch</th></tr></thead>
+        <tbody>
+          <tr><td><span class="sev l">GO</span></td><td>≥8 surviving cycles <strong>and</strong>, on every mark: pooled ≥ +15 bp, cluster-bootstrap 95% CI above 0, and cycle hit rate ≥75%</td><td>The premium is the headline: who pays, how much, when it closes (passing pairs only).</td></tr>
+          <tr><td><span class="sev m">PARTIAL</span></td><td>Fewer than 8 surviving cycles (<strong>whatever the CI says</strong>), or not GO but the VWAP and Close CIs are both above 0</td><td>One finding inside the decomposition. Not the headline.</td></tr>
+          <tr><td><span class="sev h">NO-GO</span></td><td>Anything else</td><td><strong>Fallback, agreed now: “contract-fairness desk”.</strong> The decomposition, each contract’s basis to its own settlement price, and the chooser. Headline: “we tested the apparent small-lot premium against four price marks and the exchange’s own settlement prices, and it doesn’t hold.” The polled-spot angle and the chooser still differentiate us.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="figure" style="gap:12px">
+      <div class="fig-head"><h3>G0 result · 18 cycles, Apr 2025 – Sep 2026</h3><span class="sev l" style="font-size:.8rem">GO · both pairs</span></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Pair</th><th class="n">Cycles</th><th class="n">Close</th><th class="n">Open</th><th class="n">Mid</th><th class="n">VWAP [95% CI]</th><th class="n">Positive cycles</th></tr></thead>
+        <tbody>
+          <tr><td>GOLDGUINEA − GOLDTEN</td><td class="n">18/18</td><td class="n">+78.9</td><td class="n">+81.8</td><td class="n">+78.7</td><td class="n"><strong>+78.7</strong> [61.0, 97.4]</td><td class="n">100%</td></tr>
+          <tr><td>GOLDPETAL − GOLDTEN</td><td class="n">18/18</td><td class="n">+94.6</td><td class="n">+92.9</td><td class="n">+93.2</td><td class="n"><strong>+94.1</strong> [80.4, 108.8]</td><td class="n">100%</td></tr>
+        </tbody></table></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>VWAP premium by trading days to expiry</th><th class="n">60+</th><th class="n">40–59</th><th class="n">20–39</th><th class="n">10–19</th><th class="n">5–9</th></tr></thead>
+        <tbody>
+          <tr><td>GOLDGUINEA − GOLDTEN</td><td class="n">+87</td><td class="n">+78</td><td class="n">+69</td><td class="n">+68</td><td class="n">+76</td></tr>
+          <tr><td>GOLDPETAL − GOLDTEN</td><td class="n">+97</td><td class="n">+96</td><td class="n">+88</td><td class="n">+85</td><td class="n">+91</td></tr>
+        </tbody></table></div>
+      <ul class="clean note">
+        <li><strong>Close-timing artefact ruled out:</strong> VWAP agrees with Close to within 1 bp. The result holds under every sensitivity run (turnover floors, a 3-day tender window, excluding the Jan–Mar 2026 crash cycles).</li>
+        <li><strong>Time-varying:</strong> cycle means run from 34 to 145 bp, peaking in the Mar–Jun 2026 cycles.</li>
+        <li><strong>No decay before delivery:</strong> traded prices still carry it on expiry day. Only the final settlement price, the same per gram for all three, removes it. The two-cycle “decay” is withdrawn.</li>
+        <li><strong>Rupee view:</strong> at about ₹14,800/g the premium is about ₹117–139/g, or <strong>about ₹1,170–1,390 per 10 g, lost by anyone holding into settlement or delivery</strong>. Exit before tender and you get most of it back: your cost is the premium’s change, about 6–11 bp on average, more when the regime shifts.</li>
+        <li><strong>Also confirmed:</strong> gold-rv’s GOLDPETAL break. Against GOLDGUINEA it went from −250 bp (late 2024) to about +30 bp (mid-2025), across the Nov 2024 → Apr 2025 cycles. The cause is still an S1 hypothesis; the sign is awkward for the making-charge story.</li>
+      </ul>
+      <p class="note">Full record: <code>g0_gate/G0_RESULTS.md</code>.</p>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="stack">
+      <h3>MVP: due 31 Oct</h3>
+      <div class="list-box">
+        <div class="feat"><span class="id">M1</span><div><h3>Validated data layer</h3>
+          <ul>
+            <li>Chrome-TLS fetcher.</li>
+            <li>Contract-wise backfill 2020→, plus polled spot. This also feeds G0.</li>
+            <li>Versioned spec YAML.</li>
+            <li>Guards: holiday, date echo, FUTCOM filter, zero-OHLC no-trade days.</li>
+            <li><strong>A committed Parquet snapshot plus a one-command refresh script.</strong> The GitHub Actions cron only if time permits; otherwise it moves to the finale (S6).</li>
+          </ul></div></div>
+        <div class="feat"><span class="id">M2</span><div><h3>Basis Anatomy</h3>
+          <ul>
+            <li>Per contract per day: waterfall from raw price through steps 1–5 above.</li>
+            <li>Basis to own polled spot.</li>
+            <li>Implied carry checked against T-bill rates.</li>
+          </ul></div></div>
+        <div class="feat"><span class="id">M3</span><div><h3>Same-reference convergence monitor</h3>
+          <ul>
+            <li>GOLDTEN vs GOLDGUINEA vs GOLDPETAL (identical settlement price per gram) across every cycle since Apr 2025.</li>
+            <li>GOLD vs GOLDM as the control pair (same 3-day average settlement; the premium should be about 0). It works <strong>only on the near even-month contract</strong>: GOLD lists Feb, Apr, Jun, Aug, Oct and Dec only, so about 6 cycles a year. On 9 Oct the shared Dec contract was at −2.6 bp; the far shared months barely trade.</li>
+          </ul></div></div>
+        <div class="feat"><span class="id">M4</span><div><h3>Walk-forward verdict</h3>
+          <ul>
+            <li>Premium rule: test whether any pre-tender version of the premium trade survives measured costs. Given the flat profile, a null is likely, and that is a valid answer.</li>
+            <li>t+1 fills, fine-gram lot matching, EDGE + statutory costs.</li>
+            <li>Gold-leg vs spread-leg P&amp;L split.</li>
+            <li>Random-entry null, block-bootstrap CI, Deflated Sharpe with the honest trial count.</li>
+            <li>Results with and without the Jan–Mar 2026 crash; truncation test in CI.</li>
+          </ul></div></div>
+        <div class="feat"><span class="id">M5</span><div><h3>Trader-facing layer</h3>
+          <ul>
+            <li><strong>“Which contract?” chooser</strong> (keeps the named-user argument): hold X g for N days → ranked effective cost.</li>
+            <li>Cost includes premium, carry, statutory fees, and brokerage. <strong>The broker is a parameter</strong>; the default preset is labelled “Zerodha rates” (0.03% or ₹20 per order, whichever is lower), so quantity matters.</li>
+            <li>A <strong>take-delivery</strong> line: making charge (₹100/g on GOLDPETAL coins) and tender-period margin.</li>
+            <li>Shows the tender and broker exit deadlines.</li>
+            <li><strong>In-app alert log</strong>, quiet by default, with the reason each day was silent. Replaces Telegram.</li>
+            <li>Contract calendar.</li>
+          </ul></div></div>
+      </div>
+    </div>
+    <div class="stack">
+      <h3>Stretch: finale on 20 Nov</h3>
+      <div class="list-box stretch">
+        <div class="feat"><span class="id">S1</span><div><h3>Spec-change annotator</h3><p>Change-point detection on the premium series, linked to dated circulars. Tests the Dec 2024–Mar 2025 GOLDPETAL regime break, and whether the ₹100/g making charge (about 67 bp) explains any of the GOLDPETAL premium.</p></div></div>
+        <div class="feat"><span class="id">S2</span><div><h3>Silver family</h3><p>SILVER, SILVERM, SILVERMIC through the same engine, to show it generalises.</p></div></div>
+        <div class="feat"><span class="id">S3</span><div><h3>LLM explainer</h3><p>A Claude-written daily note built only from the computed decomposition, citing the spec clause. Never generates numbers or signals.</p></div></div>
+        <div class="feat"><span class="id">S4</span><div><h3>Long history</h3><p>GOLD, GOLDM, GOLDGUINEA and GOLDPETAL from 2011. Out-of-sample on years the rules never saw.</p></div></div>
+        <div class="feat"><span class="id">S5</span><div><h3>Exchange fairness index</h3><p>A one-number daily premium of the retail contracts over their settlement reference, for the MCX/SEBI impact story.</p></div></div>
+        <div class="feat"><span class="id">S6</span><div><h3>Daily cron and live track record</h3><p>GitHub Actions daily fetch → rebuild → deploy, plus Telegram alerts. If switched on right after Round 2, it gives weeks of untouched live alerts by 20 Nov. Show them unedited.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stack">
+    <h3>Architecture and stack</h3>
+    <div class="pipe" role="list">
+      <div class="stage" role="listitem"><span class="k">FETCH</span><strong>curl_cffi</strong><span>Bhavcopy (date and contract), polled spot. Cache raw JSON.</span></div>
+      <div class="stage" role="listitem"><span class="k">STORE</span><strong>DuckDB + Parquet</strong><span>Keyed by (symbol, expiry, date); spec_versions table; events table.</span></div>
+      <div class="stage" role="listitem"><span class="k">MODEL</span><strong>pandas · numpy · statsmodels · arch · bidask</strong><span>Anatomy, carry, convergence curves, costs.</span></div>
+      <div class="stage" role="listitem"><span class="k">VALIDATE</span><strong>Custom walk-forward + pytest</strong><span>t+1 fills, truncation test, Deflated Sharpe, bootstrap, nulls.</span></div>
+      <div class="stage" role="listitem"><span class="k">PUBLISH</span><strong>JSON → React + Vite + ECharts</strong><span>Static site on Vercel; chooser runs in the browser.</span></div>
+      <div class="stage" role="listitem"><span class="k">RUN</span><strong>Refresh script</strong><span>One command: fetch → rebuild JSON → redeploy. The cron + Telegram come at the finale (S6).</span></div>
+    </div>
+    <p class="note">The site is static by design, as gold-rv chose: nothing breaks on stage. A small serverless function is needed only if we ship S3 (the LLM key stays on the server). Python 3.12 on Windows laptops; no paid services.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <span class="eyebrow">What makes it novel</span>
+      <ul>
+        <li><strong>Settlement-reference basis:</strong> the first PS03 build to use MCX’s per-contract polled spot.</li>
+        <li><strong>Contract design as data:</strong> versioned specs and circular events inside the decomposition.</li>
+        <li><strong>A finding, not a dashboard (G0: GO):</strong> small-lot contracts trade +79 to +94 bp over GOLDTEN in all 18 cycles, and only settlement removes it. The question shifts from “is there arbitrage?” to “who pays, how much, and how to avoid paying it?”</li>
+        <li><strong>Measured costs</strong> instead of assumed ones.</li>
+        <li><strong>A named user and decision</strong> that stay valuable even if the verdict is “no edge”.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Data sources for the build</span>
+      <ul>
+        <li><strong>P0:</strong> MCX bhavcopy (date-wise and contract-wise), polled spot archive, spec PDFs. All verified on 13 Oct 2026.</li>
+        <li><strong>P1:</strong> FBIL T-bill (carry check); IBJA (spot cross-check).</li>
+        <li><strong>P2:</strong> silver contracts; hand-curated event list.</li>
+        <li><strong>Not used:</strong> news, weather, AIS, gold-direction forecasts. Off-problem for relative value.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stack">
+    <h3>Risks and feasibility</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr></thead>
+        <tbody>
+          <tr><td>18 days left, and the deck, video and docs are due too</td><td><span class="sev h">High</span></td><td>MVP cut: in-app alert log instead of Telegram; refresh script instead of cron. Order: G0 → M1 → M2/M3 → M4 → chooser. Everything stretch waits for the finale.</td></tr>
+          <tr><td>The premium is a <code>Close</code>-timing artefact, or two cycles was luck</td><td><span class="sev h">High</span></td><td><strong>G0 gate by Fri 16 Oct</strong>: full backfill and four price marks, with pass criteria and a fallback framing agreed in advance.</td></tr>
+          <tr><td>Slide stats from secondary sources are wrong</td><td><span class="sev m">Med</span></td><td>Two were already wrong (the “205%” and the crash date). Only ✅ items from 05 §F go on slides; market turnover is computed from our own bhavcopy.</td></tr>
+          <tr><td>MCX blocks or changes endpoints again</td><td><span class="sev m">Med</span></td><td>Commit a Parquet snapshot. Keep a manual CSV import path. The demo runs offline.</td></tr>
+          <tr><td>The premium is explained but not tradable</td><td><span class="sev l">Low</span></td><td>That is still a valid PS outcome. The chooser and fairness view stay useful.</td></tr>
+          <tr><td>Crowded field reads as “another gold dashboard”</td><td><span class="sev m">Med</span></td><td>Lead the pitch with the finding and the decomposition, not the UI.</td></tr>
+          <tr><td>Domain mistakes (specs, costs)</td><td><span class="sev m">Med</span></td><td>Every constant in YAML cites its PDF or circular. CTT 0.01% is broker-confirmed; confirm against a real contract note.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div><span class="when">13–16 Oct</span><strong>Data + G0</strong><ul><li>Fetcher, full backfill, polled spot</li><li>Four-mark re-measure</li><li><strong>GO / PARTIAL / NO-GO on Fri 16 Oct</strong></li></ul></div>
+      <div><span class="when">17–22 Oct</span><strong>Decomposition</strong><ul><li>Spec YAML, Basis Anatomy</li><li>Convergence monitor + control pair</li></ul></div>
+      <div><span class="when">23–27 Oct</span><strong>Verdict</strong><ul><li>Walk-forward, EDGE costs</li><li>Deflated Sharpe, nulls</li><li>Chooser</li></ul></div>
+      <div><span class="when">28–31 Oct</span><strong>Ship</strong><ul><li>UI, alert log, refresh script, README</li><li>Deck + demo video, submit</li></ul></div>
+    </div>
+  </div>
+
+  <div class="checkpoint" role="note">
+    <span class="eyebrow gold">Decisions · 13 Oct 2026</span>
+    <strong style="font-family:var(--display);font-size:1.15rem">Scope approved; G0 runs before the deck</strong>
+    <ul class="clean">
+      <li><strong>Framing:</strong> approved (fair-price desk with a retail chooser).</li>
+      <li><strong>G0 criteria and fallback:</strong> approved, with the VWAP swap, cycle-clustered bootstrap and ≥8-cycle minimum.</li>
+      <li><strong>Primary user:</strong> approved (retail and HNI gold traders).</li>
+      <li><strong>MVP cut line:</strong> approved as revised.</li>
+      <li><strong>Name:</strong> Tola, pending a brand check. Quick web check: no Indian gold or fintech product by that name. Unrelated US uses exist (a B2B payments startup and Tola Capital). As a generic Indian gold-weight term, “tola” would be weak to register; fine for a hackathon.</li>
+    </ul>
+    <p>The deck uses <code>ppt_template.pptx</code> once G0 decides the headline.</p>
+  </div>
+</section>
+
+<footer>
+  <span>Sources and verification status: <code>07_sources.md</code>. Live data was pulled from mcxindia.com on 13 Oct 2026 and is saved in <code>data_probe/</code>.</span>
+  <span>Competitor details come from public READMEs as of 13 Oct 2026 and may have changed since.</span>
+</footer>
+</div>
+
+<script>
+const DATA = {"31AUG2026":{"tender":"2026-08-27","d":["2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-25","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-19","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-03","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31"],"g":[50.0,82.6,65.4,34.9,58.1,41.4,-4.3,6.1,27.2,7.2,34.3,25.7,15.8,20.7,29.8,55.1,18.2,27.0,34.2,-4.1,22.4,35.4,37.5,62.5,48.7,99.7,61.1,86.5,117.0,76.5,55.4,58.1,43.7,32.9,90.2,79.3,72.9,84.8,75.6,56.2,52.7,58.5,59.1,46.8,47.7,34.3,52.1,63.8,54.0,59.7,60.9,64.4,57.8,66.1,57.9,87.0,72.9,48.3,41.8,56.5,50.7,47.3,31.0,33.6,30.9,44.3,48.5,41.2,13.1,33.1,38.6,31.8,33.9,42.9,43.3,39.8,39.7,47.9,37.7,31.9,34.6,37.7,30.0,21.0,-20.9,-26.1,105.2],"p":[67.4,98.7,105.8,81.9,87.8,94.1,54.6,67.6,62.8,51.7,75.4,75.2,59.3,37.5,49.5,62.6,29.6,47.1,45.6,23.2,42.8,46.7,62.2,73.7,65.5,105.0,88.3,91.9,99.4,80.2,70.8,63.9,52.3,48.6,83.5,71.3,64.6,86.0,76.1,49.6,58.1,63.6,55.9,45.2,49.8,55.4,57.1,65.1,56.9,58.8,58.8,67.5,55.6,63.6,63.1,97.9,76.6,58.3,51.4,65.0,55.2,53.7,35.1,41.2,36.6,53.5,53.9,43.9,25.9,40.3,42.6,35.1,39.1,46.1,47.4,41.9,39.5,42.2,33.3,29.1,27.4,30.6,24.6,40.5,17.8,29.4,63.1],"vg":[125,366,128,378,285,219,371,292,1842,605,475,553,285,436,105,149,301,436,1025,859,929,823,749,766,1001,1928,1833,1599,3007,2822,1808,1789,966,895,2648,4146,2285,2816,7179,6506,2564,3365,4571,5774,5183,4365,2817,3290,5175,3197,4128,6104,6702,3745,5669,7173,3812,3872,6296,5910,6123,6930,13157,14224,10218,7136,6443,8188,15785,14939,16314,14463,13382,11004,10790,9861,9361,8001,15128,11989,12888,11776,11419,8117,1834,105,27],"vp":[3151,6312,3213,8853,10190,5731,10243,10716,29420,12555,16426,12788,14500,16853,7214,6285,6372,12254,26657,16210,18052,21127,20714,15266,19511,40825,33797,33168,54985,45250,32118,43798,25752,21743,59698,60014,33223,41996,117759,96240,41821,53228,76514,118298,92179,73022,51651,62316,93391,59838,66378,84117,94322,72440,93679,114773,69257,71548,99742,104767,111868,125657,181068,213270,209766,135557,119734,134918,264202,260226,267226,234082,242585,222046,222203,197984,165580,169130,258151,253760,272479,270203,206753,172895,24737,10082,2390],"vt":[633,719,254,793,777,635,1251,903,3039,1003,1344,986,1524,1173,510,525,704,1422,2678,2390,1422,2024,1655,2059,1474,4282,3551,2980,6047,4618,3301,2818,2341,2738,6285,5749,3783,4661,11074,9592,5014,4736,6971,12578,10822,7681,5332,7927,10190,6969,7090,10038,10721,8795,9890,11984,8912,10676,15879,14949,17270,14553,23890,23325,26027,17640,15806,17118,40041,34074,37632,25666,25878,26233,23077,22142,19687,16246,31437,27996,28898,22336,17911,20226,11194,1505,904]},"30SEP2026":{"tender":"2026-09-28","d":["2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-19","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-03","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15","2026-07-16","2026-07-17","2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-10","2026-08-11","2026-08-12","2026-08-13","2026-08-14","2026-08-17","2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-07","2026-09-08","2026-09-09","2026-09-10","2026-09-11","2026-09-14","2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-28","2026-09-29","2026-09-30"],"g":[34.5,38.9,55.6,60.2,122.6,63.8,80.3,113.0,71.6,70.5,53.2,43.7,28.2,75.7,64.3,76.9,86.0,69.9,48.1,52.4,54.6,69.5,40.4,35.4,51.5,51.9,71.0,64.2,59.9,76.8,89.6,68.3,80.6,101.3,99.4,104.0,67.2,63.7,79.4,68.5,97.3,68.4,37.6,35.4,63.9,69.3,39.5,24.4,35.9,46.3,35.7,45.7,53.7,57.5,46.8,41.3,53.1,44.0,39.6,31.7,43.3,39.1,33.3,31.4,43.5,41.0,40.7,36.8,33.3,36.6,34.6,40.5,29.7,24.0,30.4,25.9,24.8,26.1,24.8,13.5,27.3,19.8,30.7,26.1,10.1,32.5,77.0,65.4],"p":[43.7,77.3,95.1,80.0,131.7,98.4,102.8,108.7,90.9,86.4,70.1,59.3,43.7,86.4,64.5,78.1,86.6,74.8,57.9,63.0,66.5,67.5,49.0,43.1,62.0,58.7,71.3,68.8,65.5,73.6,84.8,64.5,82.1,88.7,111.0,99.6,64.0,64.2,66.1,63.3,83.9,58.0,42.7,48.3,59.7,64.0,44.2,29.1,47.8,50.7,42.7,47.7,56.8,58.5,51.6,43.6,54.3,42.4,37.4,35.7,37.7,36.1,30.8,30.7,41.8,36.0,38.8,35.3,31.9,31.9,29.4,35.4,22.8,27.2,25.9,22.6,23.2,15.3,18.4,11.8,20.2,11.3,20.8,19.0,9.8,80.3,80.8,39.9],"vg":[175,118,169,95,400,579,356,751,463,705,329,140,140,412,1215,294,565,1548,1741,827,1164,1534,1896,1814,1695,1012,1179,1780,1185,1378,2119,1995,1802,2150,2638,865,1047,2036,1946,1811,1728,2323,2591,2517,1806,1557,2123,5205,5354,5993,5591,4849,5183,4335,4455,4507,4060,9766,9719,11969,12587,12940,16729,22218,22074,14266,17282,20093,19129,24374,9420,10752,13809,14398,18338,8367,9247,9927,11413,10595,7565,8681,6598,7073,12025,3937,244,20],"vp":[4784,6465,3823,3270,10282,12423,11207,20466,17675,9429,8175,4990,7306,19172,23723,8898,19187,46400,39831,13500,16030,22837,39168,30875,24128,18410,24952,39912,24846,33629,49273,42463,36419,47217,49553,34053,32543,40877,53809,39600,32889,46369,45542,55808,41180,33785,39084,112527,121887,118689,86431,91781,96304,81507,97426,76994,81488,191147,170613,215799,218768,221678,276022,448372,436379,299368,348415,346825,390717,458389,229958,255027,319359,320645,386845,166065,223809,199729,261967,258446,202166,199719,141684,169541,253660,64476,2748,172],"vt":[268,318,704,314,1134,701,667,1344,928,622,618,548,459,1342,1172,742,1196,2583,2341,1088,1223,2007,4172,3535,2741,1636,2598,3458,2064,3437,4672,4384,4140,5543,5398,3251,3266,4800,5264,4918,3316,4993,8701,9662,6250,5438,6594,18704,12692,15195,11300,12562,14005,12677,10803,11582,12170,23986,23836,28826,27986,32456,35341,51822,48699,32872,34499,40145,41115,49956,24292,28537,28806,29957,38642,18540,20063,20336,28203,28177,22460,23524,15099,16226,22111,9469,747,295]}};
+(function () {
+  const svg = document.getElementById('chart');
+  const tip = document.getElementById('tip');
+  const box = document.getElementById('chart-box');
+  const statsEl = document.getElementById('stats');
+  const tbl = document.getElementById('tbl');
+  const NS = 'http://www.w3.org/2000/svg';
+  const W = 760, H = 300, M = { t: 16, r: 92, b: 34, l: 44 };
+  let key = '30SEP2026';
+  const el = (n, a) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
+  const fmtD = s => { const d = new Date(s + 'T00:00:00'); return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }); };
+  const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+
+  function render() {
+    const S = DATA[key];
+    const n = S.d.length;
+    while (svg.lastChild && svg.lastChild.nodeName !== 'desc') svg.removeChild(svg.lastChild);
+    const all = S.g.concat(S.p);
+    const lo = Math.min(0, Math.floor(Math.min(...all) / 20) * 20);
+    const hi = Math.ceil(Math.max(...all) / 20) * 20;
+    const x = i => M.l + (i / (n - 1)) * (W - M.l - M.r);
+    const y = v => M.t + (1 - (v - lo) / (hi - lo)) * (H - M.t - M.b);
+    const ti = S.d.indexOf(S.tender);
+    // tender shading
+    svg.appendChild(el('rect', { x: x(ti) - 3, y: M.t, width: x(n - 1) - x(ti) + 6, height: H - M.t - M.b, fill: 'var(--tender)' }));
+    // grid
+    const g = el('g', { class: 'grid' });
+    for (let v = lo; v <= hi; v += 20) {
+      g.appendChild(el('line', { x1: M.l, x2: W - M.r, y1: y(v), y2: y(v) }));
+      const t = el('text', { x: M.l - 8, y: y(v) + 4, 'text-anchor': 'end' }); t.textContent = v; svg.appendChild(t);
+    }
+    svg.insertBefore(g, svg.children[1]);
+    svg.appendChild(el('line', { class: 'zero', x1: M.l, x2: W - M.r, y1: y(0), y2: y(0) }));
+    // month ticks
+    let last = '';
+    S.d.forEach((d, i) => { const m = d.slice(0, 7); if (m !== last) { last = m; const t = el('text', { x: x(i), y: H - 12, 'text-anchor': 'start' }); t.textContent = new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { month: 'short' }); svg.appendChild(t); svg.appendChild(el('line', { x1: x(i), x2: x(i), y1: H - M.b, y2: H - M.b + 5, stroke: 'var(--faint)' })); } });
+        // lines
+    [['g', 'var(--s1)', 'GUINEA'], ['p', 'var(--s2)', 'PETAL']].forEach(([k, c, lab]) => {
+      const d = S[k].map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(' ');
+      svg.appendChild(el('path', { d, fill: 'none', stroke: c, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+      const lv = S[k][n - 1];
+      const ly = Math.max(M.t + 8, Math.min(H - M.b - 4, y(lv) + (k === 'g' ? -8 : 12)));
+      const t = el('text', { x: x(n - 1) + 8, y: ly }); t.textContent = lab + ' ' + Math.round(lv); t.style.fill = 'var(--fg)'; svg.appendChild(t);
+    });
+    const tt = el('text', { x: x(ti) - 6, y: M.t + 12, 'text-anchor': 'end' }); tt.textContent = 'tender →'; svg.appendChild(tt);
+    // hover
+    const cross = el('line', { x1: 0, x2: 0, y1: M.t, y2: H - M.b, stroke: 'var(--faint)', 'stroke-width': 1, visibility: 'hidden' });
+    const d1 = el('circle', { r: 4.5, fill: 'var(--s1)', stroke: 'var(--surface)', 'stroke-width': 2, visibility: 'hidden' });
+    const d2 = el('circle', { r: 4.5, fill: 'var(--s2)', stroke: 'var(--surface)', 'stroke-width': 2, visibility: 'hidden' });
+    svg.append(cross, d1, d2);
+    const hit = el('rect', { x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b, fill: 'transparent' });
+    svg.appendChild(hit);
+    const move = ev => {
+      const r = svg.getBoundingClientRect();
+      const px = (ev.clientX - r.left) * (W / r.width);
+      const i = Math.max(0, Math.min(n - 1, Math.round((px - M.l) / (W - M.l - M.r) * (n - 1))));
+      [cross, d1, d2].forEach(e => e.setAttribute('visibility', 'visible'));
+      cross.setAttribute('x1', x(i)); cross.setAttribute('x2', x(i));
+      d1.setAttribute('cx', x(i)); d1.setAttribute('cy', y(S.g[i])); d2.setAttribute('cx', x(i)); d2.setAttribute('cy', y(S.p[i]));
+      tip.hidden = false;
+      tip.innerHTML = '<b>' + fmtD(S.d[i]) + (i >= ti ? ' · tender' : '') + '</b><br>' +
+        '<span class="k" style="background:var(--s1)"></span>GUINEA − TEN ' + S.g[i].toFixed(1) + ' bp<br>' +
+        '<span class="k" style="background:var(--s2)"></span>PETAL − TEN ' + S.p[i].toFixed(1) + ' bp<br>' +
+        '<span class="muted">Volume (lots): TEN ' + S.vt[i].toLocaleString('en-IN') + ' · GUINEA ' + S.vg[i].toLocaleString('en-IN') + ' · PETAL ' + S.vp[i].toLocaleString('en-IN') + '</span>';
+      const br = box.getBoundingClientRect();
+      let left = ev.clientX - br.left + box.scrollLeft + 14;
+      if (left + 220 > br.width + box.scrollLeft) left -= 240;
+      tip.style.left = left + 'px'; tip.style.top = Math.max(0, ev.clientY - br.top - 30) + 'px';
+    };
+    hit.addEventListener('mousemove', move);
+    hit.addEventListener('mouseleave', () => { tip.hidden = true; [cross, d1, d2].forEach(e => e.setAttribute('visibility', 'hidden')); });
+
+    // stats: liquid pre-tender days (GUINEA vol >= 1000)
+    const idx = S.d.map((d, i) => i).filter(i => i < ti && S.vg[i] >= 1000);
+    const G = idx.map(i => S.g[i]), P = idx.map(i => S.p[i]);
+    const f10 = a => mean(a.slice(0, 10)), l5 = a => mean(a.slice(-5));
+    statsEl.innerHTML = [
+      [mean(G).toFixed(1) + ' bp', 'GUINEA − TEN, mean over ' + idx.length + ' liquid pre-tender days'],
+      [mean(P).toFixed(1) + ' bp', 'PETAL − TEN, same days'],
+      [f10(G).toFixed(0) + ' → ' + l5(G).toFixed(0), 'GUINEA premium, first 10 → last 5 pre-tender days'],
+      [f10(P).toFixed(0) + ' → ' + l5(P).toFixed(0), 'PETAL premium, first 10 → last 5 pre-tender days']
+    ].map(([v, l]) => '<div><span class="v">' + v + '</span><span class="l">' + l + '</span></div>').join('');
+
+    tbl.innerHTML = '<thead><tr><th>Date</th><th class="n">GUINEA − TEN (bp)</th><th class="n">PETAL − TEN (bp)</th><th class="n">Vol TEN</th><th class="n">Vol GUINEA</th><th class="n">Vol PETAL</th></tr></thead><tbody>' +
+      S.d.map((d, i) => '<tr' + (i >= ti ? ' class="hl"' : '') + '><td>' + d + '</td><td class="n">' + S.g[i].toFixed(1) + '</td><td class="n">' + S.p[i].toFixed(1) + '</td><td class="n">' + S.vt[i] + '</td><td class="n">' + S.vg[i] + '</td><td class="n">' + S.vp[i] + '</td></tr>').join('') + '</tbody>';
+  }
+  const bs = document.getElementById('b-sep'), ba = document.getElementById('b-aug');
+  bs.addEventListener('click', () => { key = '30SEP2026'; bs.setAttribute('aria-pressed', 'true'); ba.setAttribute('aria-pressed', 'false'); render(); });
+  ba.addEventListener('click', () => { key = '31AUG2026'; ba.setAttribute('aria-pressed', 'true'); bs.setAttribute('aria-pressed', 'false'); render(); });
+  const tg = document.getElementById('tbl-toggle'), tw = document.getElementById('tbl-wrap');
+  tg.addEventListener('click', () => { const open = tw.hidden; tw.hidden = !open; tg.setAttribute('aria-expanded', String(open)); tg.textContent = open ? 'Hide data table' : 'Show data table'; });
+  render();
+})();
+</script>
+</body>
+</html>
