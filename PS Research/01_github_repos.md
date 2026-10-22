@@ -8,6 +8,8 @@ Licence key: GPL/AGPL code can be *used as a reference* but copying it into our 
 
 ## A. Direct competitors: other Hack in Hills '26 PS03 teams
 
+> **Superseded on 23 Oct 2026 by [08_competitor_tracker.md](08_competitor_tracker.md)** (42 repos; gold-rv renamed to `nexora-gold-rv-`). This table is kept as the 13 Oct baseline.
+
 This is the most important section. At least **11 public repos** target the same problem statement. All were created between 1 and 8 Oct 2026, so Round 2 is crowded with near-identical builds.
 
 | Repo | Created → last push | Stack | Data | What they do | What they don't do |

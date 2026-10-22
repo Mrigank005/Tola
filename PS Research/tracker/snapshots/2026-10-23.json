@@ -1,0 +1,570 @@
+{
+ "date": "2026-10-23",
+ "since": "2026-10-22",
+ "repos": {
+  "CodeByDivyansh-tech/nexora-gold-rv-": {
+   "full_name": "CodeByDivyansh-tech/nexora-gold-rv-",
+   "created": "2026-10-01",
+   "pushed": "2026-10-22T12:51:45Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://gold-rv.vercel.app",
+   "description": "Gold relative-value research for MCX gold futures (GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL), 2011\u20132026: normalised spreads, carry, walk-forward backtests after costs, and a clean 2011\u20132023 test showing ",
+   "readme_sha": "133488c3c1ad",
+   "readme_len": 18065,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Merge pull request #25 from CodeByDivyansh-tech/feature/pitch-video-oct22"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Pitch video for 22 Oct 2026 on the intro and demo pages"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "WIP: point intro and demo page at the new pitch video (video files not added yet)"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Merge pull request #24 from CodeByDivyansh-tech/data/oct-19-21"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Data: add MCX Bhavcopy for 19-21 Oct 2026 (24 contracts)"
+    }
+   ]
+  },
+  "Surjune/aura-mcx-gold": {
+   "full_name": "Surjune/aura-mcx-gold",
+   "created": "2026-10-15",
+   "pushed": "2026-10-22T08:56:36Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://aura.lightninglogics.me",
+   "description": "AuRA: relative-value analytics for MCX gold futures (GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL). Normalises to \u20b9/g fine gold, splits carry from genuine dislocation, and walk-forward tests it net of all co",
+   "readme_sha": "a73779203b75",
+   "readme_len": 9011,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Update team member details in README"
+    }
+   ]
+  },
+  "j4yop/arb-bound": {
+   "full_name": "j4yop/arb-bound",
+   "created": "2026-10-12",
+   "pushed": "2026-10-15T18:06:18Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://arb-bound.vercel.app/",
+   "description": "Is an MCX cross-contract gold spread an opportunity, or the cost of closing it? Hack in Hills 26 Track 03",
+   "readme_sha": "af4cffa10bca",
+   "readme_len": 8683
+  },
+  "j4yop/arb-bound-live": {
+   "full_name": "j4yop/arb-bound-live",
+   "created": "2026-10-13",
+   "pushed": "2026-10-22T11:44:26Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://arb-bound-live.vercel.app",
+   "description": "Live MCX gold bhavcopy through TinyFish, judged against a structural arbitrage bound. Hack in Hills '26 TinyFish Builder Challenge.",
+   "readme_sha": "0adead3d50d0",
+   "readme_len": 11037,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "chore: daily MCX scan 2026-10-22"
+    }
+   ]
+  },
+  "strange-exe/Bullion-Basis": {
+   "full_name": "strange-exe/Bullion-Basis",
+   "created": "2026-10-15",
+   "pushed": "2026-10-15T17:47:43Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://bullion-basis.pages.dev/",
+   "description": "MCX gold futures in four lot sizes, normalized to one price per gram (999). Finds a ~50 bps gap between GOLDTEN and GUINEA/PETAL on real Bhavcopy data, and tests whether it survives costs without look",
+   "readme_sha": "01b7c781081b",
+   "readme_len": 3887
+  },
+  "thedarknight262/HackNHills": {
+   "full_name": "thedarknight262/HackNHills",
+   "created": "2026-10-21",
+   "pushed": "2026-10-21T17:35:26Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Hack in Hills '26 (PS-03)  Quantitative relative-value intelligence, term-structure carry interpolation, walk forward Z-score alerts, and post cost backtesting engine for MCX Gold Futures (GOLDM, GOLD",
+   "readme_sha": "1b714cf55859",
+   "readme_len": 12362
+  },
+  "dhir-1/Mcx-gold-dhir": {
+   "full_name": "dhir-1/Mcx-gold-dhir",
+   "created": "2026-10-20",
+   "pushed": "2026-10-20T13:07:44Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "517113f21c9b",
+   "readme_len": 5216
+  },
+  "manaslalwani190/auraspread": {
+   "full_name": "manaslalwani190/auraspread",
+   "created": "2026-10-03",
+   "pushed": "2026-10-21T13:00:31Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "2132a67d656e",
+   "readme_len": 9408
+  },
+  "sru-codes/aurum-spread": {
+   "full_name": "sru-codes/aurum-spread",
+   "created": "2026-10-14",
+   "pushed": "2026-10-15T15:00:24Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://aurum-spread.up.railway.app",
+   "description": "Cost-aware relative-value intelligence for MCX gold futures \u00b7 Hack in Hills 2026",
+   "readme_sha": "ea32e18f1081",
+   "readme_len": 33219
+  },
+  "Adarsh1577/goldlens-mcx-gold": {
+   "full_name": "Adarsh1577/goldlens-mcx-gold",
+   "created": "2026-10-21",
+   "pushed": "2026-10-22T11:35:28Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "3dc0349fe13d",
+   "readme_len": 3613,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Add team section and chart export script"
+    }
+   ]
+  },
+  "SAHIBA-09/summit-syndicate-mcx-gold": {
+   "full_name": "SAHIBA-09/summit-syndicate-mcx-gold",
+   "created": "2026-10-18",
+   "pushed": "2026-10-22T14:15:30Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Cross-contract relative-value analysis for MCX gold futures: normalizes four contracts to Rs/gram, tracks them by expiry, and flags spread gaps against a no-look-ahead normal range. Early prototype bu",
+   "readme_sha": "01a4fd5ee53d",
+   "readme_len": 1283,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Create README.md"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Delete README.md"
+    }
+   ]
+  },
+  "jayanti614/goldparity": {
+   "full_name": "jayanti614/goldparity",
+   "created": "2026-10-07",
+   "pushed": "2026-10-08T03:39:02Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "4b1f2699cf5a",
+   "readme_len": 13381
+  },
+  "Umar1988104/GoldParity": {
+   "full_name": "Umar1988104/GoldParity",
+   "created": "2026-09-21",
+   "pushed": "2026-09-23T05:17:36Z",
+   "stars": 1,
+   "branch": "main",
+   "homepage": "https://gold-parity.vercel.app",
+   "description": "Cross-contract mispricing detection for MCX gold futures (GOLDM/GOLDTEN/GOLDGUINEA/GOLDPETAL) \u2014 fair-value modeling, signal detection, and a walk-forward backtest engine, built for Hack in Hills '26.",
+   "readme_sha": "4b1f2699cf5a",
+   "readme_len": 13381
+  },
+  "Mayank-iitj/GoldLens": {
+   "full_name": "Mayank-iitj/GoldLens",
+   "created": "2026-10-04",
+   "pushed": "2026-10-19T10:49:56Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://mayank-iitj.github.io/GoldLens/",
+   "description": "GoldLens : Commodity Derivatives Intelligence & Carry-Adjusted Relative Value Analytics",
+   "readme_sha": "89953d6e53c2",
+   "readme_len": 4308
+  },
+  "NaitikBuilds/aurumspread": {
+   "full_name": "NaitikBuilds/aurumspread",
+   "created": "2026-09-28",
+   "pushed": "2026-10-01T21:43:04Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "AURUMSPREAD-Cost-aware, walk-forward relative-value analytics for MCX gold futures",
+   "readme_sha": "ffd51a906e3c",
+   "readme_len": 11284
+  },
+  "udayanbhandari/HackInHills": {
+   "full_name": "udayanbhandari/HackInHills",
+   "created": "2026-10-22",
+   "pushed": "2026-10-22T07:36:20Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "HackInHills project repository",
+   "readme_sha": "a36d60877016",
+   "readme_len": 6224,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "chore: clean up .gitignore"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Initial commit: complete project upload"
+    }
+   ]
+  },
+  "Dhrupad-05/GoldMCX": {
+   "full_name": "Dhrupad-05/GoldMCX",
+   "created": "2026-10-09",
+   "pushed": "2026-10-22T15:09:01Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "ac438cd2d7c4",
+   "readme_len": 20923,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Merge pull request #3 from Dhrupad-05/feature/goldmcx-updates"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "feat: update GoldMCX application"
+    }
+   ]
+  },
+  "satyamkr11/gold-contract-radar": {
+   "full_name": "satyamkr11/gold-contract-radar",
+   "created": "2026-10-02",
+   "pushed": "2026-10-02T20:00:41Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "d1151301c057",
+   "readme_len": 9033
+  },
+  "mahamunisarvesh738/MCX_GOLDINTEL": {
+   "full_name": "mahamunisarvesh738/MCX_GOLDINTEL",
+   "created": "2026-10-02",
+   "pushed": "2026-10-10T07:34:02Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://mcx-gold-intel.onrender.com/",
+   "description": "commodity-derivatives-intelligence",
+   "readme_sha": "fadfdccfde1e",
+   "readme_len": 11752
+  },
+  "rahulkumar1311/AurumIQ": {
+   "full_name": "rahulkumar1311/AurumIQ",
+   "created": "2026-10-04",
+   "pushed": "2026-10-04T18:37:30Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://aurum-iq.vercel.app",
+   "description": "",
+   "readme_sha": "61f8d7d71a73",
+   "readme_len": 22015
+  },
+  "PALLAK-DEVI/commodity-derivatives-intelligence": {
+   "full_name": "PALLAK-DEVI/commodity-derivatives-intelligence",
+   "created": "2026-10-06",
+   "pushed": "2026-10-08T17:33:33Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "2df7944397ab",
+   "readme_len": 4616
+  },
+  "pyharshcodes/Hack_In_Hills": {
+   "full_name": "pyharshcodes/Hack_In_Hills",
+   "created": "2026-10-20",
+   "pushed": "2026-10-21T04:13:04Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://hackinhills-ten.vercel.app",
+   "description": "",
+   "readme_sha": "4ca307ff4f2c",
+   "readme_len": 8618
+  },
+  "aritradutta7858-netizen/AurumIQ": {
+   "full_name": "aritradutta7858-netizen/AurumIQ",
+   "created": "2026-10-04",
+   "pushed": "2026-10-04T05:11:34Z",
+   "stars": 0,
+   "branch": "master",
+   "homepage": "",
+   "description": "AurumIQ \u2014 Commodity Derivatives Intelligence & Spread Arbitrage (MCX Gold Futures)",
+   "readme_sha": "1cf70a91d30f",
+   "readme_len": 4060
+  },
+  "krishsingh-ai/cdi-terminal": {
+   "full_name": "krishsingh-ai/cdi-terminal",
+   "created": "2026-10-03",
+   "pushed": "2026-10-06T07:42:22Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://cdi-terminal.vercel.app",
+   "description": "AuX \u2014 Institutional Commodity Derivatives Intelligence Terminal.  A React + TypeScript + Vite frontend for MCX Gold futures analytics featuring  pairwise spread intelligence, walk-forward backtesting,",
+   "readme_sha": "56b09c917bff",
+   "readme_len": 4584
+  },
+  "jiyanmansuri/HackInHills": {
+   "full_name": "jiyanmansuri/HackInHills",
+   "created": "2026-10-04",
+   "pushed": "2026-10-13T15:05:57Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "a34671441bf1",
+   "readme_len": 10012
+  },
+  "sunilgupta046/MCX-Gold-RVA": {
+   "full_name": "sunilgupta046/MCX-Gold-RVA",
+   "created": "2026-10-22",
+   "pushed": "2026-10-22T17:46:15Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Gold analysis",
+   "readme_sha": "6f0a7794bda1",
+   "readme_len": 20166,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Initial commit"
+    }
+   ]
+  },
+  "Mohit-Tanwar25/Hack-in-Hills-Hackathon": {
+   "full_name": "Mohit-Tanwar25/Hack-in-Hills-Hackathon",
+   "created": "2026-10-20",
+   "pushed": "2026-10-21T10:03:13Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Akshita,Mohit,Devesh",
+   "readme_sha": "356dd717498e",
+   "readme_len": 15198
+  },
+  "vds18/GoldLens": {
+   "full_name": "vds18/GoldLens",
+   "created": "2026-10-21",
+   "pushed": "2026-10-22T19:39:36Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "MCX Gold Futures Market Intelligence and Research Dashboard",
+   "readme_sha": "961268dc0cae",
+   "readme_len": 5178,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Improve GoldLens project documentation"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Finalize GoldLens research dashboard"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "Backup before GoldLens UI upgrade"
+    }
+   ]
+  },
+  "SujalRathore18/GoldLens": {
+   "full_name": "SujalRathore18/GoldLens",
+   "created": "2026-10-10",
+   "pushed": "2026-10-22T19:05:30Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Goldlens converts MCX gold futures to rupees per gram of fine gold, matches them by expiry, charges every real cost, and tests the idea with a no-lookahead walk-forward backtest. Most gaps turn out to",
+   "readme_sha": "346657cb40c1",
+   "readme_len": 2578,
+   "commits": [
+    {
+     "date": "2026-10-22",
+     "msg": "Build GoldLens financial analysis prototype"
+    },
+    {
+     "date": "2026-10-22",
+     "msg": "first commit"
+    }
+   ]
+  },
+  "shivammaurya2903/MCX-Gold": {
+   "full_name": "shivammaurya2903/MCX-Gold",
+   "created": "2026-10-10",
+   "pushed": "2026-10-10T05:29:51Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "4be0235b12c9",
+   "readme_len": 9076
+  },
+  "Abhimanyu1712/Aureon": {
+   "full_name": "Abhimanyu1712/Aureon",
+   "created": "2026-10-07",
+   "pushed": "2026-10-07T15:46:14Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://aureon-livid.vercel.app",
+   "description": "Commodity Derivatives Intelligence using MCX futures data, relative-value analytics, and backtesting.",
+   "readme_sha": "27fd9ead0a05",
+   "readme_len": 6556
+  },
+  "samuelmichaelalva/frostbite": {
+   "full_name": "samuelmichaelalva/frostbite",
+   "created": "2026-10-10",
+   "pushed": "2026-10-15T18:40:22Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://frostbite-taupe.vercel.app",
+   "description": "A research-driven commodity derivatives intelligence system for detecting relative mispricing in MCX gold futures and evaluating trading strategies through cost-aware backtesting.",
+   "readme_sha": "cf524643f51d",
+   "readme_len": 2398
+  },
+  "shreaysvy/Aurum-Synthesis": {
+   "full_name": "shreaysvy/Aurum-Synthesis",
+   "created": "2026-10-13",
+   "pushed": "2026-10-14T14:22:06Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://aurum-synthesis.vercel.app",
+   "description": "A quantitative data product analyzing cross-contract relative value in MCX gold futures. It features zero look-ahead walk-forward backtesting, real-time Z-score spread convergence modeling, transactio",
+   "readme_sha": "e3b0c44298fc",
+   "readme_len": 0
+  },
+  "himanshugit786/MCX-quantitative-arbitrage-": {
+   "full_name": "himanshugit786/MCX-quantitative-arbitrage-",
+   "created": "2026-10-14",
+   "pushed": "2026-10-16T16:44:18Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "MCX pe gold ke 4 futures contracts hain: GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL. Sab ka underlying same hai (gold), bas size aur quotation alag hai. Isliye normalize karne ke baad inke prices lagbhag s",
+   "readme_sha": "0d03158c7781",
+   "readme_len": 751
+  },
+  "Burhanmalu/Goldlens": {
+   "full_name": "Burhanmalu/Goldlens",
+   "created": "2026-10-06",
+   "pushed": "2026-10-16T07:51:02Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "https://goldlens.vercel.app",
+   "description": "AI-powered market intelligence platform for normalizing MCX gold contracts, detecting cross-contract relative-value opportunities, and validating trading signals through cost-aware backtesting and wal",
+   "readme_sha": "60b55ff7df79",
+   "readme_len": 1450
+  },
+  "japesh3737/AurumLens": {
+   "full_name": "japesh3737/AurumLens",
+   "created": "2026-09-20",
+   "pushed": "2026-09-20T20:24:11Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "AurumLens is an MCX gold futures analytics platform that normalizes contracts, analyzes relative pricing, detects meaningful anomalies, and validates signals using liquidity, expiry, transaction costs",
+   "readme_sha": "2847d4c393b3",
+   "readme_len": 1906
+  },
+  "gfiinnovators/aureus-rv-3.0": {
+   "full_name": "gfiinnovators/aureus-rv-3.0",
+   "created": "2026-10-21",
+   "pushed": "2026-10-21T13:52:45Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Lifecycle-aware MCX Gold relative-value research instrument with contract normalization, expiry-aware pairing, transaction-cost analysis, and evidence-based decision gates.",
+   "readme_sha": "e3b0c44298fc",
+   "readme_len": 0
+  },
+  "sharayubhokare2396-tech/commodity-derivatives-intelligence": {
+   "full_name": "sharayubhokare2396-tech/commodity-derivatives-intelligence",
+   "created": "2026-10-15",
+   "pushed": "2026-10-20T13:20:50Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "",
+   "readme_sha": "e3b0c44298fc",
+   "readme_len": 0
+  },
+  "gayathrisnair2006/Nexora_gold_contract": {
+   "full_name": "gayathrisnair2006/Nexora_gold_contract",
+   "created": "2026-10-18",
+   "pushed": "2026-10-18T15:13:05Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "compare MCX gold contracts ,detect unusual price differences,apply liquidity and expiry filters,and validate signals through cost aware walk forward backtesting.",
+   "readme_sha": "73f1beeea42a",
+   "readme_len": 185
+  },
+  "arnavkotnala/-hack-in-hills-goldie": {
+   "full_name": "arnavkotnala/-hack-in-hills-goldie",
+   "created": "2026-10-22",
+   "pushed": "2026-10-22T13:50:03Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "A web-based platform to compare MCX gold contracts (GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL) on a like-for-like basis. Detect potential mispricing, assess liquidity, account for fees and slippage, separ",
+   "readme_sha": "e3b0c44298fc",
+   "readme_len": 0,
+   "commits": []
+  },
+  "sm8935983-ai/mcx-commodity-derivatives-intelligence": {
+   "full_name": "sm8935983-ai/mcx-commodity-derivatives-intelligence",
+   "created": "2026-10-05",
+   "pushed": "2026-10-05T16:02:56Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "MCX India commodity futures analytics platform with statistical signal generation, price normalization, and walk-forward backtesting",
+   "readme_sha": "1f871307ae1c",
+   "readme_len": 1496
+  },
+  "sm8935983-ai/GoldQuant": {
+   "full_name": "sm8935983-ai/GoldQuant",
+   "created": "2026-10-05",
+   "pushed": "2026-10-05T16:12:46Z",
+   "stars": 0,
+   "branch": "main",
+   "homepage": "",
+   "description": "Quantitative intelligence platform for analyzing MCX gold futures contracts, relative pricing, term structure, and backtested trading signals.",
+   "readme_sha": "789919cb7f56",
+   "readme_len": 155
+  }
+ },
+ "new": {}
+}
