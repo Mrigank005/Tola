@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tola Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  /* 60% blacks */
+  --canvas: #0B0E11; --surface: #1E2329; --surface-raised: #2B3139;
+  --hairline: #2B3139; --hairline-strong: #3E4651; --control-border: #707A8A;
+  --scrim: rgba(8, 10, 12, 0.72);
+  /* 30% ink */
+  --ink: #EAECEF; --body: #B7BDC6; --muted: #848E9C; --faint: #6A7383;
+  --on-accent: #0B0E11; --on-ink: #0B0E11;
+  /* 10% yellow */
+  --accent: #FCD535; --accent-hover: #FFE15A; --accent-pressed: #F0B90B;
+  --accent-wash: rgba(252, 213, 53, 0.12);
+  /* status */
+  --positive: #0ECB81; --caution: #F0884A; --negative: #FF5A4D; --info: #5B9DF5;
+  /* data viz */
+  --series-1: #3987E5; --series-2: #DB3B3B; --series-3: #199E70; --series-4: #9085E9;
+  --div-c3: #8DB8F0; --div-c2: #3987E5; --div-c1: #2B5C99; --div-mid: #343B45;
+  --div-r1: #9E3030; --div-r2: #DB3B3B; --div-r3: #F5887E;
+  --seq-1: #184F95; --seq-2: #256ABF; --seq-3: #3987E5; --seq-4: #6DA7EC; --seq-5: #9EC5F4;
+
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r-xs: 4px; --r-sm: 6px; --r-md: 8px; --r-lg: 12px;
+  --ring: 0 0 0 2px var(--canvas), 0 0 0 4px var(--accent);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--canvas); color: var(--body); font: 400 16px/1.6 var(--sans); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible { outline: none; box-shadow: var(--ring); border-radius: var(--r-sm); }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.num { font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--mono); }
+
+/* top nav */
+.nav { position: sticky; top: 0; z-index: 10; height: 56px; background: var(--surface); border-bottom: 1px solid var(--hairline); }
+.nav .wrap { height: 100%; display: flex; align-items: center; gap: 32px; }
+.brand { color: var(--ink); font-weight: 700; font-size: 18px; letter-spacing: -0.3px; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.brand-mark { width: 18px; height: 18px; border-radius: 4px; background: var(--ink); position: relative; }
+.brand-mark::after { content: ""; position: absolute; inset: 5px; border-radius: 2px; background: var(--canvas); }
+.tabs { display: flex; gap: 4px; height: 100%; overflow-x: auto; scrollbar-width: none; }
+.tab { display: flex; align-items: center; padding: 0 12px; height: 100%; color: var(--muted); font-size: 14px; font-weight: 500; text-decoration: none; border-bottom: 2px solid transparent; white-space: nowrap; transition: color .12s ease-out; }
+.tab:hover { color: var(--body); }
+.tab[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 13px; }
+.icon-btn { position: relative; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.icon-btn:hover { background: var(--surface-raised); color: var(--ink); }
+.dot { position: absolute; top: 6px; right: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px var(--surface); }
+
+/* sections */
+header.hero { padding: 64px 0 32px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+h1, h2, h3, h4 { color: var(--ink); margin: 0; }
+h1 { font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -1.5px; max-width: 18ch; }
+h2 { font-size: 28px; font-weight: 700; line-height: 1.2; letter-spacing: -0.6px; }
+h3 { font-size: 18px; font-weight: 600; line-height: 1.4; }
+h4 { font-size: 15px; font-weight: 600; line-height: 1.4; }
+.lede { max-width: 64ch; margin: 16px 0 0; }
+section.block { padding: 48px 0; border-top: 1px solid var(--hairline); }
+.block-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 24px; }
+.block-head p { margin: 0; color: var(--muted); font-size: 14px; max-width: 70ch; }
+.grid { display: grid; gap: 24px; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.g-8-4 { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.g-5-7 { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.card { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-lg); padding: 24px; min-width: 0; }
+.caption { font-size: 13px; font-weight: 500; line-height: 1.4; color: var(--muted); }
+.label-up { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+.stack > * + * { margin-top: 12px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+
+/* 60-30-10 */
+.ratio { display: flex; height: 64px; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--hairline); }
+.ratio > div { display: flex; align-items: flex-end; padding: 10px 14px; font-size: 13px; font-weight: 600; }
+.ratio .r60 { flex: 60; background: linear-gradient(90deg, var(--canvas) 0 50%, var(--surface) 50% 85%, var(--hairline) 85%); color: var(--ink); }
+.ratio .r30 { flex: 30; background: var(--ink); color: var(--on-ink); }
+.ratio .r10 { flex: 10; background: var(--accent); color: var(--on-accent); }
+
+/* swatches */
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.sw { border: 1px solid var(--hairline); border-radius: var(--r-md); overflow: hidden; background: var(--surface); }
+.sw-chip { height: 72px; border-bottom: 1px solid var(--hairline); display: flex; align-items: flex-end; padding: 8px 10px; font-size: 13px; font-weight: 600; }
+.sw-meta { padding: 10px 12px; font-size: 12px; line-height: 1.5; color: var(--muted); }
+.sw-meta b { display: block; color: var(--ink); font-size: 13px; font-weight: 600; }
+.sw-meta code { font-family: var(--mono); color: var(--body); }
+.cr { font-variant-numeric: tabular-nums; }
+.cr .bad { color: var(--negative); }
+
+/* type scale */
+.type-row { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--hairline); }
+.type-row:last-child { border-bottom: 0; }
+.type-row .caption { font-family: var(--mono); font-size: 12px; }
+.t-dxl { font-size: 64px; font-weight: 700; line-height: 1.05; letter-spacing: -2px; color: var(--ink); }
+.t-dlg { font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -1.5px; color: var(--ink); }
+.t-dmd { font-size: 36px; font-weight: 700; line-height: 1.15; letter-spacing: -1px; color: var(--ink); }
+.t-dsm { font-size: 28px; font-weight: 700; line-height: 1.2; letter-spacing: -0.6px; color: var(--ink); }
+.t-tlg { font-size: 22px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; color: var(--ink); }
+.t-tmd { font-size: 18px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.t-tsm { font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.t-stat { font-size: 48px; font-weight: 700; line-height: 1; letter-spacing: -1.5px; color: var(--ink); }
+.t-body { font-size: 16px; line-height: 1.6; color: var(--body); }
+.t-bsm { font-size: 14px; line-height: 1.55; color: var(--body); }
+.t-data { font-size: 14px; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
+.t-code { font-family: var(--mono); font-size: 13px; color: var(--body); }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 20px; border-radius: var(--r-md); font: 600 14px/1 var(--sans); cursor: pointer; border: 1px solid transparent; transition: background-color .12s ease-out, color .12s ease-out; text-decoration: none; }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover, .btn-primary.is-hover { background: var(--accent-hover); }
+.btn-primary:active, .btn-primary.is-pressed { background: var(--accent-pressed); }
+.btn-secondary { background: var(--surface-raised); color: var(--ink); border-color: var(--hairline-strong); }
+.btn-secondary:hover, .btn-secondary.is-hover { background: #363D47; }
+.btn-ghost { background: transparent; color: var(--body); }
+.btn-ghost:hover, .btn-ghost.is-hover { background: var(--surface-raised); color: var(--ink); }
+.btn.is-focus { box-shadow: var(--ring); }
+.btn:disabled { background: var(--surface-raised); color: var(--faint); border-color: transparent; cursor: not-allowed; }
+.state-grid { display: grid; grid-template-columns: 110px repeat(5, minmax(0, auto)); gap: 12px 16px; align-items: center; justify-content: start; }
+.state-grid .caption { font-family: var(--mono); font-size: 12px; }
+
+/* forms */
+.field { display: grid; gap: 6px; min-width: 0; }
+.field > span:first-child { font-size: 13px; font-weight: 500; color: var(--body); }
+.input, .select { height: 40px; width: 100%; background: var(--canvas); border: 1px solid var(--control-border); border-radius: var(--r-md); color: var(--ink); font: 400 14px var(--sans); padding: 0 14px; font-variant-numeric: tabular-nums; }
+.input::placeholder { color: var(--muted); }
+.input:focus-visible, .select:focus-visible, .input.is-focus { border-color: var(--accent); box-shadow: var(--ring); outline: none; }
+.input.is-error { border-color: var(--negative); }
+.unit { position: relative; }
+.unit .input { text-align: right; padding-right: 52px; }
+.unit em { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-style: normal; font-size: 13px; color: var(--muted); pointer-events: none; }
+.select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23848E9C' stroke-width='1.8'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.err { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--body); }
+.err svg { color: var(--negative); flex: none; }
+.seg { display: inline-flex; background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 3px; gap: 2px; max-width: 100%; overflow-x: auto; }
+.seg button { height: 32px; padding: 0 14px; border: 0; border-radius: var(--r-sm); background: transparent; color: var(--muted); font: 500 13px var(--sans); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
+.seg button:hover { color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--surface-raised); color: var(--ink); border-bottom-color: var(--accent); }
+.toggle { display: flex; width: fit-content; align-items: center; gap: 10px; cursor: pointer; font-size: 14px; color: var(--body); }
+.toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.toggle .track { width: 36px; height: 20px; border-radius: 999px; background: var(--surface-raised); border: 1px solid var(--control-border); position: relative; transition: background-color .12s; }
+.toggle .track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--muted); transition: transform .12s ease-out, background-color .12s; }
+.toggle input:checked + .track { background: var(--accent); border-color: var(--accent); }
+.toggle input:checked + .track::after { transform: translateX(16px); background: var(--canvas); }
+.toggle input:focus-visible + .track { box-shadow: var(--ring); }
+.check { display: flex; width: fit-content; align-items: center; gap: 10px; font-size: 14px; color: var(--body); cursor: pointer; }
+.check input { appearance: none; width: 16px; height: 16px; margin: 0; border: 1px solid var(--control-border); border-radius: var(--r-xs); background: var(--canvas); display: grid; place-items: center; cursor: pointer; }
+.check input:checked { background: var(--accent); border-color: var(--accent); }
+.check input:checked::after { content: ""; width: 8px; height: 4px; border: 2px solid var(--on-accent); border-top: 0; border-right: 0; transform: rotate(-45deg) translate(1px, -1px); }
+.range { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 4px; background: linear-gradient(90deg, var(--accent) var(--p, 40%), var(--surface-raised) var(--p, 40%)); }
+.range::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--ink); border: 0; cursor: pointer; }
+.range::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--ink); border: 0; cursor: pointer; }
+.range:focus-visible { box-shadow: none; }
+.range:focus-visible::-webkit-slider-thumb { box-shadow: var(--ring); }
+
+/* tags & status */
+.tag { display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.tag-key { background: var(--ink); color: var(--on-ink); letter-spacing: .6px; }
+.tag-neutral { background: var(--surface-raised); color: var(--body); font-weight: 500; }
+.status { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px 0 8px; border-radius: 999px; font-size: 13px; font-weight: 500; color: var(--ink); }
+.status svg { flex: none; }
+.s-pos { background: rgba(14, 203, 129, .14); } .s-pos svg { color: var(--positive); }
+.s-cau { background: rgba(240, 136, 72, .14); } .s-cau svg { color: var(--caution); }
+.s-neg { background: rgba(255, 90, 77, .14); } .s-neg svg { color: var(--negative); }
+.s-inf { background: rgba(127, 174, 224, .14); } .s-inf svg { color: var(--info); }
+.chip { display: inline-flex; align-items: center; gap: 8px; font: 500 13px var(--mono); color: var(--ink); }
+.chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex: none; }
+
+/* stats */
+.tile { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 18px 20px; min-width: 0; }
+.tile.raised { background: var(--surface-raised); border-color: transparent; }
+.tile .v { font-size: 28px; font-weight: 700; letter-spacing: -0.6px; color: var(--ink); line-height: 1.1; margin: 8px 0 6px; font-variant-numeric: tabular-nums; }
+.tile .v small { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0; margin-left: 4px; }
+.headline-stat .n { font-size: 48px; font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--ink); }
+
+/* chart */
+.chart-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.chart-head p { margin: 4px 0 0; font-size: 14px; color: var(--body); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--body); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 2px; border-radius: 2px; display: inline-block; }
+.plot { position: relative; }
+.plot svg { display: block; width: 100%; height: auto; overflow: visible; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: var(--r-sm); box-shadow: 0 16px 48px rgba(0,0,0,.5); padding: 8px 12px; font-size: 13px; color: var(--body); min-width: 168px; opacity: 0; transition: opacity .2s; }
+.tip b { color: var(--ink); font-weight: 600; display: block; margin-bottom: 4px; }
+.tip div { display: flex; align-items: center; gap: 8px; justify-content: space-between; font-variant-numeric: tabular-nums; }
+.tip div span { display: inline-flex; align-items: center; gap: 6px; }
+.tip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.tip em { font-style: normal; color: var(--ink); }
+
+/* ramps */
+.ramp { display: flex; border-radius: var(--r-md); overflow: hidden; height: 40px; gap: 2px; background: var(--surface); }
+.ramp > div { flex: 1; }
+.ramp-labels { display: flex; justify-content: space-between; margin-top: 6px; }
+.heat { display: grid; grid-template-columns: 110px repeat(18, minmax(0, 1fr)); gap: 2px; align-items: center; }
+.heat .cell { height: 26px; border-radius: 3px; }
+.heat .rl { font: 500 12px var(--mono); color: var(--ink); }
+
+/* table */
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+thead th { position: sticky; top: 0; text-align: left; font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); padding: 12px 16px; border-bottom: 1px solid var(--hairline); background: var(--surface); white-space: nowrap; }
+thead th.sorted { color: var(--ink); }
+tbody td { padding: 0 16px; height: 40px; border-bottom: 1px solid var(--hairline); color: var(--body); white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: var(--surface-raised); }
+tbody tr.sel td { background: var(--accent-wash); }
+tbody tr.sel td:first-child { box-shadow: inset 2px 0 0 var(--accent); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+td.n { color: var(--ink); font-weight: 500; }
+td .dim { color: var(--muted); font-weight: 400; margin-left: 6px; }
+td .na { color: var(--faint); }
+
+/* alerts */
+.alert { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--hairline); position: relative; }
+.alert:last-child { border-bottom: 0; }
+.alert svg { margin-top: 2px; }
+.alert .t { color: var(--ink); font-weight: 600; font-size: 14px; }
+.alert .d { grid-column: 2 / 4; font-size: 14px; color: var(--body); }
+.alert time { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.alert .unread { position: absolute; left: -14px; top: 21px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+/* calendar */
+.cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; text-align: center; }
+.cal .h { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: var(--muted); padding: 6px 0; }
+.cal .d { position: relative; height: 40px; display: grid; place-items: center; border-radius: var(--r-sm); font-size: 14px; font-weight: 500; color: var(--body); font-variant-numeric: tabular-nums; }
+.cal .d.off { color: var(--faint); }
+.cal .d.tender { background: rgba(240, 136, 72, .14); color: var(--ink); }
+.cal .d.expiry { box-shadow: inset 0 0 0 1px var(--ink); color: var(--ink); font-weight: 700; }
+.cal .d.today::after { content: ""; position: absolute; bottom: 5px; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+/* chooser */
+.result-row { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--hairline); font-size: 14px; }
+.result-row:last-child { border-bottom: 0; }
+.result-row span:last-child { color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; }
+.result-row.total { border-top: 1px solid var(--hairline-strong); border-bottom: 0; margin-top: 4px; padding-top: 14px; }
+.result-row.total span { color: var(--ink); font-weight: 700; font-size: 16px; }
+.pick { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.pick .big { font-size: 28px; font-weight: 700; letter-spacing: -0.6px; color: var(--ink); font-family: var(--mono); }
+
+/* code, callout, misc */
+pre { margin: 0; background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 16px; overflow-x: auto; font: 400 13px/1.6 var(--mono); color: var(--body); }
+.k { color: #8DB8F0; } .s { color: #9AD1B5; } .nn { color: var(--ink); } .c { color: var(--faint); }
+.callout { background: var(--surface); border: 1px solid var(--hairline); border-left: 3px solid var(--accent); border-radius: var(--r-lg); padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+.skel { background: var(--surface-raised); border-radius: var(--r-sm); height: 12px; }
+.modal-demo { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--hairline); min-height: 260px; background: var(--canvas); display: grid; place-items: center; padding: 24px; }
+.modal-demo::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, var(--surface) 0 18px, var(--canvas) 18px 30px); opacity: .7; }
+.modal-demo::after { content: ""; position: absolute; inset: 0; background: var(--scrim); }
+.modal { position: relative; z-index: 1; width: min(420px, 100%); background: var(--surface); border: 1px solid var(--hairline-strong); border-radius: var(--r-lg); box-shadow: 0 16px 48px rgba(0,0,0,.5); padding: 24px; }
+.dont { border: 1px dashed var(--hairline-strong); border-radius: var(--r-md); padding: 16px; }
+.dont .x { font-size: 12px; font-weight: 600; color: var(--negative); letter-spacing: 1px; }
+.do .x { font-size: 12px; font-weight: 600; color: var(--positive); letter-spacing: 1px; }
+footer { border-top: 1px solid var(--hairline); padding: 32px 0 48px; margin-top: 48px; font-size: 14px; color: var(--muted); }
+
+@media (max-width: 1024px) {
+  .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .g3, .g-8-4, .g-5-7 { grid-template-columns: minmax(0, 1fr); }
+  .nav-right .asof { display: none; }
+}
+@media (max-width: 767px) {
+  .wrap { padding: 0 16px; }
+  h1 { font-size: 32px; letter-spacing: -1px; }
+  .t-dxl { font-size: 40px; } .t-dlg { font-size: 32px; } .t-dmd { font-size: 28px; } .t-stat, .headline-stat .n { font-size: 36px; }
+  .g2 { grid-template-columns: minmax(0, 1fr); }
+  .type-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .state-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .state-grid .caption:first-child { grid-column: 1 / -1; }
+  .heat { grid-template-columns: 84px repeat(18, minmax(0, 1fr)); }
+  .callout { padding: 24px; }
+  .nav .wrap { gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ok" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 8.2l2 2 4-4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 16 16"><path d="M8 1.8l6.5 11.6H1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 6.3v3.4M8 11.6v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-err" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.7 5.7l4.6 4.6M10.3 5.7l-4.6 4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-info" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.3v3.9M8 4.8v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 20 20"><path d="M10 3a4.5 4.5 0 00-4.5 4.5v3L4 13.5h12L14.5 10.5v-3A4.5 4.5 0 0010 3zM8.3 16a1.8 1.8 0 003.4 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>Tola</a>
+    <div class="tabs">
+      <a class="tab" href="#top" aria-current="page">Overview</a>
+      <a class="tab" href="#colors">Basis</a>
+      <a class="tab" href="#charts">Convergence</a>
+      <a class="tab" href="#data">Verdict</a>
+      <a class="tab" href="#chooser">Chooser</a>
+      <a class="tab" href="#calendar">Calendar</a>
+      <a class="tab" href="#type">Method</a>
+    </div>
+    <div class="nav-right">
+      <span class="asof caption">Data as of 22 Oct 2026</span>
+      <button class="icon-btn" aria-label="Alerts, 2 unread"><svg width="20" height="20"><use href="#i-bell"/></svg><span class="dot"></span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Design system · v1 · 23 Oct 2026</p>
+    <h1>One gram of gold, five prices.</h1>
+    <p class="lede">This page renders every token and component in <code class="mono">Design.md</code> so you can check them by eye. Contrast ratios below are computed live from the CSS variables. Chart values are <strong style="color:var(--ink)">illustrative</strong>, not results.</p>
+    <div class="row" style="margin-top:24px">
+      <a class="btn btn-primary" href="#chooser">Open the chooser</a>
+      <a class="btn btn-secondary" href="#charts">See the charts</a>
+      <span class="tag tag-key">PRE-REGISTERED</span>
+    </div>
+  </header>
+
+  <!-- 60 30 10 -->
+  <section class="block" id="ratio">
+    <div class="block-head"><h2>60 · 30 · 10</h2><p>Blacks dominate, ink carries the words, yellow marks what you can act on.</p></div>
+    <div class="ratio" role="img" aria-label="60 percent blacks, 30 percent ink, 10 percent yellow">
+      <div class="r60">60% blacks</div><div class="r30">30% ink</div><div class="r10">10%</div>
+    </div>
+  </section>
+
+  <!-- colors -->
+  <section class="block" id="colors">
+    <div class="block-head"><h2>Color tokens</h2><p>Each card shows the token, hex and contrast against canvas / surface. Text tokens must clear 4.5:1 (faint is exempt: disabled only).</p></div>
+    <h3 style="margin-bottom:12px">Surfaces (60%)</h3>
+    <div class="swatches" data-group="surfaces"></div>
+    <h3 style="margin:32px 0 12px">Text (30%)</h3>
+    <div class="swatches" data-group="text"></div>
+    <h3 style="margin:32px 0 12px">Accent (10%)</h3>
+    <div class="swatches" data-group="accent"></div>
+    <h3 style="margin:32px 0 12px">Status</h3>
+    <div class="swatches" data-group="status"></div>
+    <h3 style="margin:32px 0 12px">Chart series (fixed per contract)</h3>
+    <div class="swatches" data-group="series"></div>
+  </section>
+
+  <!-- type -->
+  <section class="block" id="type">
+    <div class="block-head"><h2>Typography</h2><p>Inter 700/600/500/400, tabular figures for numbers, JetBrains Mono for code and symbols.</p></div>
+    <div class="card" style="padding:8px 24px">
+      <div class="type-row"><span class="caption">display-xl 64/700</span><span class="t-dxl">Fair price</span></div>
+      <div class="type-row"><span class="caption">display-lg 48/700</span><span class="t-dlg">Small contracts trade rich</span></div>
+      <div class="type-row"><span class="caption">display-md 36/700</span><span class="t-dmd">Who pays the premium</span></div>
+      <div class="type-row"><span class="caption">display-sm 28/700</span><span class="t-dsm">Hold GOLDTEN, exit before tender</span></div>
+      <div class="type-row"><span class="caption">title-lg 22/700</span><span class="t-tlg">Basis anatomy</span></div>
+      <div class="type-row"><span class="caption">title-md 18/600</span><span class="t-tmd">Same-reference convergence</span></div>
+      <div class="type-row"><span class="caption">title-sm 15/600</span><span class="t-tsm">Premium over GOLDTEN, per gram</span></div>
+      <div class="type-row"><span class="caption">stat-display 48/700</span><span class="t-stat num">+94 bp</span></div>
+      <div class="type-row"><span class="caption">body-md 16/400</span><span class="t-body">After normalising for unit and purity, a gram of gold should cost about the same in each contract. It doesn't, and the gap persists until final settlement.</span></div>
+      <div class="type-row"><span class="caption">body-sm 14/400</span><span class="t-bsm">Brokerage is the lower of 0.03% or ₹20 per order, so small single-lot orders cost about 3 bp each.</span></div>
+      <div class="type-row"><span class="caption">data 14/500 tabular</span><span class="t-data">₹1,48,206 · ₹14,820.6/g · +79 bp [61, 97] · ₹10.3 Cr</span></div>
+      <div class="type-row"><span class="caption">caption 13/500</span><span class="caption">Source: MCX bhavcopy and polled spot · as of 22 Oct 2026, 23:30 IST</span></div>
+      <div class="type-row"><span class="caption">caption-upper 12/600</span><span class="label-up">Premium over GOLDTEN</span></div>
+      <div class="type-row"><span class="caption">code 13 mono</span><span class="t-code">GOLDPETAL 30NOV2026 · vwap = value × 1e5 ÷ (volume × lot_g)</span></div>
+    </div>
+  </section>
+
+  <!-- buttons -->
+  <section class="block" id="buttons">
+    <div class="block-head"><h2>Buttons &amp; states</h2><p>Hover and press states are forced with classes here so you can see them side by side. Tab through the page to see real focus rings.</p></div>
+    <div class="card">
+      <div class="state-grid">
+        <span class="caption"></span><span class="caption">default</span><span class="caption">hover</span><span class="caption">pressed</span><span class="caption">focus</span><span class="caption">disabled</span>
+        <span class="caption">primary</span>
+        <button class="btn btn-primary">Run chooser</button><button class="btn btn-primary is-hover">Run chooser</button><button class="btn btn-primary is-pressed">Run chooser</button><button class="btn btn-primary is-focus">Run chooser</button><button class="btn btn-primary" disabled>Run chooser</button>
+        <span class="caption">secondary</span>
+        <button class="btn btn-secondary">Export CSV</button><button class="btn btn-secondary is-hover">Export CSV</button><button class="btn btn-secondary">Export CSV</button><button class="btn btn-secondary is-focus">Export CSV</button><button class="btn btn-secondary" disabled>Export CSV</button>
+        <span class="caption">ghost</span>
+        <button class="btn btn-ghost">View table</button><button class="btn btn-ghost is-hover">View table</button><button class="btn btn-ghost">View table</button><button class="btn btn-ghost is-focus">View table</button><button class="btn btn-ghost" disabled>View table</button>
+      </div>
+      <p class="t-bsm" style="margin:24px 0 0">Inline link: the premium is explained in the <a href="#type">method notes</a>. Yellow text stays a short span.</p>
+    </div>
+  </section>
+
+  <!-- forms -->
+  <section class="block" id="forms">
+    <div class="block-head"><h2>Inputs &amp; controls</h2><p>Control borders use <code class="mono">control-border</code> (#707A8A) to clear 3:1. Selection is shown with yellow, text stays ink.</p></div>
+    <div class="grid g3">
+      <div class="card stack">
+        <label class="field"><span>Search contracts</span><input class="input" placeholder="e.g. GOLDPETAL Nov 2026"></label>
+        <label class="field"><span>Focused</span><input class="input is-focus" value="GOLDGUINEA"></label>
+        <label class="field"><span>Quantity</span><span class="unit"><input class="input is-error" value="0"><em>g</em></span></label>
+        <div class="err"><svg width="16" height="16"><use href="#i-err"/></svg>Enter at least 1 gram.</div>
+      </div>
+      <div class="card stack">
+        <label class="field"><span>Broker preset</span><select class="select"><option>Zerodha rates (0.03% or ₹20)</option><option>Custom</option></select></label>
+        <div class="field"><span>Mark</span>
+          <div class="seg" role="group" aria-label="Price mark">
+            <button aria-pressed="true">VWAP</button><button aria-pressed="false">Close</button><button aria-pressed="false">Open</button><button aria-pressed="false">(H+L)/2</button>
+          </div>
+        </div>
+        <label class="toggle"><input type="checkbox" checked><span class="track"></span>Take delivery</label>
+        <label class="toggle"><input type="checkbox"><span class="track"></span>Exclude Jan 2026 crash</label>
+      </div>
+      <div class="card stack">
+        <label class="field"><span>Holding period</span>
+          <input class="range" type="range" min="1" max="60" value="24" id="hold" style="--p:39%">
+        </label>
+        <div class="row" style="justify-content:space-between"><span class="caption">1 day</span><span class="t-data" id="holdv">24 days</span><span class="caption">60 days</span></div>
+        <label class="check"><input type="checkbox" checked> GOLDGUINEA</label>
+        <label class="check"><input type="checkbox" checked> GOLDPETAL</label>
+        <label class="check"><input type="checkbox"> GOLDM (control)</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- tags -->
+  <section class="block" id="tags">
+    <div class="block-head"><h2>Tags, chips &amp; status</h2><p>Status always has an icon and a label. Contract identity is a series-colored dot plus the symbol in ink.</p></div>
+    <div class="card stack">
+      <div class="row"><span class="tag tag-key">18/18 CYCLES</span><span class="tag tag-neutral">VWAP</span><span class="tag tag-neutral">Cycle bootstrap</span><span class="tag tag-neutral">Apr 2025 – Sep 2026</span></div>
+      <div class="row">
+        <span class="status s-pos"><svg width="16" height="16"><use href="#i-ok"/></svg>Settlement check passed</span>
+        <span class="status s-cau"><svg width="16" height="16"><use href="#i-warn"/></svg>Inside tender window</span>
+        <span class="status s-neg"><svg width="16" height="16"><use href="#i-err"/></svg>Fetch failed</span>
+        <span class="status s-inf"><svg width="16" height="16"><use href="#i-info"/></svg>Spec changed Dec 2024</span>
+      </div>
+      <div class="row">
+        <span class="chip"><i style="background:var(--series-1)"></i>GOLDTEN</span>
+        <span class="chip"><i style="background:var(--series-2)"></i>GOLDGUINEA</span>
+        <span class="chip"><i style="background:var(--series-3)"></i>GOLDPETAL</span>
+        <span class="chip"><i style="background:var(--series-4)"></i>GOLDM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- stats -->
+  <section class="block" id="stats">
+    <div class="block-head"><h2>Stats</h2><p>Numbers are ink, never yellow. Every number has context: a CI, a date or a source.</p></div>
+    <div class="grid g-8-4">
+      <div class="card">
+        <div class="grid g4" style="gap:12px">
+          <div class="tile raised"><div class="label-up">GOLDGUINEA</div><div class="v">+79<small>bp</small></div><div class="caption num">95% CI [61, 97]</div></div>
+          <div class="tile raised"><div class="label-up">GOLDPETAL</div><div class="v">+94<small>bp</small></div><div class="caption num">95% CI [80, 109]</div></div>
+          <div class="tile raised"><div class="label-up">Exit cost</div><div class="v">6–11<small>bp</small></div><div class="caption">Change in premium</div></div>
+          <div class="tile raised"><div class="label-up">At risk</div><div class="v">₹10.3<small>Cr</small></div><div class="caption">Last 12 cycles</div></div>
+        </div>
+      </div>
+      <div class="card headline-stat">
+        <div class="label-up">Delivery vs retail coin</div>
+        <div class="n num" style="margin:10px 0">−₹610<span style="font-size:20px;color:var(--muted);letter-spacing:0">/g</span></div>
+        <p class="t-bsm" style="margin:0 0 8px">GOLDPETAL delivery is cheaper than a retail 1 g coin, even after the premium, making charge and GST.</p>
+        <span class="status s-pos"><svg width="16" height="16"><use href="#i-ok"/></svg>Cheaper</span>
+        <p class="caption" style="margin:12px 0 0">Prices as of 13 Oct 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- charts -->
+  <section class="block" id="charts">
+    <div class="block-head"><h2>Charts</h2><p>Illustrative data. Hover the plot for the crosshair tooltip. Legend always present; direct labels at the line ends.</p></div>
+    <div class="grid g-8-4">
+      <div class="card">
+        <div class="chart-head">
+          <div><h4>Premium over GOLDTEN, per gram</h4><p>Both small contracts trade rich in every cycle.</p></div>
+          <div class="seg" role="group" aria-label="Chart view"><button aria-pressed="true" data-view="chart">Chart</button><button aria-pressed="false" data-view="table">Table</button></div>
+        </div>
+        <div class="legend"><span><i style="background:var(--series-2)"></i>GOLDGUINEA</span><span><i style="background:var(--series-3)"></i>GOLDPETAL</span><span><i style="background:var(--hairline-strong);height:0;border-top:1px dashed var(--muted)"></i>GOLDTEN parity</span></div>
+        <div class="plot" id="plot" role="img" aria-label="Line chart: GOLDGUINEA and GOLDPETAL premium over GOLDTEN across 18 cycles, both positive throughout, illustrative data"></div>
+        <div id="plot-table" hidden></div>
+        <p class="caption" style="margin:12px 0 0">Illustrative data for design review · Source line goes here</p>
+      </div>
+      <div class="card stack">
+        <h4>Bar: premium by mark</h4>
+        <p class="t-bsm" style="margin:4px 0 0">Survives all four marks.</p>
+        <div id="bars"></div>
+        <p class="caption">Illustrative data</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:24px">
+      <h4>Diverging: premium heatmap by cycle</h4>
+      <p class="t-bsm" style="margin:4px 0 16px">cheap ← parity → rich. Cool neutral midpoint, brighter = bigger.</p>
+      <div class="heat" id="heat"></div>
+      <div style="margin-top:20px; max-width:560px">
+        <div class="ramp" id="divramp"></div>
+        <div class="ramp-labels caption"><span>−150 bp cheap</span><span>parity</span><span>+150 bp rich</span></div>
+      </div>
+      <h4 style="margin-top:28px">Sequential: magnitude only</h4>
+      <div style="margin-top:12px; max-width:560px">
+        <div class="ramp" id="seqramp"></div>
+        <div class="ramp-labels caption"><span>low</span><span>high</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- table -->
+  <section class="block" id="data">
+    <div class="block-head"><h2>Data table</h2><p>Numbers right-aligned and tabular. Hover row = raised surface, selected row = yellow wash + yellow bar.</p></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Contract</th><th>Expiry</th><th class="n">₹ / g (999)</th><th class="n sorted">Premium ↓</th><th class="n">Turnover</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><span class="chip"><i style="background:var(--series-3)"></i>GOLDPETAL</span></td><td>30 Nov 2026</td><td class="n">₹14,961.4</td><td class="n">+94 bp<span class="dim">rich</span></td><td class="n">₹42.1 Cr</td><td><span class="status s-pos"><svg width="16" height="16"><use href="#i-ok"/></svg>Fresh</span></td></tr>
+          <tr class="sel"><td><span class="chip"><i style="background:var(--series-2)"></i>GOLDGUINEA</span></td><td>30 Nov 2026</td><td class="n">₹14,940.2</td><td class="n">+79 bp<span class="dim">rich</span></td><td class="n">₹8.6 Cr</td><td><span class="status s-cau"><svg width="16" height="16"><use href="#i-warn"/></svg>Thin</span></td></tr>
+          <tr><td><span class="chip"><i style="background:var(--series-1)"></i>GOLDTEN</span></td><td>30 Nov 2026</td><td class="n">₹14,823.1</td><td class="n">0 bp<span class="dim">ref</span></td><td class="n">₹61.0 Cr</td><td><span class="status s-pos"><svg width="16" height="16"><use href="#i-ok"/></svg>Fresh</span></td></tr>
+          <tr><td><span class="chip"><i style="background:var(--series-4)"></i>GOLDM</span></td><td>5 Dec 2026</td><td class="n">₹14,819.5</td><td class="n">−2.6 bp<span class="dim">cheap</span></td><td class="n"><span class="na">—</span></td><td><span class="status s-neg"><svg width="16" height="16"><use href="#i-err"/></svg>No trades</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption" style="margin:8px 0 0">Illustrative values · as of 22 Oct 2026</p>
+  </section>
+
+  <!-- chooser, alerts, calendar -->
+  <section class="block" id="chooser">
+    <div class="block-head"><h2>Chooser</h2><p>Inputs left, result right. The result is ink; the only yellow is the action and the selected controls.</p></div>
+    <div class="grid g-5-7">
+      <div class="card stack">
+        <label class="field"><span>Grams you want exposure to</span><span class="unit"><input class="input" value="100"><em>g</em></span></label>
+        <label class="field"><span>Holding period</span><span class="unit"><input class="input" value="24"><em>days</em></span></label>
+        <label class="toggle"><input type="checkbox"><span class="track"></span>Take delivery</label>
+        <label class="field"><span>Broker</span><select class="select"><option>Zerodha rates</option></select></label>
+        <button class="btn btn-primary" style="width:100%">Compare contracts</button>
+      </div>
+      <div class="card">
+        <div class="label-up">Cheapest for this trade</div>
+        <div class="pick" style="margin:8px 0 4px"><span class="big">GOLDTEN</span><span class="tag tag-key">10 LOTS</span></div>
+        <p class="t-bsm" style="margin:0 0 16px">Avoids the small-lot premium. Exit before the tender window on 25 Nov.</p>
+        <div class="result-row"><span>Premium paid (entry − exit change)</span><span>₹1,240</span></div>
+        <div class="result-row"><span>Brokerage, 20 orders</span><span>₹400</span></div>
+        <div class="result-row"><span>CTT, stamp, exchange, GST</span><span>₹236</span></div>
+        <div class="result-row total"><span>Total cost</span><span>₹1,876</span></div>
+        <p class="caption" style="margin:12px 0 0">Illustrative · vs GOLDPETAL ₹3,912 · GOLDGUINEA ₹3,140</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="calendar">
+    <div class="grid g3">
+      <div class="card">
+        <div class="row" style="justify-content:space-between;margin-bottom:8px"><h4>Alert log</h4><span class="caption">Quiet by default</span></div>
+        <div style="padding-left:14px">
+          <div class="alert"><span class="unread" aria-label="Unread"></span><svg width="16" height="16" style="color:var(--caution)"><use href="#i-warn"/></svg><span class="t">Premium regime shift</span><time>22 Oct, 23:30</time><span class="d">GOLDPETAL premium moved 31 bp in 3 sessions.</span></div>
+          <div class="alert"><span class="unread" aria-label="Unread"></span><svg width="16" height="16" style="color:var(--info)"><use href="#i-info"/></svg><span class="t">Tender window opens</span><time>21 Oct, 09:00</time><span class="d">Oct contracts enter the 3-day window on 27 Oct.</span></div>
+          <div class="alert"><svg width="16" height="16" style="color:var(--positive)"><use href="#i-ok"/></svg><span class="t">Data refreshed</span><time>20 Oct, 23:45</time><span class="d">4 contracts, 0 rejected rows.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row" style="justify-content:space-between;margin-bottom:8px"><h4>Contract calendar</h4><span class="caption">Oct 2026</span></div>
+        <div class="cal" id="cal"></div>
+        <div class="row" style="margin-top:12px;gap:16px">
+          <span class="caption"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;box-shadow:inset 0 0 0 1px var(--ink);vertical-align:-1px"></span> Expiry</span>
+          <span class="caption"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:rgba(240, 136, 72, .3);vertical-align:-1px"></span> Tender window</span>
+          <span class="caption"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);vertical-align:1px"></span> Today</span>
+        </div>
+      </div>
+      <div class="card stack">
+        <h4>States</h4>
+        <p class="caption" style="margin:0">Loading skeleton</p>
+        <div class="skel" style="width:60%"></div><div class="skel" style="width:90%"></div><div class="skel" style="width:75%;height:80px"></div>
+        <p class="caption" style="margin-top:16px">Stale data</p>
+        <span class="status s-cau"><svg width="16" height="16"><use href="#i-warn"/></svg>Last good data: 20 Oct 2026</span>
+        <p class="caption" style="margin-top:16px">Empty</p>
+        <div class="row"><span class="t-bsm" style="color:var(--muted)">No alerts this week.</span><button class="btn btn-ghost" style="height:32px;padding:0 12px">Alert settings</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- code, modal, callout -->
+  <section class="block" id="misc">
+    <div class="grid g2">
+      <div class="stack">
+        <h4>Code block</h4>
+<pre><span class="c"># VWAP per gram, MCX Value is in ₹ lakh</span>
+<span class="k">def</span> vwap_per_g(value, volume, lot_g):
+    <span class="k">return</span> value * <span class="nn">1e5</span> / (volume * lot_g)
+
+symbols = [<span class="s">"GOLDTEN"</span>, <span class="s">"GOLDGUINEA"</span>, <span class="s">"GOLDPETAL"</span>]</pre>
+      </div>
+      <div class="stack">
+        <h4>Modal (overlay level)</h4>
+        <div class="modal-demo">
+          <div class="modal">
+            <h3>Refresh data?</h3>
+            <p class="t-bsm" style="margin:8px 0 20px">Pulls the latest bhavcopy and polled spot from MCX. About 40 requests.</p>
+            <div class="row" style="justify-content:flex-end"><button class="btn btn-ghost">Cancel</button><button class="btn btn-primary">Refresh</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:24px">
+      <div><h2 style="font-size:24px">Which contract should you hold?</h2><p class="t-bsm" style="margin:6px 0 0">Callout band: surface + yellow left edge. Yellow never fills a large area.</p></div>
+      <a class="btn btn-primary" href="#chooser">Open the chooser</a>
+    </div>
+  </section>
+
+  <!-- do / don't -->
+  <section class="block" id="rules">
+    <div class="block-head"><h2>Do / Don't</h2></div>
+    <div class="grid g4">
+      <div class="dont do"><div class="x">DO</div><p class="t-stat num" style="font-size:32px;margin:8px 0 4px">+94 bp</p><p class="caption" style="margin:0">Stat numbers in ink</p></div>
+      <div class="dont"><div class="x">DON'T</div><p class="num" style="font-size:32px;font-weight:700;letter-spacing:-1px;color:var(--accent);margin:8px 0 4px">+94 bp</p><p class="caption" style="margin:0">Yellow numbers read as links</p></div>
+      <div class="dont"><div class="x">DON'T</div><p style="color:var(--accent);font-size:14px;margin:8px 0 4px">Yellow paragraph text reads as a link and competes with the actions on the page.</p><p class="caption" style="margin:0">No long yellow text</p></div>
+      <div class="dont"><div class="x">DON'T</div><div style="display:flex;gap:8px;margin:12px 0 8px"><span style="color:#ff4d4d;font-weight:700">+79 bp</span><span style="color:#3ad15a;font-weight:700">−2.6 bp</span></div><p class="caption" style="margin:0">Price direction is not a status</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row" style="justify-content:space-between">
+    <span>Tola · fair-price desk for MCX gold · Hack in Hills '26, PS03</span>
+    <span>Research prototype. Not investment advice.</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const css = getComputedStyle(document.documentElement);
+  const v = name => css.getPropertyValue(name).trim();
+
+  // contrast
+  const rgb = hex => { const h = hex.replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16) / 255); };
+  const lum = hex => rgb(hex).map(c => c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4).reduce((a, c, i) => a + c * [0.2126, 0.7152, 0.0722][i], 0);
+  const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+
+  const groups = {
+    surfaces: [['canvas', 'Canvas', 'Page floor, inputs'], ['surface', 'Surface', 'Cards, nav, modals'], ['surface-raised', 'Surface raised', 'Nested, hover'], ['hairline', 'Hairline', 'Borders, gridlines'], ['hairline-strong', 'Hairline strong', 'Axes, emphasis'], ['control-border', 'Control border', 'Input borders, ≥3:1', 3]],
+    text: [['ink', 'Ink', 'Headlines, stats, primary', 4.5], ['body', 'Body', 'Running text', 4.5], ['muted', 'Muted', 'Captions, labels', 4.5], ['faint', 'Faint', 'Disabled only']],
+    accent: [['accent', 'Accent', 'Actions only', 3], ['accent-hover', 'Accent hover', 'Button hover', 3], ['accent-pressed', 'Accent pressed', 'Button pressed', 3]],
+    status: [['positive', 'Positive', 'Passed, fresh', 3], ['caution', 'Caution', 'Stale, thin, tender', 3], ['negative', 'Negative', 'Failed, error', 3], ['info', 'Info', 'Notices', 3]],
+    series: [['series-1', 'Series 1 · GOLDTEN', 'Blue', 3], ['series-2', 'Series 2 · GOLDGUINEA', 'Red', 3], ['series-3', 'Series 3 · GOLDPETAL', 'Aqua', 3], ['series-4', 'Series 4 · GOLDM', 'Violet', 3]]
+  };
+  const canvas = v('--canvas'), surface = v('--surface');
+  for (const [g, items] of Object.entries(groups)) {
+    const box = document.querySelector(`[data-group="${g}"]`);
+    box.innerHTML = items.map(([tok, name, use, min]) => {
+      const hex = v('--' + tok).toUpperCase();
+      const isSurface = g === 'surfaces' && !min;
+      const onChip = lum(hex) > 0.18 ? canvas : v('--ink');
+      const c1 = ratio(hex, canvas), c2 = ratio(hex, surface);
+      const fmt = c => `<span class="${min && c < min ? 'bad' : ''}">${c.toFixed(2)}</span>`;
+      const crLine = isSurface ? `on ink ${ratio(v('--ink'), hex).toFixed(2)}` : `${fmt(c1)} canvas · ${fmt(c2)} surface`;
+      const extra = tok === 'accent' ? `<br>text on it ${ratio(v('--on-accent'), hex).toFixed(2)}` : '';
+      return `<div class="sw"><div class="sw-chip" style="background:${hex};color:${onChip}">${g === 'text' ? 'Aa' : ''}</div><div class="sw-meta"><b>${name}</b><code>--${tok}</code> · <code>${hex}</code><br>${use}<br><span class="cr">${crLine}${extra}</span></div></div>`;
+    }).join('');
+  }
+
+  // slider
+  const hold = document.getElementById('hold'), holdv = document.getElementById('holdv');
+  const syncHold = () => { hold.style.setProperty('--p', ((hold.value - hold.min) / (hold.max - hold.min) * 100) + '%'); holdv.textContent = hold.value + ' days'; };
+  hold.addEventListener('input', syncHold); syncHold();
+
+  // segmented controls
+  document.querySelectorAll('.seg').forEach(seg => seg.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    seg.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    if (b.dataset.view) {
+      document.getElementById('plot').hidden = b.dataset.view !== 'chart';
+      document.getElementById('plot-table').hidden = b.dataset.view !== 'table';
+    }
+  }));
+
+  // illustrative data: 18 cycles
+  const cycles = ['Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26','Jul 26','Aug 26','Sep 26'];
+  const guinea = [52, 48, 61, 44, 39, 57, 66, 71, 63, 58, 82, 118, 131, 125, 109, 88, 74, 69];
+  const petal  = [68, 61, 77, 59, 52, 70, 81, 90, 84, 79, 101, 136, 145, 139, 121, 104, 92, 86];
+  const series = [{ name: 'GOLDGUINEA', color: v('--series-2'), data: guinea }, { name: 'GOLDPETAL', color: v('--series-3'), data: petal }];
+
+  // line chart
+  const plot = document.getElementById('plot');
+  const W = 760, H = 300, m = { t: 12, r: 96, b: 28, l: 44 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b, yMax = 160;
+  const x = i => m.l + i * iw / (cycles.length - 1), y = val => m.t + ih - val / yMax * ih;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">`;
+  for (let t = 0; t <= yMax; t += 40) svg += `<line x1="${m.l}" x2="${m.l + iw}" y1="${y(t)}" y2="${y(t)}" stroke="${t ? v('--hairline') : v('--hairline-strong')}" ${t ? '' : 'stroke-dasharray="4 4"'}/><text x="${m.l - 8}" y="${y(t) + 4}" text-anchor="end" font-size="12" fill="${v('--muted')}" style="font-variant-numeric:tabular-nums">${t ? '+' + t : '0'}</text>`;
+  cycles.forEach((c, i) => { if (i % 3 === 0 || i === cycles.length - 1) svg += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle" font-size="12" fill="${v('--muted')}">${c}</text>`; });
+  const crash = 9; svg += `<line x1="${x(crash)}" x2="${x(crash)}" y1="${m.t}" y2="${m.t + ih}" stroke="${v('--hairline-strong')}" stroke-dasharray="3 3"/><text x="${x(crash) + 6}" y="${m.t + 12}" font-size="12" fill="${v('--muted')}">Jan 2026 crash</text>`;
+  series.forEach(s => {
+    svg += `<path d="${s.data.map((d, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(d).toFixed(1)).join(' ')}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const li = s.data.length - 1;
+    svg += `<circle cx="${x(li)}" cy="${y(s.data[li])}" r="4" fill="${s.color}" stroke="${v('--surface')}" stroke-width="2"/><text x="${x(li) + 10}" y="${y(s.data[li]) + 4}" font-size="12" font-weight="600" fill="${v('--ink')}">${s.name.replace('GOLD', '')} +${s.data[li]}</text>`;
+  });
+  svg += `<g id="hover" style="display:none"><line id="hx" y1="${m.t}" y2="${m.t + ih}" stroke="${v('--muted')}" stroke-width="1"/>${series.map((s, k) => `<circle id="hc${k}" r="5" fill="${s.color}" stroke="${v('--surface')}" stroke-width="2"/>`).join('')}</g>`;
+  svg += `<rect id="hit" x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent"/></svg>`;
+  plot.innerHTML = svg + '<div class="tip" id="tip"></div>';
+  const svgEl = plot.querySelector('svg'), tip = document.getElementById('tip'), hov = svgEl.querySelector('#hover');
+  const move = ev => {
+    const r = svgEl.getBoundingClientRect(), sx = (ev.clientX - r.left) / r.width * W;
+    const i = Math.max(0, Math.min(cycles.length - 1, Math.round((sx - m.l) / iw * (cycles.length - 1))));
+    hov.style.display = ''; svgEl.querySelector('#hx').setAttribute('x1', x(i)); svgEl.querySelector('#hx').setAttribute('x2', x(i));
+    series.forEach((s, k) => { const c = svgEl.querySelector('#hc' + k); c.setAttribute('cx', x(i)); c.setAttribute('cy', y(s.data[i])); });
+    tip.innerHTML = `<b>${cycles[i]} cycle</b>` + series.map(s => `<div><span><i style="background:${s.color}"></i>${s.name}</span><em>+${s.data[i]} bp</em></div>`).join('');
+    const px = x(i) / W * r.width, flip = px > r.width * 0.6;
+    tip.style.left = (flip ? px - tip.offsetWidth - 14 : px + 14) + 'px'; tip.style.top = (y(petal[i]) / H * r.height - 10) + 'px'; tip.style.opacity = 1;
+  };
+  svgEl.querySelector('#hit').addEventListener('pointermove', move);
+  svgEl.querySelector('#hit').addEventListener('pointerleave', () => { hov.style.display = 'none'; tip.style.opacity = 0; });
+
+  // table view of the chart
+  document.getElementById('plot-table').innerHTML = `<div class="tbl-wrap" style="max-height:300px;overflow:auto"><table style="min-width:0"><thead><tr><th>Cycle</th><th class="n">GOLDGUINEA</th><th class="n">GOLDPETAL</th></tr></thead><tbody>${cycles.map((c, i) => `<tr><td>${c}</td><td class="n">+${guinea[i]} bp</td><td class="n">+${petal[i]} bp</td></tr>`).join('')}</tbody></table></div>`;
+
+  // bars: premium by mark
+  const marks = [['Close', 81, 97], ['Open', 77, 92], ['(H+L)/2', 78, 93], ['VWAP', 79, 94]];
+  const BW = 320, BH = 220, bm = { t: 8, r: 8, b: 24, l: 36 }, bih = BH - bm.t - bm.b, biw = BW - bm.l - bm.r, bmax = 120;
+  const by = val => bm.t + bih - val / bmax * bih, gw = biw / marks.length, bw = 18;
+  let bs = `<svg viewBox="0 0 ${BW} ${BH}" style="width:100%;height:auto;display:block" role="img" aria-label="Bar chart: premium by price mark, illustrative">`;
+  for (let t = 0; t <= bmax; t += 40) bs += `<line x1="${bm.l}" x2="${bm.l + biw}" y1="${by(t)}" y2="${by(t)}" stroke="${t ? v('--hairline') : v('--hairline-strong')}"/><text x="${bm.l - 6}" y="${by(t) + 4}" text-anchor="end" font-size="11" fill="${v('--muted')}">${t}</text>`;
+  const barPath = (x0, w, val) => { const top = by(val), base = by(0), r = 4; return `M${x0} ${base}V${top + r}Q${x0} ${top} ${x0 + r} ${top}H${x0 + w - r}Q${x0 + w} ${top} ${x0 + w} ${top + r}V${base}Z`; };
+  marks.forEach(([lab, g, p], i) => {
+    const cx = bm.l + gw * i + gw / 2;
+    bs += `<path d="${barPath(cx - bw - 1, bw, g)}" fill="${v('--series-2')}"><title>${lab} · GOLDGUINEA +${g} bp</title></path><path d="${barPath(cx + 1, bw, p)}" fill="${v('--series-3')}"><title>${lab} · GOLDPETAL +${p} bp</title></path>`;
+    bs += `<text x="${cx}" y="${BH - 6}" text-anchor="middle" font-size="11" fill="${v('--muted')}">${lab}</text>`;
+  });
+  document.getElementById('bars').innerHTML = `<div class="legend" style="margin-top:12px"><span><i style="background:var(--series-2);height:8px;width:8px;border-radius:2px"></i>GOLDGUINEA</span><span><i style="background:var(--series-3);height:8px;width:8px;border-radius:2px"></i>GOLDPETAL</span></div>` + bs + '</svg>';
+
+  // heatmap
+  const div = ['--div-c3', '--div-c2', '--div-c1', '--div-mid', '--div-r1', '--div-r2', '--div-r3'].map(v);
+  const bucket = val => val <= -100 ? 0 : val <= -50 ? 1 : val < -10 ? 2 : val <= 10 ? 3 : val < 50 ? 4 : val < 100 ? 5 : 6;
+  const control = [-12, -4, 3, -2, -9, 1, -3, 6, -1, -14, -6, 2, -18, -5, 0, 4, -2, -3];
+  const rows = [['GUINEA', guinea], ['PETAL', petal], ['GOLDM ctl', control]];
+  document.getElementById('heat').innerHTML = rows.map(([n, d]) => `<span class="rl">${n}</span>` + d.map((val, i) => `<div class="cell" style="background:${div[bucket(val)]}" title="${n} · ${cycles[i]} · ${val > 0 ? '+' : ''}${val} bp"></div>`).join('')).join('');
+  document.getElementById('divramp').innerHTML = div.map(c => `<div style="background:${c}" title="${c}"></div>`).join('');
+  document.getElementById('seqramp').innerHTML = ['--seq-1', '--seq-2', '--seq-3', '--seq-4', '--seq-5'].map(t => `<div style="background:${v(t)}" title="${v(t)}"></div>`).join('');
+
+  // calendar: Oct 2026 starts on a Thursday; Mon-first grid. Expiry 30 Oct, tender window 27-29 Oct.
+  const cal = document.getElementById('cal');
+  let ch = ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map(d => `<div class="h">${d}</div>`).join('');
+  for (let i = 0; i < 3; i++) ch += `<div class="d off">${28 + i}</div>`;
+  for (let d = 1; d <= 31; d++) {
+    const cls = [d === 30 ? 'expiry' : '', [27, 28, 29].includes(d) ? 'tender' : '', d === 23 ? 'today' : ''].join(' ');
+    ch += `<div class="d ${cls}">${d}</div>`;
+  }
+  cal.innerHTML = ch;
+})();
+</script>
+</body>
+</html>
