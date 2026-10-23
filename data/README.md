@@ -83,6 +83,18 @@ A refresh from an empty cache took 189 MCX calls (the G0 cache seeds the rest). 
 
 **`delivery_cycles` / `delivery_summary`** (M4, holding through settlement): per expired same-reference cycle and entry point, ₹ per gram. `headroom_inr_g = futures + making received − making paid − bar discount − logistics − margin funding − entry costs`. `breakeven_coin_premium_pct` is the most a deliverer can pay over spot for coins. `retail_net_inr_g` is the result at the retail coin premium in `specs/costs.yaml`.
 
+## Web app export (`data/export/`, in git)
+
+Written by `python -m tola.export` at the end of every refresh, from the snapshot:
+
+| File | What |
+|---|---|
+| `chooser.json` | Everything the M5 chooser formula needs: live contracts (price, residual, carry, risk-free rate, tender and exit dates, lot sizes, making charges), premium-change history, cost schedule, delivery inputs, coin prices |
+| `golden.json` | `tola.chooser` quotes for seven reference requests; the app's port must reproduce them |
+| `alerts.json` | The quiet alert log (swing, tender, control, settlement) since Apr 2025, with a summary |
+| `calendar.json` | Every live contract's key dates |
+| `meta.json` | As-of dates and build time |
+
 ## Known limits
 
 - The DDR is rebuilt from published polls, not read from an MCX settlement file. It is verified against MCX's published settlements up to Sep 2023; later DDRs use the same rule but have no published value to check against.
