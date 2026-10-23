@@ -1,0 +1,172 @@
+# MCX gold futures: contract specifications, versioned by contract (expiry) month.
+#
+# Every versioned value is copied from the MCX PDF named in `source`; the PDFs are saved under
+# data/raw/specs/ (downloaded 23 Oct 2026 from the links on https://www.mcxindia.com/products/bullion/gold).
+# A version applies to contracts expiring in its `from` month and later, until the next version.
+# Contracts older than the first version we hold get `spec_version: null` in the snapshot; for those only
+# the `basis` block is used, and the snapshot marks them spec_verified = false.
+#
+# `basis` (lot, quote unit, purity) drives price normalisation. It is the same in every PDF we hold, and the
+# build re-checks it on every traded row: VWAP = Value x 1e5 / (Volume x lot_g) must fall inside [Low, High].
+#
+# Spot: GetSpotMarketArchive publishes each contract's own polled spot. GOLD and GOLDM spots are 995-basis;
+# GOLDTEN, GOLDGUINEA and GOLDPETAL spots are already converted to 999 (x 999/995), which G0 verified
+# (GOLDTEN spot = GOLDM spot x 999/995 in 18/18 cycles). The build re-checks this.
+
+symbols:
+  GOLD:
+    basis: {lot_g: 1000, quote_g: 10, purity: 995}
+    spot: {product: GOLD, location: AHMEDABAD, unit_g: 10, purity: 995}
+    expiry_rule: "5th of the expiry month; if a holiday, the preceding working day"
+    versions:
+      - from: 2026-02
+        source: GOLD_2026-02.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold/gold-february-2026-contract-onwardsf3629751-e56a-43d9-883c-cce18c121dc4.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 1000, form: "995 serially numbered gold bars (LBMA-approved suppliers)", centres: [Ahmedabad, Mumbai, New Delhi]}
+        tender: {days: 5, margin_pct: 5}
+        ddr: {rule: avg_last_poll_3d}
+        making_charge_inr_per_g: null
+      - from: 2026-08
+        source: GOLD_2026-08.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold/gold-august-2026-contract-onwardsd4df534857fb64e3bdfdff00007acb3574ea8ae7-7504-4567-a819-64dc0c700557.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 1000, form: "995 serially numbered gold bars (LBMA-approved suppliers)", centres: [Ahmedabad, Mumbai, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: avg_last_poll_3d}
+        making_charge_inr_per_g: null
+      - from: 2027-02
+        source: GOLD_2027-02.pdf
+        url: https://www.mcxindia.com/docs/default-source/about-us/gold-february-2027-contract-onwards.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 1000, form: "995 serially numbered 1 kg bars (MCX-empanelled refiners or LBMA)", centres: [Ahmedabad, Mumbai, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: avg_last_poll_3d}
+        making_charge_inr_per_g: null
+
+  GOLDM:
+    basis: {lot_g: 100, quote_g: 10, purity: 995}
+    spot: {product: GOLDM, location: AHMEDABAD, unit_g: 10, purity: 995}
+    expiry_rule: "5th of the expiry month; if a holiday, the preceding working day"
+    versions:
+      - from: 2025-11
+        source: GOLDM_2025-11.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-mini/gold-mini-november-2025-contract-onwardsfc22554857fb64e3bdfdff00007acb35.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 100, form: "995 serially numbered gold bars (LBMA-approved suppliers)", centres: [Ahmedabad, Mumbai, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: avg_last_poll_3d}
+        making_charge_inr_per_g: null
+      - from: 2026-05
+        source: GOLDM_2026-05.pdf
+        url: https://www.mcxindia.com/docs/default-source/about-us/gold-mini-may-2026-contract-onwards.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 100, form: "995 serially numbered bars (MCX-empanelled refiners, BIS standard, or LBMA)", centres: [Ahmedabad, Mumbai, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: avg_last_poll_3d}
+        making_charge_inr_per_g: null
+      - from: 2026-08
+        source: GOLDM_2026-08.pdf
+        url: https://www.mcxindia.com/docs/default-source/about-us/gold-mini-august-2026-contract-onwards8a79913a-e8de-4136-9f0b-25d31dc163c4.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 100, form: "995 serially numbered bars (MCX-empanelled refiners, BIS standard, or LBMA)", centres: [Ahmedabad, Mumbai, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: avg_last_poll_3d}
+        making_charge_inr_per_g: null
+
+  GOLDTEN:
+    basis: {lot_g: 10, quote_g: 10, purity: 999}
+    spot: {product: GOLDTEN, location: AHMEDABAD, unit_g: 10, purity: 999}
+    expiry_rule: "last calendar day of the expiry month; if a holiday, the preceding working day"
+    first_contract: 2025-04   # GOLDTEN launched 1 Apr 2025
+    versions:
+      - from: 2025-04
+        source: GOLDTEN_2025-04.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-ten/gold-ten-april-2025-contract-onwards7fb63e4857fb64e3bdfdff00007acb3580008247-f6c1-4a56-be21-ac18ff0bdbe4.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 10, form: "999 serially numbered 10 g (LBMA-approved suppliers)", centres: [Ahmedabad, New Delhi, Mumbai]}
+        tender: {days: 5, margin_pct: 5}
+        ddr: {rule: last_poll_expiry, spot: "Ahmedabad 995 x 999/995, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 30   # Rs 300 per 10 g, buyer pays seller over the DDR
+      - from: 2025-11
+        source: GOLDTEN_2025-11.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-ten/gold-ten-november-2025-contract-onwards9a08564857fb64e3bdfdff00007acb35.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 10, form: "999 serially numbered 10 g (LBMA-approved suppliers)", centres: [Ahmedabad, New Delhi, Mumbai]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: last_poll_expiry, spot: "Ahmedabad 995 x 999/995, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 30
+      - from: 2026-07
+        source: GOLDTEN_2026-07.pdf
+        url: https://www.mcxindia.com/docs/default-source/about-us/gold-ten-july-2026-contract-onwards.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 10, form: "999 serially numbered 10 g (LBMA-approved suppliers)", centres: [Ahmedabad, New Delhi, Mumbai]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: last_poll_expiry, spot: "Ahmedabad 995 x 999/995, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 30
+
+  GOLDGUINEA:
+    basis: {lot_g: 8, quote_g: 8, purity: 999}
+    spot: {product: GOLDGUINEA, location: AHMEDABAD, unit_g: 8, purity: 999}
+    expiry_rule: "last calendar day of the expiry month; if a holiday, the preceding working day"
+    versions:
+      - from: 2025-01
+        source: GOLDGUINEA_2025-01.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-guinea/gold-guinea-january-2025-contract-onwards8992f3f6-d244-425a-9a53-66d94500bb34.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 8, form: "999 serially numbered Gold Guinea (LBMA-approved suppliers)", centres: [Ahmedabad, New Delhi, Mumbai]}
+        tender: {days: 5, margin_pct: 5}
+        ddr: {rule: last_poll_expiry, spot: "Ahmedabad 995 x 999/995 x 8/10, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 25   # Rs 200 per 8 g Guinea, buyer pays seller over the DDR
+      - from: 2025-12
+        source: GOLDGUINEA_2025-12.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-guinea/gold-guinea-december-2025-contract-onwardsdc22554857fb64e3bdfdff00007acb35.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 8, form: "999 serially numbered Gold Guinea (LBMA-approved suppliers)", centres: [Ahmedabad, New Delhi, Mumbai]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: last_poll_expiry, spot: "Ahmedabad 995 x 999/995 x 8/10, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 25
+      - from: 2026-07
+        source: GOLDGUINEA_2026-07.pdf
+        url: https://www.mcxindia.com/docs/default-source/about-us/gold-guinea-july-2026-contract-onwards.pdf
+        price_basis: Ex-Ahmedabad
+        delivery: {unit_g: 8, form: "999 serially numbered 8 g bar/coin (MCX-empanelled refiners or LBMA)", centres: [Ahmedabad, New Delhi, Mumbai]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: last_poll_expiry, spot: "Ahmedabad 995 x 999/995 x 8/10, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 25
+
+  GOLDPETAL:
+    basis: {lot_g: 1, quote_g: 1, purity: 999}
+    spot: {product: GOLDPETAL, location: MUMBAI, unit_g: 1, purity: 999}
+    expiry_rule: "last calendar day of the expiry month; if a holiday, the preceding working day"
+    versions:
+      - from: 2025-04
+        source: GOLDPETAL_2025-04.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-petal/gold-petal-april-2025-contracts-onwards4b958087-3b38-44b0-abc2-30acd903c1ad.pdf
+        price_basis: Ex-Mumbai
+        delivery: {unit_g: 1, form: "999 serially numbered 1 g coin (LBMA-approved suppliers)", centres: [Mumbai, Ahmedabad, New Delhi]}
+        tender: {days: 5, margin_pct: 5}
+        ddr: {rule: last_poll_expiry, spot: "Mumbai 995 x 999/995 x 1/10, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 100   # Rs 100 per 1 g coin, buyer pays seller over the DDR
+      - from: 2025-12
+        source: GOLDPETAL_2025-12.pdf
+        url: https://www.mcxindia.com/docs/default-source/products/contract-specification/gold-petal/gold-petal-december-2025-contracts-onwards7a08564857fb64e3bdfdff00007acb35.pdf
+        price_basis: Ex-Mumbai
+        delivery: {unit_g: 1, form: "999 serially numbered 1 g coin (LBMA-approved suppliers)", centres: [Mumbai, Ahmedabad, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: last_poll_expiry, spot: "Mumbai 995 x 999/995 x 1/10, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 100
+      - from: 2026-07
+        source: GOLDPETAL_2026-07.pdf
+        url: https://www.mcxindia.com/docs/default-source/about-us/gold-petal-july-2026-contract-onwards.pdf
+        price_basis: Ex-Mumbai
+        delivery: {unit_g: 1, form: "999 serially numbered 1 g bar/coin (MCX-empanelled refiners or LBMA)", centres: [Mumbai, Ahmedabad, New Delhi]}
+        tender: {days: 3, margin_pct: 8.34}
+        ddr: {rule: last_poll_expiry, spot: "Mumbai 995 x 999/995 x 1/10, polled around 5 pm on expiry day"}
+        making_charge_inr_per_g: 100
+
+# Common to every version we hold (not repeated above):
+#   - Closing price = weighted average price of the last half hour of trading. On expiry day the
+#     settlement price is the DDR, not the closing price.
+#   - Delivery period margin = higher of (3% + 5-day 99% VaR of spot) or 25%.
+#   - Tender days include the expiry day; on expiry, all open positions are marked for compulsory delivery.

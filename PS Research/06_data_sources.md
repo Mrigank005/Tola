@@ -55,6 +55,18 @@ Changes between versions:
 
 Our spec table must be **versioned by contract month**.
 
+> **Corrections (23 Oct 2026, from all 15 MCX spec PDFs, now in `data/specs/gold.yaml`):**
+> - **Every small contract has a making charge**, paid by the buyer to the seller over the DDR: **GOLDTEN ₹300 per 10 g (₹30/g), GOLDGUINEA ₹200 per 8 g (₹25/g), GOLDPETAL ₹100 per 1 g.** It is in every version we hold (GOLDTEN since Apr 2025, GOLDGUINEA since Jan 2025, GOLDPETAL since Apr 2025). G0_RESULTS said GOLDGUINEA had none; that was wrong.
+> - **The 5 → 3 day tender change came earlier than "2026 specs"**: with the Nov 2025 contracts for GOLDTEN and GOLDM, Dec 2025 for GOLDGUINEA and GOLDPETAL, and Aug 2026 for GOLD.
+> - **`Close` is defined in the specs**: "closing price (weighted average price of last half an hour)". It is not the last traded price. On expiry day the settlement price is the DDR instead.
+> - The delivery-period margin (after allocation) is the higher of 3% + 5-day 99% VaR or 25%, separate from the 8.34% tender-period margin.
+>
+> **Data behaviour found while building M1 (23 Oct 2026, details in `data/snapshot/VALIDATION.md`):**
+> - **Until the Oct 2023 expiries, the last-day `Close` *was* the DDR.** Our DDR rebuilt from polled spot matches it on all 145 such contracts. From Oct 2023 the last-day Close is a traded price. (So the "expiry-day close isn't the DDR" note above holds only from Oct 2023.)
+> - **MCX republishes the previous day's spot when the spot market is shut** (holidays, Diwali week, 49 days in the 2020 lockdown, 21 in 2021). GOLD/GOLDM's 3-day DDR skips those days.
+> - **Expiries get brought forward** when the published expiry has no spot poll: 31 Mar 2025 → 28 Mar, 31 Mar 2026 → 30 Mar, GOLD 5 Oct 2022 → 4 Oct.
+> - **Lead for S1:** from Oct 2023 to early 2024, GOLDPETAL's last-day close sat 125–255 bp *below* its own DDR while GOLDGUINEA's sat above. That is the pre-2025 GOLDPETAL discount seen at expiry.
+
 ## B. Rates, spot cross-checks and macro context
 
 | Source | What | Access | Cost | Use |

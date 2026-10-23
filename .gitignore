@@ -16,3 +16,10 @@ PS Research/g0_gate/fetch_log.txt
 PS Research/g0_gate/results/analysis_stdout.json
 PS Research/g0_gate/results/analysis_stderr.txt
 PS Research/g0_gate/results/settlement_check_log.txt
+
+# MCX raw cache: rebuilt by `python -m tola.refresh`; hashes are kept in data/snapshot/raw_index.json.
+# The spec PDFs are source documents for data/specs/gold.yaml, so they stay in git.
+data/raw/*
+!data/raw/specs/
+data/snapshot/VALIDATION_FAILED.md
+.pytest_cache/
