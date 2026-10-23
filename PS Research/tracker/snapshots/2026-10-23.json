@@ -1,6 +1,6 @@
 {
  "date": "2026-10-23",
- "since": "2026-10-22",
+ "since": "2026-10-13",
  "repos": {
   "CodeByDivyansh-tech/nexora-gold-rv-": {
    "full_name": "CodeByDivyansh-tech/nexora-gold-rv-",
@@ -32,6 +32,286 @@
     {
      "date": "2026-10-22",
      "msg": "Data: add MCX Bhavcopy for 19-21 Oct 2026 (24 contracts)"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Merge pull request #23 from CodeByDivyansh-tech/data/mcx-history-download"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Use our own MCX download for 2003-2023; credit only MCX on the site"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Merge pull request #22 from CodeByDivyansh-tech/fix/remove-book-wording"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Remove book names from the site; keep all data and honest attribution; 15-year count never rounds up"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Merge pull request #21 from CodeByDivyansh-tech/fix/pair-no-trades"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Pair Explorer: say so when a pair has no trades instead of showing an empty table"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Merge pull request #20 from CodeByDivyansh-tech/fix/json-nan"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Data files: write NaN as null so every JSON file is valid"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #19 from CodeByDivyansh-tech/fix/intro-last-card"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Intro: last card shows only the verdict (Watch demo video removed too)"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Intro: last card keeps only the verdict and Watch demo video"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #18 from CodeByDivyansh-tech/docs/readme-demo-team"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "README: links to the 3D intro and the demo video, and Team NEXORA with roles"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #17 from CodeByDivyansh-tech/feature/intro-glass-team-demo"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "New Gold RV logo: 3D gold ingot and a raised, polished wordmark"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Demo video: add a WebM copy as a fallback source for browsers without H.264"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Intro: Watch demo video plays in a glass dialog, Meet the team section, metallic Gold RV wordmark"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Demo page: add the laptop walkthrough video (3:54, every page top to bottom) and its chapter times"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Intro: team and members on the last card, Watch the demo video button, glass on every part"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #16 from CodeByDivyansh-tech/fix/remove-old-name"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Remove the old name from the site; keep all the data"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #15 from CodeByDivyansh-tech/fix/download-escape"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Download panel: Escape closes it and focus moves into it"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #14 from CodeByDivyansh-tech/fix/short-screen-menu"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Fit the side menu on short laptop screens; show the project name instead of the Vercel address"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #13 from CodeByDivyansh-tech/fix/repo-links"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Point GitHub links to the renamed repo (nexora-gold-rv-)"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Redeploy: trigger Vercel after making the repo public"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge branch 'feature/brief-and-216': brief page, 6-of-216 hindsight line, README fixes, full-site debug"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "README: whole-study coverage first, correct counts, Brief page"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Fix bugs found in the full-site check"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Add \"The brief, answered\" page and the 6-of-216 hindsight sentence"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Pipeline: hindsight count and contract-calendar check, for the brief page"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #12 from CodeByDivyansh-tech/docs/claude-guide"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Add CLAUDE.md: project guide for Claude Code (layout, commands, monthly data import, rules, design, deploying)"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #11 from CodeByDivyansh-tech/feature/3d-intro"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Intro: one real trade marked on the gap timeline, chapter names on the dots, soft gold flash between chapters, footer wo"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Intro: halftone 'gold rv' wordmark footer with links into the site (dots part around the cursor, click ripple)"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Intro: use the site's own colours (gold foil headline, warm gold glow, exact contract colours)"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Intro: lit-glass panels for the hero, chapter cards and logo, matching the site's left menu"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Intro page: the problem and our answer as a 3D scroll story (preview)"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #10 from CodeByDivyansh-tech/feature/lit-glass-menu"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Left menu: lit glass panel, sliding hover highlight, shortcut badges"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #9 from CodeByDivyansh-tech/fix/chart-file-names"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Chart downloads: name files from the chart title in whole words"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #8 from CodeByDivyansh-tech/feature/pdf-download"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Downloads: PDF option for every file, and Ctrl/Cmd+P for a PDF"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #7 from CodeByDivyansh-tech/feature/custom-download-range"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Downloads: custom date range, plus \"Last 3 years\""
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #6 from CodeByDivyansh-tech/data/oct-2026-forward"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Data: add MCX Bhavcopy 5-16 Oct 2026 (first days after the test year)"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #5 from CodeByDivyansh-tech/release/full-study-and-ux"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Data: rebuild after the thin-day definition fix (6,880 thin days in 2011-2023)"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Every headline covers 2011-2026, plus 15 usability improvements"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Merge pull request #4 from CodeByDivyansh-tech/fix/full-history-charts"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Charts: show the whole 2011-2026 study, not only our 3-year download"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Merge pull request #3 from CodeByDivyansh-tech/fix/home-facts"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Home: summary row counts the whole 2011-2026 study, not only our download"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Merge pull request #2 from CodeByDivyansh-tech/fix/home-coverage"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Home: show the full 15-year span, not just our 3-year download"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Merge PR #1: data fix, honest verdict, gold redesign with interactive charts, CI"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Site: gold-tinted dark and light themes, shared interactive chart, review fixes"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Data: add the 8 contracts our MCX download missed, plus 1 Oct 2026"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "CI: compare committed data with a fresh build at JSON level, report differences"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Docs: README rewritten around the clean test; SPEC marked as the original spec with what changed"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Data refresh script, forward period, requirements.txt and GitHub Actions"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Pitch page: fix wrong numbers in notes, label the test year honestly, add the clean test"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Site: lead with the clean test, slippage and multiple-testing panels, shared menus"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Locate the GOLDPETAL repricing from the data (4-11 Nov 2024)"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Evidence checks: honest test-year label, slippage check, multiple testing"
     }
    ]
   },
@@ -49,6 +329,130 @@
     {
      "date": "2026-10-22",
      "msg": "Update team member details in README"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Live session snapshot 2026-10-20 23:56 IST (market close)"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Live session snapshot 2026-10-20 23:40 IST (hourly)"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Live session snapshot 2026-10-20 22:39 IST (hourly)"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Live: skip stale quotes on holiday sessions, date replays by exchange stamp; restore last real session"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Live session snapshot 2026-10-20 10:38 IST (hourly)"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Live poller: publish on first poll, relaunch browser after repeated failures"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Live: correct stop instructions, add publish-now launcher"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Live page: human-readable feed age"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Ingest: bulk insert, database reload in seconds instead of minutes"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "One-click data refresh for the public site"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: architecture diagram image"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: links as a list"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: top-down architecture diagram"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: GitHub-safe Mermaid diagram"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: evaluator-first structure, live monitor, requirement map, architecture diagram"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: demo video link"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Live session snapshot 2026-10-15 22:00 IST (hourly)"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Live chart: break lines across feed pauses"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Double-click launcher for the live poller"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Live session snapshot 2026-10-15 12:13 IST (hourly)"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Archived snapshot always reports replay"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Live session snapshot 2026-10-15 11:13 IST (first archive)"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Live monitor works without a running poller: persistent snapshot, per-day ticks, committed session replay"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Read Upstash keys under either Vercel naming scheme"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Live ticks: keep last-trade premiums; regression test"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Real-time monitor: MCX quote poller with order book, executable premiums, /api/live and /live page"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "README: live dashboard link and deployment notes"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Vercel deployment: static dashboard, serverless API entry point, bundled results"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Document full-history results in README"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Full-history results: out-of-sample verdict, trade concentration, lifecycle delivery windows, dashboard fixes"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "AuRA prototype: MCX ingest, normalisation, curve and roll-down, lifecycle, walk-forward backtest, API and dashboard"
     }
    ]
   },
@@ -61,7 +465,25 @@
    "homepage": "https://arb-bound.vercel.app/",
    "description": "Is an MCX cross-contract gold spread an opportunity, or the cost of closing it? Hack in Hills 26 Track 03",
    "readme_sha": "af4cffa10bca",
-   "readme_len": 8683
+   "readme_len": 8683,
+   "commits": [
+    {
+     "date": "2026-10-15",
+     "msg": "fix(docs): resolve KaTeX LaTeX syntax error in README formula"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "docs: restructure README with questions, solutions, workflow, architecture and vercel links"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Fix the CI failure my own claim test caused"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "TinyFish Builder Challenge: live MCX plane, and a real date bug it found"
+    }
+   ]
   },
   "j4yop/arb-bound-live": {
    "full_name": "j4yop/arb-bound-live",
@@ -77,6 +499,82 @@
     {
      "date": "2026-10-22",
      "msg": "chore: daily MCX scan 2026-10-22"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "chore: daily MCX scan 2026-10-21"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "chore: daily MCX scan 2026-10-20"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "chore: daily MCX scan 2026-10-19"
+    },
+    {
+     "date": "2026-10-16",
+     "msg": "chore: daily MCX scan 2026-10-16"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "docs: restructure README with problem questions, solutions, workflow, architecture, and vercel link"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "chore: daily MCX scan 2026-10-15"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "chore: daily MCX scan 2026-10-14"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Dashboard: show the scan corpus from day one, with the reference price"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "chore: daily MCX scan 2026-10-13"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "daily: mkdir -p scans before writing into it"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Fix the daily workflow committing nothing, and fail loudly when the key is absent"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "README: the verified command set, now that the server path is fixed"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Expose a module-level ASGI app so uvicorn and Vercel can both start it"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Make the dashboard byte-reproducible, or the guard can never pass"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Deploy to Vercel, and generate the dashboard from committed scans"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Deploy the FastAPI app itself behind api/index.py"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Vercel: static docs plus a serverless /api for the live scan"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "CI: httpx is required by starlette's TestClient, so it belongs in dev"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "arb-bound-live: live MCX gold through TinyFish, judged by a structural bound"
     }
    ]
   },
@@ -89,7 +587,21 @@
    "homepage": "https://bullion-basis.pages.dev/",
    "description": "MCX gold futures in four lot sizes, normalized to one price per gram (999). Finds a ~50 bps gap between GOLDTEN and GUINEA/PETAL on real Bhavcopy data, and tests whether it survives costs without look",
    "readme_sha": "01b7c781081b",
-   "readme_len": 3887
+   "readme_len": 3887,
+   "commits": [
+    {
+     "date": "2026-10-15",
+     "msg": "Rename to Bullion Basis; set up Cloudflare Pages Git builds"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Add Bullion Basis: MCX gold cross-contract spread app, engine and data"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "thedarknight262/HackNHills": {
    "full_name": "thedarknight262/HackNHills",
@@ -100,18 +612,78 @@
    "homepage": "",
    "description": "Hack in Hills '26 (PS-03)  Quantitative relative-value intelligence, term-structure carry interpolation, walk forward Z-score alerts, and post cost backtesting engine for MCX Gold Futures (GOLDM, GOLD",
    "readme_sha": "1b714cf55859",
-   "readme_len": 12362
+   "readme_len": 12362,
+   "commits": [
+    {
+     "date": "2026-10-21",
+     "msg": "Update README.md"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Update README.md"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Update README.md"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "dhir-1/Mcx-gold-dhir": {
    "full_name": "dhir-1/Mcx-gold-dhir",
    "created": "2026-10-20",
-   "pushed": "2026-10-20T13:07:44Z",
+   "pushed": "2026-10-23T10:48:17Z",
    "stars": 0,
    "branch": "main",
    "homepage": "",
    "description": "",
-   "readme_sha": "517113f21c9b",
-   "readme_len": 5216
+   "readme_sha": "69cc12e8a0a2",
+   "readme_len": 4987,
+   "commits": [
+    {
+     "date": "2026-10-23",
+     "msg": "Update notebook wording: Replay Engine and settlement comparison, re-run all cells with outputs"
+    },
+    {
+     "date": "2026-10-23",
+     "msg": "Remove slide_assets folder and update README"
+    },
+    {
+     "date": "2026-10-23",
+     "msg": "Move app.py to main folder, remove streamlit folder, and refine wording"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Update findings wording, clean terminology, add imports cell, and refresh walkthrough notebook"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Remove duplicate app.py at root, retaining streamlit/app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Remove docs folder and update README"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Clean root folder, move pipeline scripts to scripts/, and expand master walkthrough notebook with all findings"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Add dedicated streamlit folder and master walkthrough notebook"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Round 2 prototype: MCX gold futures dashboard"
+    }
+   ]
   },
   "manaslalwani190/auraspread": {
    "full_name": "manaslalwani190/auraspread",
@@ -122,7 +694,33 @@
    "homepage": "",
    "description": "",
    "readme_sha": "2132a67d656e",
-   "readme_len": 9408
+   "readme_len": 9408,
+   "commits": [
+    {
+     "date": "2026-10-21",
+     "msg": "Fix beam collision, light mode contrast, search dropdown visibility"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Add price ticker splash animation"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Competitive UX improvements: timeline, why-it-matters cards, comparison table, footer, mobile fix, toast"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Replace heatmap with stacked area chart panels"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Competitive improvements vs Parity: data badge, alerts, OG tags, comparison table"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Add 2004-2024 data, fix header overflow, beam diagram and light mode"
+    }
+   ]
   },
   "sru-codes/aurum-spread": {
    "full_name": "sru-codes/aurum-spread",
@@ -133,7 +731,85 @@
    "homepage": "https://aurum-spread.up.railway.app",
    "description": "Cost-aware relative-value intelligence for MCX gold futures \u00b7 Hack in Hills 2026",
    "readme_sha": "ea32e18f1081",
-   "readme_len": 33219
+   "readme_len": 33219,
+   "commits": [
+    {
+     "date": "2026-10-15",
+     "msg": "Expand README into complete project guide"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Reject duplicate daily provider observations"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Harden context validation and clarify provider setup"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Integrate Gold API context and document setup"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "fix: improve theme text contrast"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "feat: add system theme and story scroll reveals"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "feat: add guided storytelling landing page"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "ci: test the Railway runtime and research pipeline"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "feat: run authenticated research API on Railway"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "data: refresh dated gold and FX context"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "chore: compact generated research fixture"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "feat: connect research artifacts to dashboard"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "fix: complete specification and test partition outputs"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "feat: add contextual market provider adapters"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "feat: add walk-forward contract research engine"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "feat: add auditable MCX import lineage"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "fix: make contract data expiry-aware"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Prepare v0.1.0 hackathon release"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Build Aurum Spread research prototype"
+    }
+   ]
   },
   "Adarsh1577/goldlens-mcx-gold": {
    "full_name": "Adarsh1577/goldlens-mcx-gold",
@@ -149,6 +825,10 @@
     {
      "date": "2026-10-22",
      "msg": "Add team section and chart export script"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "GoldLens: MCX gold futures relative pricing prototype"
     }
    ]
   },
@@ -170,6 +850,54 @@
     {
      "date": "2026-10-22",
      "msg": "Delete README.md"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Delete Another_copy_of_mcx_gold_colab_(1).ipynb"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Update README.md"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Created using Colab"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Delete mcx_gold_colab (1).ipynb"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Created using Colab"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Delete mcx_gold_colab (1).ipynb"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-18",
+     "msg": "Initial commit"
     }
    ]
   },
@@ -204,7 +932,13 @@
    "homepage": "https://mayank-iitj.github.io/GoldLens/",
    "description": "GoldLens : Commodity Derivatives Intelligence & Carry-Adjusted Relative Value Analytics",
    "readme_sha": "89953d6e53c2",
-   "readme_len": 4308
+   "readme_len": 4308,
+   "commits": [
+    {
+     "date": "2026-10-19",
+     "msg": "fix(deps): upgrade numpy to ^2.0.0 and add pyarrow, fix Series.replace deprecation"
+    }
+   ]
   },
   "NaitikBuilds/aurumspread": {
    "full_name": "NaitikBuilds/aurumspread",
@@ -256,6 +990,22 @@
     {
      "date": "2026-10-22",
      "msg": "feat: update GoldMCX application"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #2 from Dhrupad-05/docs/root-readme-to-main"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "docs: add root project README"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Merge pull request #1 from Dhrupad-05/feature/mcx-gold-backend"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "feat: add MCX gold intelligence backend"
     }
    ]
   },
@@ -312,7 +1062,21 @@
    "homepage": "https://hackinhills-ten.vercel.app",
    "description": "",
    "readme_sha": "4ca307ff4f2c",
-   "readme_len": 8618
+   "readme_len": 8618,
+   "commits": [
+    {
+     "date": "2026-10-21",
+     "msg": "feat: complete next-level institutional quant terminal (Arbitrage Matrix, Robustness Lab, Macro Stress Test, Delivery Ra"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "feat: replace banner with rich golden hour mountain peaks image"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "feat: complete Commodity Derivatives Intelligence platform with Vercel deploy support"
+    }
+   ]
   },
   "aritradutta7858-netizen/AurumIQ": {
    "full_name": "aritradutta7858-netizen/AurumIQ",
@@ -345,7 +1109,17 @@
    "homepage": "",
    "description": "",
    "readme_sha": "a34671441bf1",
-   "readme_len": 10012
+   "readme_len": 10012,
+   "commits": [
+    {
+     "date": "2026-10-13",
+     "msg": "chore: remove team and hackathon identity text from website and codebase"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "fix: add defensive sqlite column migration and ensure theme CSS variables in root layout"
+    }
+   ]
   },
   "sunilgupta046/MCX-Gold-RVA": {
    "full_name": "sunilgupta046/MCX-Gold-RVA",
@@ -373,7 +1147,37 @@
    "homepage": "",
    "description": "Akshita,Mohit,Devesh",
    "readme_sha": "356dd717498e",
-   "readme_len": 15198
+   "readme_len": 15198,
+   "commits": [
+    {
+     "date": "2026-10-21",
+     "msg": "docs: add comprehensive REST API endpoints reference to README"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "database added"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Merge remote-tracking branch 'origin/mohit/back'"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "docs: add architecture, methodologies, data dictionary, and deployment guide"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "implement MCX gold derivatives normalization, analytics & backtesting engine"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "uild quantitative derivatives intelligence terminal dashboard"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "vds18/GoldLens": {
    "full_name": "vds18/GoldLens",
@@ -397,6 +1201,18 @@
     {
      "date": "2026-10-22",
      "msg": "Backup before GoldLens UI upgrade"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Update README with live demo and project documentation"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Include processed data for Streamlit deployment"
+    },
+    {
+     "date": "2026-10-21",
+     "msg": "Initial commit: GoldLens research dashboard"
     }
    ]
   },
@@ -452,7 +1268,17 @@
    "homepage": "https://frostbite-taupe.vercel.app",
    "description": "A research-driven commodity derivatives intelligence system for detecting relative mispricing in MCX gold futures and evaluating trading strategies through cost-aware backtesting.",
    "readme_sha": "cf524643f51d",
-   "readme_len": 2398
+   "readme_len": 2398,
+   "commits": [
+    {
+     "date": "2026-10-15",
+     "msg": "fix(mobile): lock viewport and eliminate sideways horizontal scrolling and blank side space"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "feat: complete Frostbite scrollytelling terminal and research desk access portal"
+    }
+   ]
   },
   "shreaysvy/Aurum-Synthesis": {
    "full_name": "shreaysvy/Aurum-Synthesis",
@@ -463,7 +1289,29 @@
    "homepage": "https://aurum-synthesis.vercel.app",
    "description": "A quantitative data product analyzing cross-contract relative value in MCX gold futures. It features zero look-ahead walk-forward backtesting, real-time Z-score spread convergence modeling, transactio",
    "readme_sha": "e3b0c44298fc",
-   "readme_len": 0
+   "readme_len": 0,
+   "commits": [
+    {
+     "date": "2026-10-14",
+     "msg": "Merge pull request #1 from shreaysvy/frontend-assay-office-rebuild"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Rebuild the frontend as a ruled assay-office terminal"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "feat: integrate institutional operator authentication"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "feat: initialize Aurum Synthesis architecture"
+    },
+    {
+     "date": "2026-10-13",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "himanshugit786/MCX-quantitative-arbitrage-": {
    "full_name": "himanshugit786/MCX-quantitative-arbitrage-",
@@ -474,7 +1322,33 @@
    "homepage": "",
    "description": "MCX pe gold ke 4 futures contracts hain: GOLDM, GOLDTEN, GOLDGUINEA, GOLDPETAL. Sab ka underlying same hai (gold), bas size aur quotation alag hai. Isliye normalize karne ke baad inke prices lagbhag s",
    "readme_sha": "0d03158c7781",
-   "readme_len": 751
+   "readme_len": 751,
+   "commits": [
+    {
+     "date": "2026-10-16",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Enhance README with MCX Gold Normalization details"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Add information about MCX gold futures contracts"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "feat(ui): add Project Report modal to dashboard header"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "feat: initialize MCX arbitrage terminal project"
+    },
+    {
+     "date": "2026-10-14",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "Burhanmalu/Goldlens": {
    "full_name": "Burhanmalu/Goldlens",
@@ -485,7 +1359,21 @@
    "homepage": "https://goldlens.vercel.app",
    "description": "AI-powered market intelligence platform for normalizing MCX gold contracts, detecting cross-contract relative-value opportunities, and validating trading signals through cost-aware backtesting and wal",
    "readme_sha": "60b55ff7df79",
-   "readme_len": 1450
+   "readme_len": 1450,
+   "commits": [
+    {
+     "date": "2026-10-16",
+     "msg": "Merge branch 'main' of https://github.com/Burhanmalu/Goldlens"
+    },
+    {
+     "date": "2026-10-16",
+     "msg": "feat: initialize main dashboard page component with layout and state management"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Merge branch 'main' of github.com:Burhanmalu/Goldlens"
+    }
+   ]
   },
   "japesh3737/AurumLens": {
    "full_name": "japesh3737/AurumLens",
@@ -507,7 +1395,13 @@
    "homepage": "",
    "description": "Lifecycle-aware MCX Gold relative-value research instrument with contract normalization, expiry-aware pairing, transaction-cost analysis, and evidence-based decision gates.",
    "readme_sha": "e3b0c44298fc",
-   "readme_len": 0
+   "readme_len": 0,
+   "commits": [
+    {
+     "date": "2026-10-21",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "sharayubhokare2396-tech/commodity-derivatives-intelligence": {
    "full_name": "sharayubhokare2396-tech/commodity-derivatives-intelligence",
@@ -518,7 +1412,77 @@
    "homepage": "",
    "description": "",
    "readme_sha": "e3b0c44298fc",
-   "readme_len": 0
+   "readme_len": 0,
+   "commits": [
+    {
+     "date": "2026-10-20",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-20",
+     "msg": "Add files via upload"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update app.py"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Update requirements.txt"
+    },
+    {
+     "date": "2026-10-19",
+     "msg": "Add MCX gold normalization and validation"
+    },
+    {
+     "date": "2026-10-15",
+     "msg": "Add files via upload"
+    }
+   ]
   },
   "gayathrisnair2006/Nexora_gold_contract": {
    "full_name": "gayathrisnair2006/Nexora_gold_contract",
@@ -529,7 +1493,13 @@
    "homepage": "",
    "description": "compare MCX gold contracts ,detect unusual price differences,apply liquidity and expiry filters,and validate signals through cost aware walk forward backtesting.",
    "readme_sha": "73f1beeea42a",
-   "readme_len": 185
+   "readme_len": 185,
+   "commits": [
+    {
+     "date": "2026-10-18",
+     "msg": "Initial commit"
+    }
+   ]
   },
   "arnavkotnala/-hack-in-hills-goldie": {
    "full_name": "arnavkotnala/-hack-in-hills-goldie",
