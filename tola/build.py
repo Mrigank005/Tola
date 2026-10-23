@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 import numpy as np
 import pandas as pd
 
-from . import anatomy, convergence, parse, rates, specs
+from . import anatomy, backtest, convergence, delivery, parse, rates, specs
 from .checks import Report
 from .mcx import RAW
 
@@ -313,6 +313,8 @@ def build(asof=None, log=print):
     settle = settlement_table(fut, spot, contracts, cal, report)
     basis, curve, _ = anatomy.build(fut, spot, report)
     conv, _ = convergence.build(fut, basis, settle, contracts, asof, report)
+    wf, _ = backtest.build(conv["convergence_daily"], report)
+    dlv = delivery.build(conv["convergence_cycles"], curve)
 
     SNAP.mkdir(parents=True, exist_ok=True)
     if report.errors():
@@ -324,7 +326,7 @@ def build(asof=None, log=print):
             "oi_lots", "traded", "lot_g", "quote_g", "purity", "close_g999", "open_g999", "mid_g999", "vwap_g999",
             "tdte", "tdte_exact", "tender_days", "in_tender", "spec_version", "spec_verified", "source"]
     tables = {"futures_daily": fut[cols], "spot_polls": spot, "settlement": settle, "contracts": contracts,
-              "basis_daily": basis, "curve_daily": curve, "tbill_3m": rates.load_tbill(), **conv}
+              "basis_daily": basis, "curve_daily": curve, "tbill_3m": rates.load_tbill(), **conv, **wf, **dlv}
     for name, t in tables.items():
         t.to_parquet(SNAP / f"{name}.parquet", index=False)
 

@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-23T16:02:17+05:30",
+ "built_at": "2026-10-23T16:42:41+05:30",
  "data_asof": "2026-10-22",
  "spot_asof": "2026-10-22",
  "spec_file_sha256": "05343adf91db8f002e7e68c4bf2b94298de917e0f9fc9a711c250b7cd0b70082",
@@ -51,6 +51,22 @@
   "convergence_live": {
    "rows": 21,
    "sha256": "fd5f9815314211b284c5e3c2fcd46fa42c1a0790c8c043bea12d9b268afcff79"
+  },
+  "wf_trades": {
+   "rows": 2081,
+   "sha256": "f9a27ef2d0f8f77e1d9f96b4995f95a939bba4067303e220d3b1db72d58201d1"
+  },
+  "wf_summary": {
+   "rows": 6,
+   "sha256": "13ff88d2f3dac834dfdbef2d2b2ed7bbe5def7c97adaa3850105713e1543d943"
+  },
+  "delivery_cycles": {
+   "rows": 68,
+   "sha256": "2c4c32433026371bf5cb333db647102ff6e7bf0434498f36a63f7ec05de523f7"
+  },
+  "delivery_summary": {
+   "rows": 4,
+   "sha256": "45438ad87f1caf8e17df9843a92155e1157a4b141911a3602be642bf56a9e009"
   }
  },
  "coverage": {
@@ -96,7 +112,8 @@
    "spot.frozen": 23,
    "settlement.stale_spot": 12,
    "anatomy.curve_days": 1743,
-   "convergence.cycles": 173
+   "convergence.cycles": 173,
+   "backtest.trades": 1874
   },
   "passed": [
    "anatomy.waterfall_identity",
