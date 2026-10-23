@@ -17,6 +17,7 @@ A refresh from an empty cache took 189 MCX calls (the G0 cache seeds the rest). 
 
 | Path | In git | What |
 |---|---|---|
+| `specs/costs.yaml` | yes | Statutory charges, broker preset, tick-based slippage, delivery-leg inputs, with sources. |
 | `specs/rates.yaml` | yes | RBI repo-rate history with sources (risk-free proxy before FBIL coverage). |
 | `specs/gold.yaml` | yes | Contract specs versioned by expiry month. Every value is copied from an MCX PDF. |
 | `raw/specs/*.pdf` | yes | The 15 MCX spec PDFs behind `gold.yaml` (downloaded 23 Oct 2026). |
@@ -77,6 +78,10 @@ A refresh from an empty cache took 189 MCX calls (the G0 cache seeds the rest). 
 | `convergence_summary` | pair | Pooled mean of expired cycle means, cycle-bootstrap 95% CI, hit rate |
 | `convergence_profile` | pair × bucket | Premium by trading days to expiry, pooled over expired cycles |
 | `convergence_live` | pair × live expiry | Latest premium, 5-day change, percentile against expired cycles at the same stage (GOLDPETAL/GOLDGUINEA ranked only against cycles since Apr 2025) |
+
+**`wf_trades` / `wf_summary`** (M4, pre-tender rules): gram-matched spread trades, 200 g per leg, decided on day t's close and filled at the next eligible day's VWAP, all closed before tender. `config` is DRIFT or MR(W, k); rows with `out_of_sample = true` are the walk-forward trades (`config_used` is the config chosen from trades closed before that month, and `chosen_from` is how many such trades there were). P&L columns: `gross_inr = spread_leg_inr + gold_leg_inr`, `net_inr = gross_inr − cost_inr`, plus the same in bp of the GOLDTEN-leg notional. `wf_summary` holds, per pair and scored strategy: mean net bp, cycle-bootstrap CI, hit rate, Deflated Sharpe (10 trials per pair), random-entry p, results without Jan–Mar 2026, and break-even slippage in ticks per order.
+
+**`delivery_cycles` / `delivery_summary`** (M4, holding through settlement): per expired same-reference cycle and entry point, ₹ per gram. `headroom_inr_g = futures + making received − making paid − bar discount − logistics − margin funding − entry costs`. `breakeven_coin_premium_pct` is the most a deliverer can pay over spot for coins. `retail_net_inr_g` is the result at the retail coin premium in `specs/costs.yaml`.
 
 ## Known limits
 

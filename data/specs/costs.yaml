@@ -1,0 +1,59 @@
+# Trading-cost model for M4 (walk-forward) and M5 (chooser).
+#
+# Statutory charges are the same at every broker. Values from Zerodha's charges page (commodity futures, non-agri),
+# read 13 Oct 2026 (https://zerodha.com/charges/), recorded in PS Research/05_articles_reports.md:
+#   CTT 0.01% on the sell side; MCX transaction charge 0.0021%; SEBI fee Rs 10 per crore; stamp duty 0.002% on the
+#   buy side; GST 18% on brokerage + transaction charge + SEBI fee.
+# Still to confirm against a real contract note.
+
+statutory:
+  ctt_sell_pct: 0.01
+  exchange_txn_pct: 0.0021
+  sebi_inr_per_crore: 10
+  stamp_buy_pct: 0.002
+  gst_pct_on_fees: 18
+
+# Brokerage is broker-specific; the chooser takes it as a parameter. Default preset:
+brokers:
+  zerodha:
+    label: "Zerodha rates"
+    pct: 0.03            # of order value
+    cap_inr: 20          # per executed order, whichever is lower
+
+# Tick size: Re 1 per quote unit for all five contracts (spec PDFs, "Tick Size (Minimum Price Movement)").
+tick_inr_per_quote_unit: 1
+
+# Slippage. Daily OHLC cannot measure it here: the EDGE estimator (Ardia, Guidotti & Kroencke 2024) gave the same
+# 10-90 bp for every contract and tracked daily volatility (correlation 0.89 across contracts), as gold-rv found with
+# Roll and Corwin-Schultz. So slippage is an explicit assumption in ticks per order, and every result also reports
+# the break-even slippage at which it would turn to zero.
+slippage_ticks_per_order:
+  base: 1
+  stress: [0, 1, 3, 10]
+
+# Delivery-leg inputs (M4 delivery economics). Making charges come from data/specs/gold.yaml per contract version.
+delivery:
+  # Coins bought to deliver against a short small-lot position, as a premium over spot, ex-GST (prices / 1.03).
+  # The cheapest retail price we observed is used; every observation is listed below so the choice can be checked.
+  # Spot = the day's last GOLDTEN polled spot (Ahmedabad 999), from data/snapshot/spot_polls.
+  retail_coin_premium_pct: {GOLDPETAL: 5.5, GOLDGUINEA: 3.6}
+  coin_price_observations:
+    - {date: 2026-10-13, product: "Augmont 1 g coin", grams: 1, price_incl_gst: 16060, spot_g999: 14772.8, ex_gst_premium_pct: 5.5,
+       source: "Augmont live product page (PS Research/05_articles_reports.md)"}
+    - {date: 2026-10-13, product: "Augmont 8 g coin", grams: 8, price_incl_gst: 126167, spot_g999: 14772.8, ex_gst_premium_pct: 3.6,
+       source: "Augmont live product page (PS Research/05_articles_reports.md)"}
+    - {date: 2026-06-10, product: "Joyalukkas 1 g bar", grams: 1, price_incl_gst: 16677, spot_g999: 14728.5, ex_gst_premium_pct: 9.9,
+       source: "https://magicdrop.in/drops/1-gram-gold-coin (Amazon India listings, updated 10 Jun 2026)"}
+    - {date: 2026-06-10, product: "Malabar 1 g coin", grams: 1, price_incl_gst: 17069, spot_g999: 14728.5, ex_gst_premium_pct: 12.5,
+       source: "https://magicdrop.in/drops/1-gram-gold-coin"}
+    - {date: 2026-06-10, product: "MMTC-PAMP 1 g bar", grams: 1, price_incl_gst: 17120, spot_g999: 14728.5, ex_gst_premium_pct: 12.9,
+       source: "https://magicdrop.in/drops/1-gram-gold-coin"}
+    - {date: 2026-06-10, product: "Bangalore Refinery 1 g", grams: 1, price_incl_gst: 17239, spot_g999: 14728.5, ex_gst_premium_pct: 13.6,
+       source: "https://magicdrop.in/drops/1-gram-gold-coin"}
+  # GST on retail listings is assumed included (Indian consumer prices are quoted GST-inclusive). A refiner's own
+  # fabrication cost is not public, so results are also reported as a break-even sourcing premium.
+  bar_resale_discount_pct: 0.25     # selling the 10 g bars received on the long GOLDTEN leg back to the market (assumed)
+  vault_assay_transport_inr_per_g: 10   # assumed; not modelled anywhere public for MCX coin delivery
+  tender_margin_days: 3             # extra 8.34% margin held over the tender window, funded at the day's risk-free rate
+  delivery_margin_pct: 25           # delivery-period margin (spec: higher of 3% + VaR or 25%), held to pay-in (T+2)
+  delivery_margin_days: 2

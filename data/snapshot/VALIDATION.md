@@ -1,6 +1,6 @@
 # Snapshot validation
 
-Built 2026-10-23T16:02:17+05:30 · futures through 2026-10-22 · spot through 2026-10-22
+Built 2026-10-23T16:42:41+05:30 · futures through 2026-10-22 · spot through 2026-10-22
 
 | Check | Result | Count | Note | Examples |
 |---|---|---|---|---|
@@ -9,6 +9,7 @@ Built 2026-10-23T16:02:17+05:30 · futures through 2026-10-22 · spot through 20
 | `settlement.partial_polls` | **WARN** | 1 | Fewer fresh polls than the rule needs | GOLDM 2020-05-05: 1 days |
 | `spot.twin_mismatch` | **WARN** | 2 | Expected GOLDGUINEA spot = GOLDM spot x 999/995 at the same poll | GOLDTEN 2026-08-28 18:38:00: -1.0 bp (n=2 of 835)<br>GOLDGUINEA 2024-07-11 17:34:00: +4.9 bp (n=2 of 3318) |
 | `anatomy.curve_days` | **INFO** | 1743 | Days with a fitted benchmark curve; 0 more reuse the previous carry; 107 have no curve |  |
+| `backtest.trades` | **INFO** | 1874 | Simulated trades across 10 configs x 3 pairs; 207 walk-forward out-of-sample |  |
 | `convergence.cycles` | **INFO** | 173 | Pair-cycles with 10+ eligible days (21 pair-cycles live) |  |
 | `futures.expiry_brought_forward` | **INFO** | 6 | MCX moved the last trading day earlier (no spot poll on the published expiry); last_trading_day used | GOLD 2022-10-05 to 2022-10-04<br>GOLDGUINEA 2025-03-31 to 2025-03-28<br>GOLDGUINEA 2026-03-31 to 2026-03-30<br>GOLDPETAL 2025-03-31 to 2025-03-28<br>GOLDPETAL 2026-03-31 to 2026-03-30 |
 | `futures.no_trade_days` | **INFO** | 7160 | Volume 0: OHLC published as 0 and Close carried forward. Prices set to NaN, never used as fills |  |
