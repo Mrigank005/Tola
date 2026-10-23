@@ -68,6 +68,16 @@ A refresh from an empty cache took 189 MCX calls (the G0 cache seeds the rest). 
 
 **`tbill_3m`**: the FBIL 3-month T-bill benchmark, accumulated across refreshes (FBIL's public endpoint serves only 12 months). The repo-rate table with sources is in `specs/rates.yaml`.
 
+**`convergence_*`** (M3): same-expiry pairs per gram at 999. The pairs are GOLDGUINEA/GOLDTEN, GOLDPETAL/GOLDTEN, GOLDPETAL/GOLDGUINEA (context, from 2020) and GOLD/GOLDM (control). `premium_*_bp = 1e4 × (small / big − 1)`. A day is `eligible` when both legs traded ₹1 Cr+ and neither is in its tender window.
+
+| Table | Grain | Key columns |
+|---|---|---|
+| `convergence_daily` | pair × shared trading day | `premium_vwap_bp`, `premium_close_bp`, `tdte`, `bucket`, `eligible`, `reference_gap_bp` (from M2) |
+| `convergence_cycles` | pair × expiry | `mean_vwap_bp`, premium by days-to-expiry bucket, `last_premium_vwap_bp`, `settlement_gap_bp` (rebuilt DDRs), `given_up_bp` / `given_up_inr_g` (what a holder into settlement loses), `counts` (10+ eligible days), `status` |
+| `convergence_summary` | pair | Pooled mean of expired cycle means, cycle-bootstrap 95% CI, hit rate |
+| `convergence_profile` | pair × bucket | Premium by trading days to expiry, pooled over expired cycles |
+| `convergence_live` | pair × live expiry | Latest premium, 5-day change, percentile against expired cycles at the same stage (GOLDPETAL/GOLDGUINEA ranked only against cycles since Apr 2025) |
+
 ## Known limits
 
 - The DDR is rebuilt from published polls, not read from an MCX settlement file. It is verified against MCX's published settlements up to Sep 2023; later DDRs use the same rule but have no published value to check against.
