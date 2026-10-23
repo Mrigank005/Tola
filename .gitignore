@@ -23,3 +23,11 @@ data/raw/*
 !data/raw/specs/
 data/snapshot/VALIDATION_FAILED.md
 .pytest_cache/
+
+# Web app build output
+web/dist/
+# Impeccable: review captures and decision mocks are working files
+.impeccable/review/
+.impeccable/mocks/
+# Impeccable skill is installed per machine: npx skills add pbakaus/impeccable
+.claude/skills/

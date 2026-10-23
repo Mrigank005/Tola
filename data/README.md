@@ -91,6 +91,7 @@ Written by `python -m tola.export` at the end of every refresh, from the snapsho
 |---|---|
 | `chooser.json` | Everything the M5 chooser formula needs: live contracts (price, residual, carry, risk-free rate, tender and exit dates, lot sizes, making charges), premium-change history, cost schedule, delivery inputs, coin prices |
 | `golden.json` | `tola.chooser` quotes for seven reference requests; the app's port must reproduce them |
+| `evidence.json` | Figures for the app's Basis, Convergence, Verdict and Method pages: today's waterfall, monthly carry vs risk-free, premium summaries, live premiums, walk-forward and delivery results, validation and coverage |
 | `alerts.json` | The quiet alert log (swing, tender, control, settlement) since Apr 2025, with a summary |
 | `calendar.json` | Every live contract's key dates |
 | `meta.json` | As-of dates and build time |
