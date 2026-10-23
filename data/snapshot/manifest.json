@@ -1,8 +1,8 @@
 {
- "built_at": "2026-10-23T03:48:36+05:30",
+ "built_at": "2026-10-23T15:30:51+05:30",
  "data_asof": "2026-10-22",
  "spot_asof": "2026-10-22",
- "spec_file_sha256": "28bc9d5d367d59f440b6b5ee81eb1f9dd781617a24e6a7a28039d0e9bf08b414",
+ "spec_file_sha256": "05343adf91db8f002e7e68c4bf2b94298de917e0f9fc9a711c250b7cd0b70082",
  "tables": {
   "futures_daily": {
    "rows": 34385,
@@ -19,6 +19,18 @@
   "contracts": {
    "rows": 332,
    "sha256": "6d99d1efcb9b6ed149e5817ce5a36ee22adc509c73f9b8ddba8c4330c10de655"
+  },
+  "basis_daily": {
+   "rows": 27225,
+   "sha256": "a098ffc7a77862c3023b00f946e9e6fed5fe16b8856069be868097a5bc975d8f"
+  },
+  "curve_daily": {
+   "rows": 1850,
+   "sha256": "94066caee5b1575ae242d7248c0ff5e5bca2d300cdc84f6cfe18c6f80ab6e2de"
+  },
+  "tbill_3m": {
+   "rows": 241,
+   "sha256": "3e68084eb550f9987ab32c3516486aea27e2bd2a8b46d681b366a35e3e5b9421"
   }
  },
  "coverage": {
@@ -53,7 +65,8 @@
   "warnings": {
    "futures.cross_contract_outlier": 2,
    "spot.twin_mismatch": 2,
-   "settlement.partial_polls": 1
+   "settlement.partial_polls": 1,
+   "anatomy.loose_fit": 5
   },
   "info": {
    "futures.no_trade_days": 7160,
@@ -61,9 +74,11 @@
    "futures.expiry_brought_forward": 6,
    "spot.carried_forward_days": 664,
    "spot.frozen": 23,
-   "settlement.stale_spot": 12
+   "settlement.stale_spot": 12,
+   "anatomy.curve_days": 1743
   },
   "passed": [
+   "anatomy.waterfall_identity",
    "futures.missing_days",
    "futures.ohlc_inconsistent",
    "futures.vwap_outside_range",
@@ -71,6 +86,6 @@
    "settlement.rebuilt"
   ]
  },
- "raw_files": 466,
- "raw_sha256": "900faf4d4f5b6eeebacd5e00e02639403bd07815ab9dedc8db4cee2f4e8fad1e"
+ "raw_files": 467,
+ "raw_sha256": "eb87582c39f46a950e381a359422565d1c7eabe063d6fcc3ca8a701b758ce121"
 }

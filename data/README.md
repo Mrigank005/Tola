@@ -17,6 +17,7 @@ A refresh from an empty cache took 189 MCX calls (the G0 cache seeds the rest). 
 
 | Path | In git | What |
 |---|---|---|
+| `specs/rates.yaml` | yes | RBI repo-rate history with sources (risk-free proxy before FBIL coverage). |
 | `specs/gold.yaml` | yes | Contract specs versioned by expiry month. Every value is copied from an MCX PDF. |
 | `raw/specs/*.pdf` | yes | The 15 MCX spec PDFs behind `gold.yaml` (downloaded 23 Oct 2026). |
 | `raw/contract/`, `raw/spot/`, `raw/datewise/` | no | Every MCX response, byte for byte. Rebuilt by the refresh; their hashes are in `snapshot/raw_index.json`. |
@@ -49,6 +50,23 @@ A refresh from an empty cache took 189 MCX calls (the G0 cache seeds the rest). 
 **Verified:** for expiries before Oct 2023, MCX published the DDR as the last-day close, and the rebuilt DDR equals it on **all 145** contracts with live spot (`close_is_ddr_era`, `ddr_matches_close`). From the Oct 2023 expiries the last-day close is a traded price, so `expiry_close_vs_ddr_bp` there is information, not a check.
 
 **`contracts`**: one row per contract: first and last row, `last_trading_day`, `expiry_brought_forward`, rows, traded days, spec version, tender start date, `expired` or `live`.
+
+**`basis_daily`** (M2): one row per traded contract-day. The futures price split into terms that add up exactly, all in bp against the same day's Ahmedabad 999 spot (`ref_spot_g999`):
+
+| Column | Meaning |
+|---|---|
+| `basis_total_bp` | 1e4 · ln(close_g999 / ref_spot_g999) |
+| `timing_bp` | The day's common level: spot is polled around 5–6 pm, the close is the last half hour to about 11:30 pm. Intercept of the benchmark curve. |
+| `carry_bp` | The day's implied carry × time to the contract's effective settlement date (`tau_days`; a day earlier for 3-day-average contracts) |
+| `reference_bp` | Own polled spot vs Ahmedabad 999 (GOLDPETAL's Mumbai spot; about 0 elsewhere) |
+| `residual_bp` | What is left: the small-lot premium |
+| `own_basis_bp` | Basis to the contract's own polled spot (= total − reference) |
+| `fair_g999` | ref spot × exp((timing + carry + reference) / 1e4): the price with no residual |
+| `making_charge_inr_g`, `making_charge_bp`, `tender_margin_pct` | Delivery terms, reported beside the residual and not subtracted (they are paid outside the futures price) |
+
+**`curve_daily`** (M2): one row per trading day. `timing_bp`, `carry_pa` (annualised, continuous) and fit quality from the benchmark regression (GOLD and GOLDM, ₹1 Cr+ turnover, outside tender). `carry_source` is `fit`, `carried` (previous carry, at most 10 days) or `none`. `rf_pct` and `rf_source` give the FBIL 3-month T-bill, or the RBI repo rate before FBIL coverage, and `carry_minus_rf_pct` is the gap.
+
+**`tbill_3m`**: the FBIL 3-month T-bill benchmark, accumulated across refreshes (FBIL's public endpoint serves only 12 months). The repo-rate table with sources is in `specs/rates.yaml`.
 
 ## Known limits
 

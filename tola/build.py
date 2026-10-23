@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 import numpy as np
 import pandas as pd
 
-from . import parse, specs
+from . import anatomy, parse, rates, specs
 from .checks import Report
 from .mcx import RAW
 
@@ -311,6 +311,7 @@ def build(asof=None, log=print):
     contracts = contracts_table(fut, cal, asof, report)
     spot = load_spot(report)
     settle = settlement_table(fut, spot, contracts, cal, report)
+    basis, curve, _ = anatomy.build(fut, spot, report)
 
     SNAP.mkdir(parents=True, exist_ok=True)
     if report.errors():
@@ -321,7 +322,8 @@ def build(asof=None, log=print):
     cols = ["date", "symbol", "expiry", "last_trading_day", "open", "high", "low", "close", "prev_close", "vwap", "volume_lots", "value_lakh",
             "oi_lots", "traded", "lot_g", "quote_g", "purity", "close_g999", "open_g999", "mid_g999", "vwap_g999",
             "tdte", "tdte_exact", "tender_days", "in_tender", "spec_version", "spec_verified", "source"]
-    tables = {"futures_daily": fut[cols], "spot_polls": spot, "settlement": settle, "contracts": contracts}
+    tables = {"futures_daily": fut[cols], "spot_polls": spot, "settlement": settle, "contracts": contracts,
+              "basis_daily": basis, "curve_daily": curve, "tbill_3m": rates.load_tbill()}
     for name, t in tables.items():
         t.to_parquet(SNAP / f"{name}.parquet", index=False)
 

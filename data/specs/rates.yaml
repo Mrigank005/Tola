@@ -1,0 +1,30 @@
+# Risk-free reference for the implied-carry check (M2).
+#
+# Primary: FBIL 3-month T-bill benchmark, daily, fetched from https://www.fbil.org.in/wasdm/tbill/fetchcommongraph/12M
+# (the public site's own chart endpoint; it serves only the last 12 months, so each refresh caches what it sees and
+# history accumulates from Oct 2025 onward).
+#
+# Before FBIL coverage: the RBI policy repo rate. The 91-day T-bill trades close to repo (FBIL 3M was 5.4-5.7% against
+# a 5.25% repo in Oct 2026), so repo is a proxy, labelled as such in rates_daily.rf_source.
+# Changes from the dated list at https://stableinvestor.com/2021/10/rbi-repo-rate-history-india.html (updated
+# 5 Dec 2025), cross-checked with https://www.basunivesh.com/rbi-repo-rate-history-from-2000/ . Effective from the
+# MPC announcement date.
+
+repo_rate_pct:
+  2019-02-07: 6.25
+  2019-04-04: 6.00
+  2019-06-06: 5.75
+  2019-08-07: 5.40
+  2019-10-04: 5.15
+  2020-03-27: 4.40
+  2020-05-22: 4.00
+  2022-05-04: 4.40
+  2022-06-08: 4.90
+  2022-08-05: 5.40
+  2022-09-30: 5.90
+  2022-12-07: 6.25
+  2023-02-08: 6.50
+  2025-02-07: 6.25
+  2025-04-09: 6.00
+  2025-06-06: 5.50
+  2025-12-05: 5.25
