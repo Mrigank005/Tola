@@ -1,5 +1,5 @@
 {
- "built_at": "2026-10-23T15:30:51+05:30",
+ "built_at": "2026-10-23T16:02:17+05:30",
  "data_asof": "2026-10-22",
  "spot_asof": "2026-10-22",
  "spec_file_sha256": "05343adf91db8f002e7e68c4bf2b94298de917e0f9fc9a711c250b7cd0b70082",
@@ -31,6 +31,26 @@
   "tbill_3m": {
    "rows": 241,
    "sha256": "3e68084eb550f9987ab32c3516486aea27e2bd2a8b46d681b366a35e3e5b9421"
+  },
+  "convergence_daily": {
+   "rows": 14689,
+   "sha256": "53d450fabc51182fe8733c5ecf743e4545fa41e565a6d6d7dd4d220c4ddf338a"
+  },
+  "convergence_cycles": {
+   "rows": 177,
+   "sha256": "d5ed3eec296f9b122b7429b75535bfe2d4bec646aef04c357480c9de8788365b"
+  },
+  "convergence_summary": {
+   "rows": 4,
+   "sha256": "616222d86516a0ade32f9e46f573857626c1e2de289ea4556abf645473d38a80"
+  },
+  "convergence_profile": {
+   "rows": 24,
+   "sha256": "ca5b8253752186967a21c7decb297f7293ded110e92424aed0e322e033cc004b"
+  },
+  "convergence_live": {
+   "rows": 21,
+   "sha256": "fd5f9815314211b284c5e3c2fcd46fa42c1a0790c8c043bea12d9b268afcff79"
   }
  },
  "coverage": {
@@ -75,10 +95,12 @@
    "spot.carried_forward_days": 664,
    "spot.frozen": 23,
    "settlement.stale_spot": 12,
-   "anatomy.curve_days": 1743
+   "anatomy.curve_days": 1743,
+   "convergence.cycles": 173
   },
   "passed": [
    "anatomy.waterfall_identity",
+   "convergence.same_reference_settles_apart",
    "futures.missing_days",
    "futures.ohlc_inconsistent",
    "futures.vwap_outside_range",

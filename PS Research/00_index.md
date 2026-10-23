@@ -17,6 +17,7 @@
 | [07_sources.md](07_sources.md) | Bibliography of 169 sources with URLs and how each was verified |
 | [08_competitor_tracker.md](08_competitor_tracker.md) | **Round 2 competitor tracker (23 Oct):** 42 PS03 repos, tier-1 profiles, what still sets Tola apart. Re-run with [tracker/track_competitors.py](tracker/track_competitors.py) |
 | [m2_basis/M2_RESULTS.md](m2_basis/M2_RESULTS.md) | **M2 Basis Anatomy (23 Oct):** timing / carry / reference / residual per contract-day; implied carry vs T-bill; making charge not priced; GOLDPETAL regime break |
+| [m3_convergence/M3_RESULTS.md](m3_convergence/M3_RESULTS.md) | **M3 convergence monitor (23 Oct):** same-expiry premiums reproduce G0; flat until settlement; GOLD vs GOLDM control turned negative in 2026; live premium about a quarter of the Jan–Mar 2026 peak |
 | [g0_gate/](g0_gate/) | G0 pre-registration (frozen before the run), fetch and analysis scripts, raw cache, results |
 | [research_summary.html](research_summary.html) | Visual summary and **proposed scope with the G0 gate** (open in a browser) |
 | [data_probe/](data_probe/) | Real data pulled during research: 9 Oct 2026 gold bhavcopy, Aug–Sep 2026 same-expiry convergence, Sep 2026 polled spot |
