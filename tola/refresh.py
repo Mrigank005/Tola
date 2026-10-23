@@ -8,6 +8,7 @@ What gets fetched:
   - contracts: every gold futures contract's full daily history; live ones and ones cached before expiry are re-fetched
   - spot: each contract's polled spot, one call per product per calendar year; the current year is re-fetched
   - rates: FBIL's 3-month T-bill benchmark (last 12 months; cached copies accumulate history)
+Then it rebuilds data/snapshot/ and writes the web app's JSON to data/export/.
 A first run from an empty cache is about 250 calls (~10 minutes at MCX-friendly pacing); a daily refresh is ~40.
 """
 import argparse
@@ -17,7 +18,7 @@ import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from . import build, parse, rates, specs
+from . import build, export, parse, rates, specs
 from .checks import Report
 from .mcx import RAW, Client, MCXError
 
@@ -176,6 +177,7 @@ def main(argv=None):
     except build.BuildError as e:
         log(f"BUILD FAILED: {e}")
         return 1
+    export.run(log=log)
     return 0
 
 
