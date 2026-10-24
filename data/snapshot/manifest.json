@@ -1,16 +1,16 @@
 {
- "built_at": "2026-10-23T17:07:03+05:30",
- "data_asof": "2026-10-22",
- "spot_asof": "2026-10-22",
+ "built_at": "2026-10-24T12:50:04+05:30",
+ "data_asof": "2026-10-23",
+ "spot_asof": "2026-10-23",
  "spec_file_sha256": "05343adf91db8f002e7e68c4bf2b94298de917e0f9fc9a711c250b7cd0b70082",
  "tables": {
   "futures_daily": {
-   "rows": 34385,
-   "sha256": "f1cf6e015d05eba5e5160115db0325f20434c18c1ab192e2b7748604879ee0a9"
+   "rows": 34415,
+   "sha256": "c60a070e0e3b02c5093471b04281340996d03515d368ea0ace8d8ab224518b56"
   },
   "spot_polls": {
-   "rows": 14519,
-   "sha256": "c8c736c0136e50b7bf817792f4e42185666b87c46b9d5560d849d073434d4bc6"
+   "rows": 14533,
+   "sha256": "a49ffdc652644733687ccb05b628e9e7d52717def0927f43f33e5d785ebda668"
   },
   "settlement": {
    "rows": 302,
@@ -18,27 +18,27 @@
   },
   "contracts": {
    "rows": 332,
-   "sha256": "6d99d1efcb9b6ed149e5817ce5a36ee22adc509c73f9b8ddba8c4330c10de655"
+   "sha256": "6cc3bdee8d3eb67b8059df2b728b5709f1a2e71a9199c82209c03adb0000707b"
   },
   "basis_daily": {
-   "rows": 27225,
-   "sha256": "a098ffc7a77862c3023b00f946e9e6fed5fe16b8856069be868097a5bc975d8f"
+   "rows": 27253,
+   "sha256": "6bf7d0bcef841499529b4598e183bd1f2d7f3a641b89652fca116fe8b68e3115"
   },
   "curve_daily": {
-   "rows": 1850,
-   "sha256": "94066caee5b1575ae242d7248c0ff5e5bca2d300cdc84f6cfe18c6f80ab6e2de"
+   "rows": 1851,
+   "sha256": "a96c7ea884f840082c64ee439818447381c3323e9cfd350e5d7e244573ece2c9"
   },
   "tbill_3m": {
-   "rows": 241,
-   "sha256": "3e68084eb550f9987ab32c3516486aea27e2bd2a8b46d681b366a35e3e5b9421"
+   "rows": 242,
+   "sha256": "06a7f4491ba0acf018f7a66c7c63636e86581dd7f8602faacd86df342645ab7c"
   },
   "convergence_daily": {
-   "rows": 14689,
-   "sha256": "53d450fabc51182fe8733c5ecf743e4545fa41e565a6d6d7dd4d220c4ddf338a"
+   "rows": 14710,
+   "sha256": "a536bd8198993aea95869354df235c570a6ec463553d9f1c6cb99add2a9e5d5d"
   },
   "convergence_cycles": {
    "rows": 177,
-   "sha256": "d5ed3eec296f9b122b7429b75535bfe2d4bec646aef04c357480c9de8788365b"
+   "sha256": "4e0ab8cb16e4fc02c2d6889be045fc5a32c0b2e7058186154a9363cf53ddc802"
   },
   "convergence_summary": {
    "rows": 4,
@@ -50,15 +50,15 @@
   },
   "convergence_live": {
    "rows": 21,
-   "sha256": "fd5f9815314211b284c5e3c2fcd46fa42c1a0790c8c043bea12d9b268afcff79"
+   "sha256": "2edbc2756afabc4deca027e8a8c15bb4f0ce05d143c572560f7eba10f87009ae"
   },
   "wf_trades": {
-   "rows": 2081,
-   "sha256": "f9a27ef2d0f8f77e1d9f96b4995f95a939bba4067303e220d3b1db72d58201d1"
+   "rows": 2086,
+   "sha256": "ebc7a6f8f50af09d407d31c426db4e182322312b7e05e68910692a0e5b4425c6"
   },
   "wf_summary": {
    "rows": 6,
-   "sha256": "13ff88d2f3dac834dfdbef2d2b2ed7bbe5def7c97adaa3850105713e1543d943"
+   "sha256": "ec7333d8f8f6a43a7b278d375baebbd5b330c3c6b0c40dbfc204fd638034ce07"
   },
   "delivery_cycles": {
    "rows": 68,
@@ -72,27 +72,27 @@
  "coverage": {
   "GOLD": {
    "first": "2019-02-18",
-   "last": "2026-10-22",
+   "last": "2026-10-23",
    "contracts": 47
   },
   "GOLDGUINEA": {
    "first": "2019-10-03",
-   "last": "2026-10-22",
+   "last": "2026-10-23",
    "contracts": 87
   },
   "GOLDM": {
    "first": "2019-11-06",
-   "last": "2026-10-22",
+   "last": "2026-10-23",
    "contracts": 87
   },
   "GOLDPETAL": {
    "first": "2019-10-03",
-   "last": "2026-10-22",
+   "last": "2026-10-23",
    "contracts": 87
   },
   "GOLDTEN": {
    "first": "2025-03-31",
-   "last": "2026-10-22",
+   "last": "2026-10-23",
    "contracts": 24
   }
  },
@@ -105,15 +105,15 @@
    "anatomy.loose_fit": 5
   },
   "info": {
-   "futures.no_trade_days": 7160,
+   "futures.no_trade_days": 7162,
    "spec.version_not_held": 228,
    "futures.expiry_brought_forward": 6,
    "spot.carried_forward_days": 664,
    "spot.frozen": 23,
    "settlement.stale_spot": 12,
-   "anatomy.curve_days": 1743,
-   "convergence.cycles": 173,
-   "backtest.trades": 1874
+   "anatomy.curve_days": 1744,
+   "convergence.cycles": 174,
+   "backtest.trades": 1879
   },
   "passed": [
    "anatomy.waterfall_identity",
@@ -125,6 +125,6 @@
    "settlement.rebuilt"
   ]
  },
- "raw_files": 467,
- "raw_sha256": "eb87582c39f46a950e381a359422565d1c7eabe063d6fcc3ca8a701b758ce121"
+ "raw_files": 469,
+ "raw_sha256": "e74434647e02829015bad662f5bc375d47a5d2effd3222c2c46217083944c95e"
 }

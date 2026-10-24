@@ -1,11 +1,11 @@
 {
- "asof": "2026-10-22",
+ "asof": "2026-10-23",
  "summary": {
   "from": "2025-04-01",
-  "to": "2026-10-22",
-  "trading_days": 402,
+  "to": "2026-10-23",
+  "trading_days": 403,
   "alert_days": 101,
-  "quiet_days": 301,
+  "quiet_days": 302,
   "by_type": {
    "tender": 84,
    "swing": 49,
