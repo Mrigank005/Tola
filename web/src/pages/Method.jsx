@@ -58,7 +58,7 @@ export default function Method() {
         </Board>
       </div>
 
-      <section className="prose">
+      <section className="prose wide">
         <h2 className="section-h">Known limits</h2>
         <ul className="log limits">
           {[

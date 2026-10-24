@@ -137,7 +137,6 @@
 }
 
 /* ---------- review round 2 ---------- */
-.nav-cta { min-height: 34px; padding: 0 14px; font-size: 14px; }
 .hero-top { min-height: 440px; }
 .hero-copy { padding-top: 0; }
 .hero-copy p strong { color: var(--ink); font-weight: 600; }
@@ -203,7 +202,6 @@
   .lots .lot-bar { display: none; }
   .mini li { grid-template-columns: 1.2rem minmax(0, 1fr) auto; }
   .mini li .dim { display: none; }
-  .nav-cta { padding: 0 10px; font-size: 13px; }
 }
 .wrap.alt .stage-in > .fig { order: -1; justify-self: start; margin-inline: -14% 0; }
 @media (max-width: 1024px) { .wrap.alt .stage-in > .fig { order: 0; margin-inline: 0; } }

@@ -50,9 +50,7 @@ export default function App() {
               <a key={p} className="tab" href={`#${p}`} aria-current={route.path === p ? 'page' : undefined}>{label}</a>
             ))}
           </nav>
-          {route.path === '/'
-            ? <a className="btn btn-primary nav-cta" href="#/choose">Open the chooser</a>
-            : <span className="stamp">MCX data to <b>{date(meta.data_asof)}</b></span>}
+          <span className="stamp">MCX data to <b>{date(meta.data_asof)}</b></span>
         </div>
       </header>
       <Suspense fallback={<main className="page" id="main" aria-busy="true"><div className="board" style={{ padding: 28 }}><div className="skeleton" style={{ width: '40%', height: 22 }} /><div className="skeleton" style={{ marginTop: 24, height: 260 }} /></div></main>}>
