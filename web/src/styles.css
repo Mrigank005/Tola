@@ -227,3 +227,7 @@ tr.q:first-child .rank { border-color: var(--accent); color: var(--ink); }
   .log time { grid-column: 2; }
   .brand small { display: none; }
 }
+
+/* Method: known limits in two columns, three rows */
+.limits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; grid-auto-flow: row; }
+@media (max-width: 720px) { .limits { grid-template-columns: minmax(0, 1fr); } }

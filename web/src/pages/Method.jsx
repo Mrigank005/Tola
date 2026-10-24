@@ -60,7 +60,7 @@ export default function Method() {
 
       <section className="prose">
         <h2 className="section-h">Known limits</h2>
-        <ul className="log">
+        <ul className="log limits">
           {[
             'Prices are daily closes (the last half-hour average), not intraday quotes or fills. Slippage is assumed at one tick per order.',
             'Settlement prices after September 2023 use the verified rule, but MCX publishes no value to check them against.',
