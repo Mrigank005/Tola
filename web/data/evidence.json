@@ -1,0 +1,2590 @@
+{
+ "asof": "2026-10-23",
+ "summary": [
+  {
+   "pair": "GOLD/GOLDM",
+   "kind": "control",
+   "cycles": 39,
+   "first_expiry": "2020-02-05",
+   "last_expiry": "2026-10-05",
+   "pooled_vwap_bp": -1.5511970457133437,
+   "ci_lo_bp": -3.369549742290425,
+   "ci_hi_bp": 0.2548750421664718,
+   "hit_rate": 0.46153846153846156,
+   "pooled_close_bp": -1.6446487243310999,
+   "close_ci_lo_bp": -3.6874154848069316,
+   "close_ci_hi_bp": 0.40185469613799635,
+   "settlement_gap_bp_median": 0.0,
+   "settlement_gap_bp_maxabs": 0.0,
+   "given_up_bp_mean": 1.3176156000568726,
+   "given_up_inr_g_mean": 0.43982045534639225
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "kind": "same reference",
+   "cycles": 18,
+   "first_expiry": "2025-04-30",
+   "last_expiry": "2026-09-30",
+   "pooled_vwap_bp": 78.7204998941308,
+   "ci_lo_bp": 61.31122323424017,
+   "ci_hi_bp": 97.4235666749215,
+   "hit_rate": 1.0,
+   "pooled_close_bp": 78.74049474680545,
+   "close_ci_lo_bp": 60.75469867184451,
+   "close_ci_hi_bp": 97.50119927197639,
+   "settlement_gap_bp_median": 0.007982578820175945,
+   "settlement_gap_bp_maxabs": 0.10603779186935114,
+   "given_up_bp_mean": 68.31055813413644,
+   "given_up_inr_g_mean": 95.44654876276849
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "kind": "context",
+   "cycles": 81,
+   "first_expiry": "2020-01-31",
+   "last_expiry": "2026-09-30",
+   "pooled_vwap_bp": -70.37585241344296,
+   "ci_lo_bp": -88.26221244764399,
+   "ci_hi_bp": -53.119986938973554,
+   "hit_rate": 0.24691358024691357,
+   "pooled_close_bp": -70.32263619353347,
+   "close_ci_lo_bp": -88.15826437149093,
+   "close_ci_hi_bp": -53.15119282563816,
+   "settlement_gap_bp_median": -3.706148255764874,
+   "settlement_gap_bp_maxabs": 166.01029990911843,
+   "given_up_bp_mean": -77.25145435422444,
+   "given_up_inr_g_mean": -42.787091648085664
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "kind": "Mumbai reference",
+   "cycles": 18,
+   "first_expiry": "2025-04-30",
+   "last_expiry": "2026-09-30",
+   "pooled_vwap_bp": 94.18153040280528,
+   "ci_lo_bp": 80.29820036102083,
+   "ci_hi_bp": 108.80492956812536,
+   "hit_rate": 1.0,
+   "pooled_close_bp": 94.54705393650288,
+   "close_ci_lo_bp": 80.75200467977173,
+   "close_ci_hi_bp": 109.9252278738461,
+   "settlement_gap_bp_median": -3.810284349314297,
+   "settlement_gap_bp_maxabs": 166.01029990911843,
+   "given_up_bp_mean": 94.92288283240866,
+   "given_up_inr_g_mean": 132.56067801628967
+  }
+ ],
+ "profile": [
+  {
+   "pair": "GOLD/GOLDM",
+   "bucket": "60+",
+   "cycles": 38,
+   "mean_vwap_bp": -2.735646785087274,
+   "ci_lo_bp": -6.8884327686481255,
+   "ci_hi_bp": 1.5966448934865223
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "bucket": "40-59",
+   "cycles": 39,
+   "mean_vwap_bp": -1.7591643722569426,
+   "ci_lo_bp": -4.154113771063965,
+   "ci_hi_bp": 0.6855552746128402
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "bucket": "20-39",
+   "cycles": 39,
+   "mean_vwap_bp": -1.7399069658883581,
+   "ci_lo_bp": -3.4142307142587818,
+   "ci_hi_bp": -0.00627843164986143
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "bucket": "10-19",
+   "cycles": 39,
+   "mean_vwap_bp": 3.246499986182347,
+   "ci_lo_bp": 0.2874126515186501,
+   "ci_hi_bp": 6.418618008059215
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "bucket": "5-9",
+   "cycles": 39,
+   "mean_vwap_bp": 2.475836939789153,
+   "ci_lo_bp": -2.000342971881598,
+   "ci_hi_bp": 6.635077661683316
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "bucket": "0-4",
+   "cycles": 2,
+   "mean_vwap_bp": 2.7506610040473056,
+   "ci_lo_bp": 0.8014969607061939,
+   "ci_hi_bp": 4.699825047388417
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "bucket": "60+",
+   "cycles": 16,
+   "mean_vwap_bp": 87.43785069354085,
+   "ci_lo_bp": 62.42032400338886,
+   "ci_hi_bp": 116.26636628513705
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "bucket": "40-59",
+   "cycles": 17,
+   "mean_vwap_bp": 77.94456389195591,
+   "ci_lo_bp": 58.00075958266226,
+   "ci_hi_bp": 100.11000078466812
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "bucket": "20-39",
+   "cycles": 18,
+   "mean_vwap_bp": 68.63438120612545,
+   "ci_lo_bp": 50.83959166955735,
+   "ci_hi_bp": 89.1289947005597
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "bucket": "10-19",
+   "cycles": 18,
+   "mean_vwap_bp": 67.5458191071686,
+   "ci_lo_bp": 47.7353568440946,
+   "ci_hi_bp": 90.31174056327853
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "bucket": "5-9",
+   "cycles": 18,
+   "mean_vwap_bp": 76.2828317245185,
+   "ci_lo_bp": 48.23564871182438,
+   "ci_hi_bp": 107.32434560037633
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "bucket": "0-4",
+   "cycles": 10,
+   "mean_vwap_bp": 100.1924806886785,
+   "ci_lo_bp": 53.416697324933274,
+   "ci_hi_bp": 159.8632620785815
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "bucket": "60+",
+   "cycles": 18,
+   "mean_vwap_bp": -0.4618144397571997,
+   "ci_lo_bp": -21.840452893459144,
+   "ci_hi_bp": 14.753658277711882
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "bucket": "40-59",
+   "cycles": 77,
+   "mean_vwap_bp": -58.52141057262135,
+   "ci_lo_bp": -76.97422553440687,
+   "ci_hi_bp": -41.08280800822756
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "bucket": "20-39",
+   "cycles": 81,
+   "mean_vwap_bp": -64.60447003406699,
+   "ci_lo_bp": -82.840707438875,
+   "ci_hi_bp": -46.85147394557539
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "bucket": "10-19",
+   "cycles": 81,
+   "mean_vwap_bp": -73.40524743042633,
+   "ci_lo_bp": -93.37432686653925,
+   "ci_hi_bp": -54.27276540018656
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "bucket": "5-9",
+   "cycles": 81,
+   "mean_vwap_bp": -84.91244819051437,
+   "ci_lo_bp": -109.15643640339039,
+   "ci_hi_bp": -62.07168023202309
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "bucket": "0-4",
+   "cycles": 10,
+   "mean_vwap_bp": 11.683170204168702,
+   "ci_lo_bp": -1.8812127581530373,
+   "ci_hi_bp": 29.873887274810553
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "bucket": "60+",
+   "cycles": 16,
+   "mean_vwap_bp": 96.68363056246501,
+   "ci_lo_bp": 73.37536279990547,
+   "ci_hi_bp": 120.96687048445992
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "bucket": "40-59",
+   "cycles": 17,
+   "mean_vwap_bp": 95.47671981263058,
+   "ci_lo_bp": 76.2520909623574,
+   "ci_hi_bp": 118.15243673981605
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "bucket": "20-39",
+   "cycles": 18,
+   "mean_vwap_bp": 88.44844925828701,
+   "ci_lo_bp": 70.41377790385152,
+   "ci_hi_bp": 109.21317705714497
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "bucket": "10-19",
+   "cycles": 18,
+   "mean_vwap_bp": 84.70007609809956,
+   "ci_lo_bp": 64.68559562047291,
+   "ci_hi_bp": 107.48151750911762
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "bucket": "5-9",
+   "cycles": 18,
+   "mean_vwap_bp": 90.80214116145025,
+   "ci_lo_bp": 63.18015880079341,
+   "ci_hi_bp": 121.58668177536276
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "bucket": "0-4",
+   "cycles": 10,
+   "mean_vwap_bp": 112.07022149683587,
+   "ci_lo_bp": 57.50474695212805,
+   "ci_hi_bp": 177.01449923020832
+  }
+ ],
+ "live": [
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2026-12-04",
+   "date": "2026-10-23",
+   "tdte": 30,
+   "bucket": "20-39",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 5.037178442710566,
+   "premium_close_bp": 4.931174887639056,
+   "change_5d_bp": -1.1362364933154012,
+   "history_cycles": 39,
+   "history_mean_bp": -1.7399069658883581,
+   "history_pct_rank": 0.9487179487179487,
+   "value_lakh_small": 914730.14,
+   "value_lakh_big": 251470.36
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2027-02-05",
+   "date": "2026-10-23",
+   "tdte": 75,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": -13.726711591731666,
+   "premium_close_bp": -13.053387664893057,
+   "change_5d_bp": -0.7051993254214572,
+   "history_cycles": 38,
+   "history_mean_bp": -2.735646785087274,
+   "history_pct_rank": 0.13157894736842105,
+   "value_lakh_small": 40239.06,
+   "value_lakh_big": 17944.04
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2027-04-05",
+   "date": "2026-10-23",
+   "tdte": 116,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": -41.27402989940521,
+   "premium_close_bp": -17.898426430009717,
+   "change_5d_bp": 52.278435334475176,
+   "history_cycles": 38,
+   "history_mean_bp": -2.735646785087274,
+   "history_pct_rank": 0.0,
+   "value_lakh_small": 1325.12,
+   "value_lakh_big": 2099.41
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-10-30",
+   "date": "2026-10-23",
+   "tdte": 5,
+   "bucket": "5-9",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 39.363866389727775,
+   "premium_close_bp": 44.59213815041885,
+   "change_5d_bp": -6.937529369894776,
+   "history_cycles": 18,
+   "history_mean_bp": 76.2828317245185,
+   "history_pct_rank": 0.4444444444444444,
+   "value_lakh_small": 10214.63,
+   "value_lakh_big": 23829.92
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-11-30",
+   "date": "2026-10-23",
+   "tdte": 26,
+   "bucket": "20-39",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 46.34995204684023,
+   "premium_close_bp": 45.1637846197106,
+   "change_5d_bp": 1.6487714869017935,
+   "history_cycles": 18,
+   "history_mean_bp": 68.63438120612545,
+   "history_pct_rank": 0.3888888888888889,
+   "value_lakh_small": 9540.87,
+   "value_lakh_big": 21771.22
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-12-31",
+   "date": "2026-10-23",
+   "tdte": 49,
+   "bucket": "40-59",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 38.40669030608312,
+   "premium_close_bp": 38.74527199910993,
+   "change_5d_bp": -6.476837648190518,
+   "history_cycles": 17,
+   "history_mean_bp": 77.94456389195591,
+   "history_pct_rank": 0.11764705882352941,
+   "value_lakh_small": 3034.45,
+   "value_lakh_big": 7822.06
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2027-01-29",
+   "date": "2026-10-23",
+   "tdte": 70,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 33.37608430824312,
+   "premium_close_bp": 32.540201783686214,
+   "change_5d_bp": 4.674233112995637,
+   "history_cycles": 16,
+   "history_mean_bp": 87.43785069354085,
+   "history_pct_rank": 0.1875,
+   "value_lakh_small": 1121.99,
+   "value_lakh_big": 4197.83
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2027-02-26",
+   "date": "2026-10-23",
+   "tdte": 90,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 26.020498438557027,
+   "premium_close_bp": 22.354313308232676,
+   "change_5d_bp": -9.590752621329024,
+   "history_cycles": 16,
+   "history_mean_bp": 87.43785069354085,
+   "history_pct_rank": 0.0625,
+   "value_lakh_small": 863.77,
+   "value_lakh_big": 1849.7
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2027-03-31",
+   "date": "2026-10-23",
+   "tdte": 113,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 21.84151053777006,
+   "premium_close_bp": 21.771025604617744,
+   "change_5d_bp": -32.03161598126725,
+   "history_cycles": 16,
+   "history_mean_bp": 87.43785069354085,
+   "history_pct_rank": 0.0625,
+   "value_lakh_small": 228.29,
+   "value_lakh_big": 559.1
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "expiry": "2026-10-30",
+   "date": "2026-10-23",
+   "tdte": 5,
+   "bucket": "5-9",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 9.339561805075114,
+   "premium_close_bp": 6.362222536406836,
+   "change_5d_bp": 9.292473321134143,
+   "history_cycles": 18,
+   "history_mean_bp": 14.45690528900223,
+   "history_pct_rank": 0.3888888888888889,
+   "value_lakh_small": 23509.95,
+   "value_lakh_big": 10214.63
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "expiry": "2026-11-30",
+   "date": "2026-10-23",
+   "tdte": 26,
+   "bucket": "20-39",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 1.602357303058799,
+   "premium_close_bp": 4.723500288659199,
+   "change_5d_bp": 6.565754097788146,
+   "history_cycles": 18,
+   "history_mean_bp": 19.36623213142355,
+   "history_pct_rank": 0.1111111111111111,
+   "value_lakh_small": 22500.1,
+   "value_lakh_big": 9540.87
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "expiry": "2026-12-31",
+   "date": "2026-10-23",
+   "tdte": 49,
+   "bucket": "40-59",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 3.9357385098126585,
+   "premium_close_bp": 1.9912557897927563,
+   "change_5d_bp": 6.681062778463032,
+   "history_cycles": 18,
+   "history_mean_bp": 13.750925903280457,
+   "history_pct_rank": 0.2777777777777778,
+   "value_lakh_small": 8200.52,
+   "value_lakh_big": 3034.45
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "expiry": "2027-01-29",
+   "date": "2026-10-23",
+   "tdte": 70,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 3.0096535811274805,
+   "premium_close_bp": 9.781881210206844,
+   "change_5d_bp": -7.46518913979255,
+   "history_cycles": 18,
+   "history_mean_bp": -0.4618144397571997,
+   "history_pct_rank": 0.4444444444444444,
+   "value_lakh_small": 3059.54,
+   "value_lakh_big": 1121.99
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "expiry": "2027-02-26",
+   "date": "2026-10-23",
+   "tdte": 90,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 5.835788363592886,
+   "premium_close_bp": 19.48024329037512,
+   "change_5d_bp": -3.1864854761853856,
+   "history_cycles": 18,
+   "history_mean_bp": -0.4618144397571997,
+   "history_pct_rank": 0.5,
+   "value_lakh_small": 2001.95,
+   "value_lakh_big": 863.77
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "expiry": "2027-03-31",
+   "date": "2026-10-23",
+   "tdte": 113,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 7.431748234609792,
+   "premium_close_bp": 20.576825771629892,
+   "change_5d_bp": 16.29360063349017,
+   "history_cycles": 18,
+   "history_mean_bp": -0.4618144397571997,
+   "history_pct_rank": 0.5,
+   "value_lakh_small": 1109.13,
+   "value_lakh_big": 228.29
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-10-30",
+   "date": "2026-10-23",
+   "tdte": 5,
+   "bucket": "5-9",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 48.74019232110616,
+   "premium_close_bp": 50.98273119745534,
+   "change_5d_bp": 2.3914900512900275,
+   "history_cycles": 18,
+   "history_mean_bp": 90.80214116145025,
+   "history_pct_rank": 0.16666666666666666,
+   "value_lakh_small": 23509.95,
+   "value_lakh_big": 23829.92
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-11-30",
+   "date": "2026-10-23",
+   "tdte": 26,
+   "bucket": "20-39",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 47.959736268317066,
+   "premium_close_bp": 49.90861802333768,
+   "change_5d_bp": 8.244139472739498,
+   "history_cycles": 18,
+   "history_mean_bp": 88.44844925828701,
+   "history_pct_rank": 0.1111111111111111,
+   "value_lakh_small": 22500.1,
+   "value_lakh_big": 21771.22
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-12-31",
+   "date": "2026-10-23",
+   "tdte": 49,
+   "bucket": "40-59",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 42.35754468490338,
+   "premium_close_bp": 40.74424296362178,
+   "change_5d_bp": 0.23166298313448408,
+   "history_cycles": 17,
+   "history_mean_bp": 95.47671981263058,
+   "history_pct_rank": 0.0,
+   "value_lakh_small": 8200.52,
+   "value_lakh_big": 7822.06
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2027-01-29",
+   "date": "2026-10-23",
+   "tdte": 70,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 36.39578293453738,
+   "premium_close_bp": 42.353913432733314,
+   "change_5d_bp": -2.8109757193384155,
+   "history_cycles": 16,
+   "history_mean_bp": 96.68363056246501,
+   "history_pct_rank": 0.125,
+   "value_lakh_small": 3059.54,
+   "value_lakh_big": 4197.83
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2027-02-26",
+   "date": "2026-10-23",
+   "tdte": 90,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 31.871471814348684,
+   "premium_close_bp": 41.878103344792365,
+   "change_5d_bp": -12.794182531199464,
+   "history_cycles": 16,
+   "history_mean_bp": 96.68363056246501,
+   "history_pct_rank": 0.0625,
+   "value_lakh_small": 2001.95,
+   "value_lakh_big": 1849.7
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2027-03-31",
+   "date": "2026-10-23",
+   "tdte": 113,
+   "bucket": "60+",
+   "eligible": true,
+   "in_tender": false,
+   "premium_vwap_bp": 29.289490833117604,
+   "premium_close_bp": 42.39264923632247,
+   "change_5d_bp": -15.674041717492763,
+   "history_cycles": 16,
+   "history_mean_bp": 96.68363056246501,
+   "history_pct_rank": 0.0625,
+   "value_lakh_small": 1109.13,
+   "value_lakh_big": 559.1
+  }
+ ],
+ "cycles": [
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2020-02-05",
+   "mean_vwap_bp": 1.2786415063396874,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 15.925867733743715,
+   "given_up_inr_g": 6.496704794007673,
+   "last_premium_vwap_bp": 15.925867733743715
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2020-04-03",
+   "mean_vwap_bp": 2.041266911773143,
+   "eligible_days": 60,
+   "settlement_gap_bp": null,
+   "given_up_bp": null,
+   "given_up_inr_g": null,
+   "last_premium_vwap_bp": -53.39423453657899
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2020-06-05",
+   "mean_vwap_bp": 4.857727498462235,
+   "eligible_days": 57,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -12.881234891036764,
+   "given_up_inr_g": -6.042313104261785,
+   "last_premium_vwap_bp": -12.881234891036764
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2020-08-05",
+   "mean_vwap_bp": -0.5341250009505137,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -5.697972216532898,
+   "given_up_inr_g": -3.0209760448680054,
+   "last_premium_vwap_bp": -5.697972216532898
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2020-10-05",
+   "mean_vwap_bp": -10.079617793108417,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 7.981206118039541,
+   "given_up_inr_g": 3.9758222662627025,
+   "last_premium_vwap_bp": 7.981206118039541
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2020-12-04",
+   "mean_vwap_bp": -13.334600420968194,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -2.2629712172839156,
+   "given_up_inr_g": -1.0981194888390915,
+   "last_premium_vwap_bp": -2.2629712172839156
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2021-02-05",
+   "mean_vwap_bp": -7.685864504240011,
+   "eligible_days": 57,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -11.36353017625602,
+   "given_up_inr_g": -5.604474845332107,
+   "last_premium_vwap_bp": -11.36353017625602
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2021-04-05",
+   "mean_vwap_bp": -5.637064537112158,
+   "eligible_days": 57,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -1.993169114520299,
+   "given_up_inr_g": -0.8923990824751696,
+   "last_premium_vwap_bp": -1.993169114520299
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2021-06-04",
+   "mean_vwap_bp": -3.6898993915242477,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -1.0933216859365658,
+   "given_up_inr_g": -0.5315387272900925,
+   "last_premium_vwap_bp": -1.0933216859365658
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2021-08-05",
+   "mean_vwap_bp": -3.5905786301504805,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 5.775264138376812,
+   "given_up_inr_g": 2.7819960359405544,
+   "last_premium_vwap_bp": 5.775264138376812
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2021-10-05",
+   "mean_vwap_bp": -5.932377979721384,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 3.64924334007366,
+   "given_up_inr_g": 1.6807868277354894,
+   "last_premium_vwap_bp": 3.64924334007366
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2021-12-03",
+   "mean_vwap_bp": -6.620224354034278,
+   "eligible_days": 56,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -0.851391529422818,
+   "given_up_inr_g": -0.40927937445568857,
+   "last_premium_vwap_bp": -0.851391529422818
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2022-02-04",
+   "mean_vwap_bp": -3.9288876883867783,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -1.1496520407416888,
+   "given_up_inr_g": -0.5508561368898887,
+   "last_premium_vwap_bp": -1.1496520407416888
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2022-04-05",
+   "mean_vwap_bp": 1.3218063402253653,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 10.822750275978343,
+   "given_up_inr_g": 5.524984042448713,
+   "last_premium_vwap_bp": 10.822750275978343
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2022-06-03",
+   "mean_vwap_bp": -1.9123783243798245,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -3.6225419706592543,
+   "given_up_inr_g": -1.8541732422289305,
+   "last_premium_vwap_bp": -3.6225419706592543
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2022-08-05",
+   "mean_vwap_bp": -9.00112952748387,
+   "eligible_days": 61,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 5.450651973684106,
+   "given_up_inr_g": 2.807101618911703,
+   "last_premium_vwap_bp": 5.450651973684106
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2022-12-05",
+   "mean_vwap_bp": -0.8663514350445981,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 17.85725307507091,
+   "given_up_inr_g": 9.386749334902083,
+   "last_premium_vwap_bp": 17.85725307507091
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2023-02-03",
+   "mean_vwap_bp": 12.82032688105898,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 10.23892601327292,
+   "given_up_inr_g": 5.831266901741292,
+   "last_premium_vwap_bp": 10.23892601327292
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2023-04-05",
+   "mean_vwap_bp": 6.486110220817747,
+   "eligible_days": 57,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 0.14504634652023896,
+   "given_up_inr_g": 0.08579457591900679,
+   "last_premium_vwap_bp": 0.14504634652023896
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2023-06-05",
+   "mean_vwap_bp": 2.5861454874558936,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 1.4850365621099648,
+   "given_up_inr_g": 0.8866864391905835,
+   "last_premium_vwap_bp": 1.4850365621099648
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2023-08-04",
+   "mean_vwap_bp": 1.7980453991942222,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 17.356369004759564,
+   "given_up_inr_g": 10.298247066445251,
+   "last_premium_vwap_bp": 17.356369004759564
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2023-10-05",
+   "mean_vwap_bp": -4.2731393172870344,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -12.212581431946257,
+   "given_up_inr_g": -7.130435283025601,
+   "last_premium_vwap_bp": -12.212581431946257
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2023-12-05",
+   "mean_vwap_bp": -5.267145248546415,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -11.673778406714463,
+   "given_up_inr_g": -7.244564053956039,
+   "last_premium_vwap_bp": -11.673778406714463
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2024-02-05",
+   "mean_vwap_bp": -1.9010635392332953,
+   "eligible_days": 54,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -11.737485704543804,
+   "given_up_inr_g": -7.333328253824803,
+   "last_premium_vwap_bp": -11.737485704543804
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2024-04-05",
+   "mean_vwap_bp": 5.869813068593061,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -7.631410903611302,
+   "given_up_inr_g": -5.132568857505264,
+   "last_premium_vwap_bp": -7.631410903611302
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2024-06-05",
+   "mean_vwap_bp": 6.322422398550873,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 8.381890115938262,
+   "given_up_inr_g": 6.064976808583532,
+   "last_premium_vwap_bp": 8.381890115938262
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2024-08-05",
+   "mean_vwap_bp": 0.42641180078629526,
+   "eligible_days": 61,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 6.073164927697938,
+   "given_up_inr_g": 4.171854267096519,
+   "last_premium_vwap_bp": 6.073164927697938
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2024-10-04",
+   "mean_vwap_bp": 0.5551909450423206,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 12.941920807842955,
+   "given_up_inr_g": 9.784846142446881,
+   "last_premium_vwap_bp": 12.941920807842955
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2024-12-05",
+   "mean_vwap_bp": -0.08377715630129624,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -5.39091861168739,
+   "given_up_inr_g": -4.103420841684694,
+   "last_premium_vwap_bp": -5.39091861168739
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2025-02-05",
+   "mean_vwap_bp": 2.868898696698722,
+   "eligible_days": 61,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 4.643014803520362,
+   "given_up_inr_g": 3.768638236065004,
+   "last_premium_vwap_bp": 4.643014803520362
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2025-04-04",
+   "mean_vwap_bp": 3.816891304308393,
+   "eligible_days": 61,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 17.525636629562857,
+   "given_up_inr_g": 15.60564772480893,
+   "last_premium_vwap_bp": 17.525636629562857
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2025-06-05",
+   "mean_vwap_bp": 3.886259676081065,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 8.588114374004086,
+   "given_up_inr_g": 8.192654075081235,
+   "last_premium_vwap_bp": 8.588114374004086
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2025-08-05",
+   "mean_vwap_bp": 1.1123009977194978,
+   "eligible_days": 61,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 7.708811227595813,
+   "given_up_inr_g": 7.574537781243537,
+   "last_premium_vwap_bp": 7.708811227595813
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2025-10-03",
+   "mean_vwap_bp": 2.99579129748327,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 7.5379681733700465,
+   "given_up_inr_g": 8.522236986284947,
+   "last_premium_vwap_bp": 7.5379681733700465
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2025-12-05",
+   "mean_vwap_bp": 0.6083708064300267,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -14.895396299405839,
+   "given_up_inr_g": -18.8907754608661,
+   "last_premium_vwap_bp": -14.895396299405839
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2026-02-05",
+   "mean_vwap_bp": -7.663573543280623,
+   "eligible_days": 92,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -29.942253717073484,
+   "given_up_inr_g": -48.786047525999145,
+   "last_premium_vwap_bp": -29.942253717073484
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2026-06-05",
+   "mean_vwap_bp": -10.389993367789549,
+   "eligible_days": 123,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 11.325760866274237,
+   "given_up_inr_g": 17.73681725671978,
+   "last_premium_vwap_bp": 11.325760866274237
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "mean_vwap_bp": -14.243323443062568,
+   "eligible_days": 125,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 6.889264682146123,
+   "given_up_inr_g": 9.804366246653885,
+   "last_premium_vwap_bp": 6.889264682146123
+  },
+  {
+   "pair": "GOLD/GOLDM",
+   "expiry": "2026-10-05",
+   "mean_vwap_bp": -5.513990817235657,
+   "eligible_days": 117,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": -3.834158470048532,
+   "given_up_inr_g": -5.6442678018239905,
+   "last_premium_vwap_bp": -3.834158470048532
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-04-30",
+   "mean_vwap_bp": 38.16908117251279,
+   "eligible_days": 16,
+   "settlement_gap_bp": -0.10603779186935114,
+   "given_up_bp": 32.93083867106583,
+   "given_up_inr_g": 31.40685695158451,
+   "last_premium_vwap_bp": 32.82480087919648
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-05-30",
+   "mean_vwap_bp": 48.80107566087144,
+   "eligible_days": 38,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 1.3410157467697026,
+   "given_up_inr_g": 1.2868773399282527,
+   "last_premium_vwap_bp": 1.3410157467697026
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-06-30",
+   "mean_vwap_bp": 54.344216555462296,
+   "eligible_days": 58,
+   "settlement_gap_bp": 0.026025129864493124,
+   "given_up_bp": 48.5169029082666,
+   "given_up_inr_g": 48.06187794076065,
+   "last_premium_vwap_bp": 48.542928038131095
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-07-31",
+   "mean_vwap_bp": 39.978065378675296,
+   "eligible_days": 61,
+   "settlement_gap_bp": 0.05078101196431817,
+   "given_up_bp": 41.4958116588382,
+   "given_up_inr_g": 40.94208100678792,
+   "last_premium_vwap_bp": 41.54659267080252
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-08-29",
+   "mean_vwap_bp": 34.17855595084796,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.04883909471731229,
+   "given_up_bp": 15.730057870639857,
+   "given_up_inr_g": 15.642637611880781,
+   "last_premium_vwap_bp": 15.77889696535717
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-09-30",
+   "mean_vwap_bp": 33.94963797480825,
+   "eligible_days": 60,
+   "settlement_gap_bp": 0.04339449063417433,
+   "given_up_bp": 35.39901905005527,
+   "given_up_inr_g": 40.25949490305246,
+   "last_premium_vwap_bp": 35.442413540689444
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-10-31",
+   "mean_vwap_bp": 48.07218990728917,
+   "eligible_days": 59,
+   "settlement_gap_bp": -0.020672432896606807,
+   "given_up_bp": 77.3744001582477,
+   "given_up_inr_g": 94.65002312951455,
+   "last_premium_vwap_bp": 77.35372772535109
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-11-28",
+   "mean_vwap_bp": 65.43235655844649,
+   "eligible_days": 59,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 120.39926048469817,
+   "given_up_inr_g": 148.39793537189078,
+   "last_premium_vwap_bp": 120.39926048469817
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-12-31",
+   "mean_vwap_bp": 78.75746713534576,
+   "eligible_days": 68,
+   "settlement_gap_bp": 0.05631772206138308,
+   "given_up_bp": 119.39822523428401,
+   "given_up_inr_g": 164.1487261351139,
+   "last_premium_vwap_bp": 119.45454295634539
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-01-30",
+   "mean_vwap_bp": 114.0101005151391,
+   "eligible_days": 84,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 246.61666719516307,
+   "given_up_inr_g": 393.15128734466293,
+   "last_premium_vwap_bp": 246.61666719516307
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-02-27",
+   "mean_vwap_bp": 124.71724897035645,
+   "eligible_days": 98,
+   "settlement_gap_bp": -0.031402498382737676,
+   "given_up_bp": 147.80749722615448,
+   "given_up_inr_g": 233.56249418595792,
+   "last_premium_vwap_bp": 147.77609472777175
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-03-31",
+   "mean_vwap_bp": 142.65154581956298,
+   "eligible_days": 108,
+   "settlement_gap_bp": 0.0511202142972067,
+   "given_up_bp": 110.76407789414321,
+   "given_up_inr_g": 159.78936260454427,
+   "last_premium_vwap_bp": 110.81519810844043
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-04-30",
+   "mean_vwap_bp": 142.25293032395166,
+   "eligible_days": 106,
+   "settlement_gap_bp": -0.016624661688391384,
+   "given_up_bp": 58.23265785051546,
+   "given_up_inr_g": 87.65015542165386,
+   "last_premium_vwap_bp": 58.21603318882707
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-05-29",
+   "mean_vwap_bp": 139.73553190338257,
+   "eligible_days": 114,
+   "settlement_gap_bp": 0.01596515764035189,
+   "given_up_bp": 24.340858050102554,
+   "given_up_inr_g": 38.26678368475437,
+   "last_premium_vwap_bp": 24.356823207742906
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-06-30",
+   "mean_vwap_bp": 121.29360609389927,
+   "eligible_days": 120,
+   "settlement_gap_bp": 0.0,
+   "given_up_bp": 54.103293961693666,
+   "given_up_inr_g": 75.99722352142716,
+   "last_premium_vwap_bp": 54.103293961693666
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-07-31",
+   "mean_vwap_bp": 81.49626389946707,
+   "eligible_days": 111,
+   "settlement_gap_bp": 0.034997585165452705,
+   "given_up_bp": 32.242483431657035,
+   "given_up_inr_g": 45.65877739314724,
+   "last_premium_vwap_bp": 32.277481016822485
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-08-31",
+   "mean_vwap_bp": 61.02927105088661,
+   "eligible_days": 108,
+   "settlement_gap_bp": -0.03210520232665992,
+   "given_up_bp": 45.77650228379082,
+   "given_up_inr_g": 73.23905404349576,
+   "last_premium_vwap_bp": 45.74439708146416
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-09-30",
+   "mean_vwap_bp": 48.099853223449124,
+   "eligible_days": 100,
+   "settlement_gap_bp": 0.016868412884285533,
+   "given_up_bp": 17.12047673837036,
+   "given_up_inr_g": 25.926229139675414,
+   "last_premium_vwap_bp": 17.137345151254646
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-04-30",
+   "mean_vwap_bp": 77.79289325943697,
+   "eligible_days": 16,
+   "settlement_gap_bp": 2.5449070048555456,
+   "given_up_bp": 79.38475854436078,
+   "given_up_inr_g": 75.710970517415,
+   "last_premium_vwap_bp": 81.92966554921632
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-05-30",
+   "mean_vwap_bp": 86.01999430629371,
+   "eligible_days": 38,
+   "settlement_gap_bp": -2.095557418273497,
+   "given_up_bp": 40.702330357413885,
+   "given_up_inr_g": 39.05912868316599,
+   "last_premium_vwap_bp": 38.606772939140384
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-06-30",
+   "mean_vwap_bp": 84.94267503997598,
+   "eligible_days": 58,
+   "settlement_gap_bp": -2.186110908694028,
+   "given_up_bp": 74.75913174614602,
+   "given_up_inr_g": 74.05798906278304,
+   "last_premium_vwap_bp": 72.57302083745199
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-07-31",
+   "mean_vwap_bp": 75.47185920129533,
+   "eligible_days": 61,
+   "settlement_gap_bp": 8.937458105664486,
+   "given_up_bp": 62.102914358366235,
+   "given_up_inr_g": 61.27419729302462,
+   "last_premium_vwap_bp": 71.04037246403072
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-08-29",
+   "mean_vwap_bp": 65.77766930952826,
+   "eligible_days": 59,
+   "settlement_gap_bp": 10.060853512019463,
+   "given_up_bp": 20.715205653150104,
+   "given_up_inr_g": 20.60008028912802,
+   "last_premium_vwap_bp": 30.776059165169567
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-09-30",
+   "mean_vwap_bp": 56.53448834082691,
+   "eligible_days": 60,
+   "settlement_gap_bp": -6.248806651507621,
+   "given_up_bp": -0.499186569183907,
+   "given_up_inr_g": -0.5677275720356542,
+   "last_premium_vwap_bp": -6.747993220691528
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-10-31",
+   "mean_vwap_bp": 56.70560276529868,
+   "eligible_days": 59,
+   "settlement_gap_bp": 3.8037276530999975,
+   "given_up_bp": 85.8329855291351,
+   "given_up_inr_g": 104.99718316384181,
+   "last_premium_vwap_bp": 89.6367131822351
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-11-28",
+   "mean_vwap_bp": 73.44948891083715,
+   "eligible_days": 59,
+   "settlement_gap_bp": -6.32211158526963,
+   "given_up_bp": 152.1425606144422,
+   "given_up_inr_g": 187.52309429878446,
+   "last_premium_vwap_bp": 145.82044902917258
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-12-31",
+   "mean_vwap_bp": 85.94275577139112,
+   "eligible_days": 68,
+   "settlement_gap_bp": 3.5292439158096656,
+   "given_up_bp": 109.63460148798009,
+   "given_up_inr_g": 150.72569244032042,
+   "last_premium_vwap_bp": 113.16384540378976
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-01-30",
+   "mean_vwap_bp": 111.26566606853191,
+   "eligible_days": 86,
+   "settlement_gap_bp": -166.01029990911843,
+   "given_up_bp": 367.6548751944542,
+   "given_up_inr_g": 586.1079428457867,
+   "last_premium_vwap_bp": 201.64457528533575
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-02-27",
+   "mean_vwap_bp": 120.72950577801217,
+   "eligible_days": 104,
+   "settlement_gap_bp": -8.353064569817104,
+   "given_up_bp": 242.37435746396807,
+   "given_up_inr_g": 382.9951830480375,
+   "last_premium_vwap_bp": 234.02129289415097
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-03-31",
+   "mean_vwap_bp": 142.88363246347032,
+   "eligible_days": 114,
+   "settlement_gap_bp": -2.9308922863002795,
+   "given_up_bp": 149.8691206430214,
+   "given_up_inr_g": 216.20268698068753,
+   "last_premium_vwap_bp": 146.9382283567211
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-04-30",
+   "mean_vwap_bp": 145.30821270146998,
+   "eligible_days": 114,
+   "settlement_gap_bp": -7.9133389635521745,
+   "given_up_bp": 90.87534894843597,
+   "given_up_inr_g": 136.78301409106874,
+   "last_premium_vwap_bp": 82.96200998488379
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-05-29",
+   "mean_vwap_bp": 145.21236726934137,
+   "eligible_days": 119,
+   "settlement_gap_bp": -21.776475020914845,
+   "given_up_bp": 51.8806670463412,
+   "given_up_inr_g": 81.56270658974319,
+   "last_premium_vwap_bp": 30.104192025426357
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-06-30",
+   "mean_vwap_bp": 137.60759907389317,
+   "eligible_days": 123,
+   "settlement_gap_bp": -20.504843385420468,
+   "given_up_bp": 72.33519602653615,
+   "given_up_inr_g": 101.60701240828534,
+   "last_premium_vwap_bp": 51.83035264111568
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-07-31",
+   "mean_vwap_bp": 99.06891554799029,
+   "eligible_days": 124,
+   "settlement_gap_bp": -4.689676412328314,
+   "given_up_bp": 27.674437547779984,
+   "given_up_inr_g": 39.18993976233247,
+   "last_premium_vwap_bp": 22.98476113545167
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-08-31",
+   "mean_vwap_bp": 71.0368703158028,
+   "eligible_days": 118,
+   "settlement_gap_bp": -25.555741052279977,
+   "given_up_bp": 62.395220117020806,
+   "given_up_inr_g": 99.82778653283928,
+   "last_premium_vwap_bp": 36.83947906474083
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-09-30",
+   "mean_vwap_bp": 59.51735112709882,
+   "eligible_days": 122,
+   "settlement_gap_bp": -1.0795784246253604,
+   "given_up_bp": 18.777366273987628,
+   "given_up_inr_g": 28.435323858005823,
+   "last_premium_vwap_bp": 17.697787849362268
+  }
+ ],
+ "monthly": [
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-04",
+   "premium_vwap_bp": 58.48790784202862
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-05",
+   "premium_vwap_bp": 40.88403231746529
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-06",
+   "premium_vwap_bp": 43.40279555689275
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-07",
+   "premium_vwap_bp": 41.579292443618684
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-08",
+   "premium_vwap_bp": 37.3728086305225
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-09",
+   "premium_vwap_bp": 34.161973791380085
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-10",
+   "premium_vwap_bp": 72.57361189384693
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-11",
+   "premium_vwap_bp": 88.61225154143781
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2025-12",
+   "premium_vwap_bp": 101.13303321170442
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-01",
+   "premium_vwap_bp": 180.05735906031052
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-02",
+   "premium_vwap_bp": 160.06127545651117
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-03",
+   "premium_vwap_bp": 165.53716531910956
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-04",
+   "premium_vwap_bp": 53.85778583558487
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-05",
+   "premium_vwap_bp": 35.66817096170016
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-06",
+   "premium_vwap_bp": 63.78199760181724
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-07",
+   "premium_vwap_bp": 69.8933736993812
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-08",
+   "premium_vwap_bp": 52.75115689208132
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-09",
+   "premium_vwap_bp": 55.79283936550938
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "month": "2026-10",
+   "premium_vwap_bp": 43.00890444998373
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-04",
+   "premium_vwap_bp": 92.33466147153591
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-05",
+   "premium_vwap_bp": 79.22616043312125
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-06",
+   "premium_vwap_bp": 66.24324041058172
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-07",
+   "premium_vwap_bp": 79.63318864671831
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-08",
+   "premium_vwap_bp": 54.192433640898315
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-09",
+   "premium_vwap_bp": 45.60622424890415
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-10",
+   "premium_vwap_bp": 69.62730517729221
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-11",
+   "premium_vwap_bp": 87.16634870273077
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2025-12",
+   "premium_vwap_bp": 111.40762660173831
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-01",
+   "premium_vwap_bp": 169.56957900284732
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-02",
+   "premium_vwap_bp": 190.79709793342505
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-03",
+   "premium_vwap_bp": 199.08041608373006
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-04",
+   "premium_vwap_bp": 76.47646462834223
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-05",
+   "premium_vwap_bp": 61.54404274045788
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-06",
+   "premium_vwap_bp": 72.20925301790527
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-07",
+   "premium_vwap_bp": 72.5129553718351
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-08",
+   "premium_vwap_bp": 53.84113001752122
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-09",
+   "premium_vwap_bp": 50.19972810474948
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "month": "2026-10",
+   "premium_vwap_bp": 42.16642615455734
+  }
+ ],
+ "waterfall_today": [
+  {
+   "symbol": "GOLD",
+   "expiry": "2026-12-04",
+   "close_g999": 14259.495075376884,
+   "ref_spot_g999": 14159.795879396985,
+   "fair_g999": 14255.21866189489,
+   "basis_total_bp": 70.16333035562428,
+   "timing_bp": -55.12014209541397,
+   "carry_bp": 122.28402903845027,
+   "reference_bp": 0.0,
+   "residual_bp": 2.999443412587979,
+   "making_charge_inr_g": null,
+   "making_charge_bp": null,
+   "value_lakh": 914730.14
+  },
+  {
+   "symbol": "GOLDM",
+   "expiry": "2026-11-05",
+   "close_g999": 14101.76351758794,
+   "ref_spot_g999": 14159.795879396985,
+   "fair_g999": 14132.451862530643,
+   "basis_total_bp": -41.06811132240775,
+   "timing_bp": -55.12014209541397,
+   "carry_bp": 35.790447523448854,
+   "reference_bp": 0.0,
+   "residual_bp": -21.73841675044264,
+   "making_charge_inr_g": null,
+   "making_charge_bp": null,
+   "value_lakh": 553872.9
+  },
+  {
+   "symbol": "GOLDTEN",
+   "expiry": "2026-10-30",
+   "close_g999": 14083.2,
+   "ref_spot_g999": 14159.795879396985,
+   "fair_g999": 14111.39639332804,
+   "basis_total_bp": -54.24075230213937,
+   "timing_bp": -55.12014209541397,
+   "carry_bp": 20.877761055345168,
+   "reference_bp": 0.0029100719041295032,
+   "residual_bp": -20.0012813339747,
+   "making_charge_inr_g": 30.0,
+   "making_charge_bp": 21.16432767885143,
+   "value_lakh": 23829.92
+  },
+  {
+   "symbol": "GOLDPETAL",
+   "expiry": "2026-10-30",
+   "close_g999": 14155.0,
+   "ref_spot_g999": 14159.795879396985,
+   "fair_g999": 14112.592291269537,
+   "basis_total_bp": -3.387543009863169,
+   "timing_bp": -55.12014209541397,
+   "carry_bp": 20.877761055345168,
+   "reference_bp": 0.8503437607249873,
+   "residual_bp": 30.00449426948065,
+   "making_charge_inr_g": 100.0,
+   "making_charge_bp": 70.3683151370821,
+   "value_lakh": 23509.95
+  },
+  {
+   "symbol": "GOLDGUINEA",
+   "expiry": "2026-10-30",
+   "close_g999": 14146.0,
+   "ref_spot_g999": 14159.795879396985,
+   "fair_g999": 14111.346564247146,
+   "basis_total_bp": -9.747742510510271,
+   "timing_bp": -55.12014209541397,
+   "carry_bp": 20.877761055345168,
+   "reference_bp": -0.03240122364912275,
+   "residual_bp": 24.527039753207653,
+   "making_charge_inr_g": 25.0,
+   "making_charge_bp": 17.64011112052168,
+   "value_lakh": 10214.63
+  }
+ ],
+ "carry_monthly": [
+  {
+   "month": "2020-01",
+   "carry_pa": 0.021205379907393244,
+   "rf_pct": 5.15,
+   "timing_bp": 5.895718350594759
+  },
+  {
+   "month": "2020-02",
+   "carry_pa": 0.024545223296038678,
+   "rf_pct": 5.15,
+   "timing_bp": -20.584301111240833
+  },
+  {
+   "month": "2020-03",
+   "carry_pa": 0.01929966093733322,
+   "rf_pct": 5.15,
+   "timing_bp": 93.90941604702653
+  },
+  {
+   "month": "2020-04",
+   "carry_pa": 0.014299599559045296,
+   "rf_pct": 4.4,
+   "timing_bp": 1089.5761458518082
+  },
+  {
+   "month": "2020-05",
+   "carry_pa": 0.021208387928301844,
+   "rf_pct": 4.4,
+   "timing_bp": 1238.3643078067885
+  },
+  {
+   "month": "2020-06",
+   "carry_pa": 0.014547243930511988,
+   "rf_pct": 4.0,
+   "timing_bp": -7.119357201256349
+  },
+  {
+   "month": "2020-07",
+   "carry_pa": 0.013201025110227575,
+   "rf_pct": 4.0,
+   "timing_bp": 2.062908838960018
+  },
+  {
+   "month": "2020-08",
+   "carry_pa": 0.0077582469367073895,
+   "rf_pct": 4.0,
+   "timing_bp": -23.793457416330753
+  },
+  {
+   "month": "2020-09",
+   "carry_pa": 0.019875533056122704,
+   "rf_pct": 4.0,
+   "timing_bp": 2.9264136601582544
+  },
+  {
+   "month": "2020-10",
+   "carry_pa": 0.007129386034781132,
+   "rf_pct": 4.0,
+   "timing_bp": 4.304063741789617
+  },
+  {
+   "month": "2020-11",
+   "carry_pa": 0.011733334204896952,
+   "rf_pct": 4.0,
+   "timing_bp": -18.376447739343977
+  },
+  {
+   "month": "2020-12",
+   "carry_pa": 0.007570873176660989,
+   "rf_pct": 4.0,
+   "timing_bp": 20.196766374957665
+  },
+  {
+   "month": "2021-01",
+   "carry_pa": 0.007078361819326648,
+   "rf_pct": 4.0,
+   "timing_bp": 2.090741045320525
+  },
+  {
+   "month": "2021-02",
+   "carry_pa": 0.02223476347747325,
+   "rf_pct": 4.0,
+   "timing_bp": -32.105540965111175
+  },
+  {
+   "month": "2021-03",
+   "carry_pa": 0.04553725313274435,
+   "rf_pct": 4.0,
+   "timing_bp": 19.050650101961036
+  },
+  {
+   "month": "2021-04",
+   "carry_pa": 0.04479364117941926,
+   "rf_pct": 4.0,
+   "timing_bp": -1.2332999540556504
+  },
+  {
+   "month": "2021-05",
+   "carry_pa": 0.05933938201186864,
+   "rf_pct": 4.0,
+   "timing_bp": -3.2326153772479906
+  },
+  {
+   "month": "2021-06",
+   "carry_pa": 0.040550697673073635,
+   "rf_pct": 4.0,
+   "timing_bp": -29.700649320296456
+  },
+  {
+   "month": "2021-07",
+   "carry_pa": 0.03427957954449571,
+   "rf_pct": 4.0,
+   "timing_bp": -16.95732750202745
+  },
+  {
+   "month": "2021-08",
+   "carry_pa": 0.020118118078370783,
+   "rf_pct": 4.0,
+   "timing_bp": -9.925918668085998
+  },
+  {
+   "month": "2021-09",
+   "carry_pa": 0.01977589214267894,
+   "rf_pct": 4.0,
+   "timing_bp": 5.229733458776197
+  },
+  {
+   "month": "2021-10",
+   "carry_pa": 0.022186350391979644,
+   "rf_pct": 4.0,
+   "timing_bp": 0.724323715829816
+  },
+  {
+   "month": "2021-11",
+   "carry_pa": 0.025130150538348266,
+   "rf_pct": 4.0,
+   "timing_bp": -5.463749800441679
+  },
+  {
+   "month": "2021-12",
+   "carry_pa": 0.022047260010402286,
+   "rf_pct": 4.0,
+   "timing_bp": -9.9559987977265
+  },
+  {
+   "month": "2022-01",
+   "carry_pa": 0.014080788122107599,
+   "rf_pct": 4.0,
+   "timing_bp": -15.503945037966696
+  },
+  {
+   "month": "2022-02",
+   "carry_pa": 0.019864136580264792,
+   "rf_pct": 4.0,
+   "timing_bp": 15.251823061393804
+  },
+  {
+   "month": "2022-03",
+   "carry_pa": 0.05087573640814904,
+   "rf_pct": 4.0,
+   "timing_bp": 26.5432936541592
+  },
+  {
+   "month": "2022-04",
+   "carry_pa": 0.028716758434447688,
+   "rf_pct": 4.0,
+   "timing_bp": -19.131978102151532
+  },
+  {
+   "month": "2022-05",
+   "carry_pa": 0.022287133385556657,
+   "rf_pct": 4.4,
+   "timing_bp": -40.206098953084506
+  },
+  {
+   "month": "2022-06",
+   "carry_pa": 0.02240052301044189,
+   "rf_pct": 4.9,
+   "timing_bp": -24.853505686163118
+  },
+  {
+   "month": "2022-07",
+   "carry_pa": 0.027045633914047094,
+   "rf_pct": 4.9,
+   "timing_bp": -3.9156552718501985
+  },
+  {
+   "month": "2022-08",
+   "carry_pa": 0.024001423968322888,
+   "rf_pct": 5.4,
+   "timing_bp": -22.37316276216056
+  },
+  {
+   "month": "2022-09",
+   "carry_pa": 0.029644218398045933,
+   "rf_pct": 5.4,
+   "timing_bp": -27.714260415713568
+  },
+  {
+   "month": "2022-10",
+   "carry_pa": 0.0354873047011785,
+   "rf_pct": 5.9,
+   "timing_bp": 20.96296147192569
+  },
+  {
+   "month": "2022-11",
+   "carry_pa": 0.043153743550764116,
+   "rf_pct": 5.9,
+   "timing_bp": -6.124067607594554
+  },
+  {
+   "month": "2022-12",
+   "carry_pa": 0.04835288474850652,
+   "rf_pct": 6.25,
+   "timing_bp": 16.68847141390107
+  },
+  {
+   "month": "2023-01",
+   "carry_pa": 0.04579894630247328,
+   "rf_pct": 6.25,
+   "timing_bp": -32.144943776903666
+  },
+  {
+   "month": "2023-02",
+   "carry_pa": 0.02596016926517479,
+   "rf_pct": 6.5,
+   "timing_bp": -47.424306127694855
+  },
+  {
+   "month": "2023-03",
+   "carry_pa": 0.04615359432161505,
+   "rf_pct": 6.5,
+   "timing_bp": -30.022862697822923
+  },
+  {
+   "month": "2023-04",
+   "carry_pa": 0.04089566392534792,
+   "rf_pct": 6.5,
+   "timing_bp": -18.668337971559545
+  },
+  {
+   "month": "2023-05",
+   "carry_pa": 0.03399870020488925,
+   "rf_pct": 6.5,
+   "timing_bp": -33.39446198049466
+  },
+  {
+   "month": "2023-06",
+   "carry_pa": 0.027806535476255802,
+   "rf_pct": 6.5,
+   "timing_bp": -17.00043232047579
+  },
+  {
+   "month": "2023-07",
+   "carry_pa": 0.0376127874011476,
+   "rf_pct": 6.5,
+   "timing_bp": 2.5874227556634497
+  },
+  {
+   "month": "2023-08",
+   "carry_pa": 0.045351532283337076,
+   "rf_pct": 6.5,
+   "timing_bp": -28.26850645908926
+  },
+  {
+   "month": "2023-09",
+   "carry_pa": 0.04697074251214556,
+   "rf_pct": 6.5,
+   "timing_bp": -26.67918787988225
+  },
+  {
+   "month": "2023-10",
+   "carry_pa": 0.047011171965144614,
+   "rf_pct": 6.5,
+   "timing_bp": -10.617292139700748
+  },
+  {
+   "month": "2023-11",
+   "carry_pa": 0.03399665346360612,
+   "rf_pct": 6.5,
+   "timing_bp": -11.979779887389222
+  },
+  {
+   "month": "2023-12",
+   "carry_pa": 0.0366157193098891,
+   "rf_pct": 6.5,
+   "timing_bp": -15.035277821394688
+  },
+  {
+   "month": "2024-01",
+   "carry_pa": 0.034400461259884656,
+   "rf_pct": 6.5,
+   "timing_bp": -39.432013094575694
+  },
+  {
+   "month": "2024-02",
+   "carry_pa": 0.042235157545782644,
+   "rf_pct": 6.5,
+   "timing_bp": -33.47474110138523
+  },
+  {
+   "month": "2024-03",
+   "carry_pa": 0.04120309571907643,
+   "rf_pct": 6.5,
+   "timing_bp": 18.0766427037291
+  },
+  {
+   "month": "2024-04",
+   "carry_pa": 0.015342440698322583,
+   "rf_pct": 6.5,
+   "timing_bp": -51.99010667426751
+  },
+  {
+   "month": "2024-05",
+   "carry_pa": 0.02166293489037506,
+   "rf_pct": 6.5,
+   "timing_bp": -45.688684499814684
+  },
+  {
+   "month": "2024-06",
+   "carry_pa": 0.025165873847045064,
+   "rf_pct": 6.5,
+   "timing_bp": 15.072906403864447
+  },
+  {
+   "month": "2024-07",
+   "carry_pa": 0.035636275613529035,
+   "rf_pct": 6.5,
+   "timing_bp": 5.061895678073789
+  },
+  {
+   "month": "2024-08",
+   "carry_pa": 0.042610212468637255,
+   "rf_pct": 6.5,
+   "timing_bp": 3.3558862848047424
+  },
+  {
+   "month": "2024-09",
+   "carry_pa": 0.045719016587715336,
+   "rf_pct": 6.5,
+   "timing_bp": 11.671494173737953
+  },
+  {
+   "month": "2024-10",
+   "carry_pa": 0.04600416372609434,
+   "rf_pct": 6.5,
+   "timing_bp": 0.056325341666103146
+  },
+  {
+   "month": "2024-11",
+   "carry_pa": 0.05173204687744476,
+   "rf_pct": 6.5,
+   "timing_bp": -19.04499752197187
+  },
+  {
+   "month": "2024-12",
+   "carry_pa": 0.062183820032531936,
+   "rf_pct": 6.5,
+   "timing_bp": -9.333111281263662
+  },
+  {
+   "month": "2025-01",
+   "carry_pa": 0.06596881670943178,
+   "rf_pct": 6.5,
+   "timing_bp": -7.306522762047971
+  },
+  {
+   "month": "2025-02",
+   "carry_pa": 0.05103270521591415,
+   "rf_pct": 6.25,
+   "timing_bp": -36.92978193297446
+  },
+  {
+   "month": "2025-03",
+   "carry_pa": 0.05129168384931651,
+   "rf_pct": 6.25,
+   "timing_bp": 14.925341833883369
+  },
+  {
+   "month": "2025-04",
+   "carry_pa": 0.04117396041134149,
+   "rf_pct": 6.0,
+   "timing_bp": -31.052214748018482
+  },
+  {
+   "month": "2025-05",
+   "carry_pa": 0.04759402132370266,
+   "rf_pct": 6.0,
+   "timing_bp": -17.76040085974956
+  },
+  {
+   "month": "2025-06",
+   "carry_pa": 0.05312851180643339,
+   "rf_pct": 5.5,
+   "timing_bp": -1.2649476411353855
+  },
+  {
+   "month": "2025-07",
+   "carry_pa": 0.05247461845549339,
+   "rf_pct": 5.5,
+   "timing_bp": -11.15970220719827
+  },
+  {
+   "month": "2025-08",
+   "carry_pa": 0.0577656793151814,
+   "rf_pct": 5.5,
+   "timing_bp": 30.139138665934368
+  },
+  {
+   "month": "2025-09",
+   "carry_pa": 0.05710336131386975,
+   "rf_pct": 5.5,
+   "timing_bp": 18.973511599879636
+  },
+  {
+   "month": "2025-10",
+   "carry_pa": 0.06690613292006509,
+   "rf_pct": 5.48,
+   "timing_bp": -22.73935692671757
+  },
+  {
+   "month": "2025-11",
+   "carry_pa": 0.078987854381589,
+   "rf_pct": 5.395,
+   "timing_bp": 26.196737874482086
+  },
+  {
+   "month": "2025-12",
+   "carry_pa": 0.12848012282211874,
+   "rf_pct": 5.27,
+   "timing_bp": 18.84494050262782
+  },
+  {
+   "month": "2026-01",
+   "carry_pa": 0.1721333973529523,
+   "rf_pct": 5.34,
+   "timing_bp": 67.72485220946422
+  },
+  {
+   "month": "2026-02",
+   "carry_pa": 0.13534641892816723,
+   "rf_pct": 5.305,
+   "timing_bp": -8.282748543858311
+  },
+  {
+   "month": "2026-03",
+   "carry_pa": 0.14988614874498601,
+   "rf_pct": 5.31,
+   "timing_bp": -66.96824160819246
+  },
+  {
+   "month": "2026-04",
+   "carry_pa": 0.10852061528535446,
+   "rf_pct": 5.25,
+   "timing_bp": -13.979926881714887
+  },
+  {
+   "month": "2026-05",
+   "carry_pa": 0.13393890501905203,
+   "rf_pct": 5.42,
+   "timing_bp": 11.248069054662968
+  },
+  {
+   "month": "2026-06",
+   "carry_pa": 0.14180224420346615,
+   "rf_pct": 5.25,
+   "timing_bp": -1.0389584997206596
+  },
+  {
+   "month": "2026-07",
+   "carry_pa": 0.06903499856671959,
+   "rf_pct": 5.29,
+   "timing_bp": -6.524865861695553
+  },
+  {
+   "month": "2026-08",
+   "carry_pa": 0.0720507859195246,
+   "rf_pct": 5.26,
+   "timing_bp": 11.822140635811559
+  },
+  {
+   "month": "2026-09",
+   "carry_pa": 0.07395367542936865,
+   "rf_pct": 5.300000000000001,
+   "timing_bp": -1.7512356187202522
+  },
+  {
+   "month": "2026-10",
+   "carry_pa": 0.10609616924550694,
+   "rf_pct": 5.675000000000001,
+   "timing_bp": -15.591700037477262
+  }
+ ],
+ "residual_by_year": [
+  {
+   "year": 2020,
+   "symbol": "GOLD",
+   "residual_bp": -1.3784933739929315
+  },
+  {
+   "year": 2020,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": 31.593700802917553
+  },
+  {
+   "year": 2020,
+   "symbol": "GOLDM",
+   "residual_bp": 1.7574461603418428
+  },
+  {
+   "year": 2020,
+   "symbol": "GOLDPETAL",
+   "residual_bp": 32.04038922212918
+  },
+  {
+   "year": 2021,
+   "symbol": "GOLD",
+   "residual_bp": -3.1014325601146595
+  },
+  {
+   "year": 2021,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": 12.04924524284267
+  },
+  {
+   "year": 2021,
+   "symbol": "GOLDM",
+   "residual_bp": 3.4858285304881296
+  },
+  {
+   "year": 2021,
+   "symbol": "GOLDPETAL",
+   "residual_bp": -50.16307571133898
+  },
+  {
+   "year": 2022,
+   "symbol": "GOLD",
+   "residual_bp": -1.2493947470509248
+  },
+  {
+   "year": 2022,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": -24.2015609715566
+  },
+  {
+   "year": 2022,
+   "symbol": "GOLDM",
+   "residual_bp": 1.5809956398693998
+  },
+  {
+   "year": 2022,
+   "symbol": "GOLDPETAL",
+   "residual_bp": -70.0331490249522
+  },
+  {
+   "year": 2023,
+   "symbol": "GOLD",
+   "residual_bp": -1.1614060342797927
+  },
+  {
+   "year": 2023,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": 34.836190962274124
+  },
+  {
+   "year": 2023,
+   "symbol": "GOLDM",
+   "residual_bp": 0.35674694898236226
+  },
+  {
+   "year": 2023,
+   "symbol": "GOLDPETAL",
+   "residual_bp": -90.88411824397826
+  },
+  {
+   "year": 2024,
+   "symbol": "GOLD",
+   "residual_bp": -0.41239407275451256
+  },
+  {
+   "year": 2024,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": 74.17975917536356
+  },
+  {
+   "year": 2024,
+   "symbol": "GOLDM",
+   "residual_bp": 1.1277744496831361
+  },
+  {
+   "year": 2024,
+   "symbol": "GOLDPETAL",
+   "residual_bp": -144.14669956432394
+  },
+  {
+   "year": 2025,
+   "symbol": "GOLD",
+   "residual_bp": -0.9727321393388451
+  },
+  {
+   "year": 2025,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": 53.627947493131174
+  },
+  {
+   "year": 2025,
+   "symbol": "GOLDM",
+   "residual_bp": 0.8735530381133074
+  },
+  {
+   "year": 2025,
+   "symbol": "GOLDPETAL",
+   "residual_bp": 76.07708392667158
+  },
+  {
+   "year": 2025,
+   "symbol": "GOLDTEN",
+   "residual_bp": -6.643510738843739
+  },
+  {
+   "year": 2026,
+   "symbol": "GOLD",
+   "residual_bp": -4.696270509738213
+  },
+  {
+   "year": 2026,
+   "symbol": "GOLDGUINEA",
+   "residual_bp": 76.79006245067805
+  },
+  {
+   "year": 2026,
+   "symbol": "GOLDM",
+   "residual_bp": 4.156246275632718
+  },
+  {
+   "year": 2026,
+   "symbol": "GOLDPETAL",
+   "residual_bp": 93.28673711921843
+  },
+  {
+   "year": 2026,
+   "symbol": "GOLDTEN",
+   "residual_bp": 10.301112673216995
+  }
+ ],
+ "walk_forward": [
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "strategy": "DRIFT",
+   "trades": 23,
+   "cycles": 23,
+   "first_entry": "2025-04-02",
+   "last_exit": "2026-10-23",
+   "mean_gross_bp": 19.099374723714337,
+   "mean_cost_bp": 4.302836986290693,
+   "mean_net_bp": 14.796537737423646,
+   "ci_lo_bp": -31.00736360281091,
+   "ci_hi_bp": 61.48061135614971,
+   "hit_rate": 0.6521739130434783,
+   "total_net_inr": 151717.2152699617,
+   "spread_leg_share": 1.248221991967278,
+   "sharpe_per_trade": 0.1284610245250695,
+   "deflated_sharpe_prob": 0.0976397132386046,
+   "random_entry_p": null,
+   "mean_net_bp_ex_crash": 0.9826741799928423,
+   "trades_ex_crash": 15,
+   "ex_crash_ci_lo_bp": -32.50632434099188,
+   "ex_crash_ci_hi_bp": 30.222658612762462,
+   "breakeven_slippage_ticks": 74.29334071012643,
+   "trials_per_pair": 10
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "strategy": "MR walk-forward",
+   "trades": 29,
+   "cycles": 11,
+   "first_entry": "2025-07-01",
+   "last_exit": "2026-05-26",
+   "mean_gross_bp": 48.2881617271586,
+   "mean_cost_bp": 4.262579157791057,
+   "mean_net_bp": 44.02558256936754,
+   "ci_lo_bp": 19.96808701158032,
+   "ci_hi_bp": 78.28857551821982,
+   "hit_rate": 0.6896551724137931,
+   "total_net_inr": 388988.72913256823,
+   "spread_leg_share": 1.0512822530704315,
+   "sharpe_per_trade": 0.5140407684878258,
+   "deflated_sharpe_prob": 0.8815242586238542,
+   "random_entry_p": 0.0,
+   "mean_net_bp_ex_crash": 10.528747392422897,
+   "trades_ex_crash": 20,
+   "ex_crash_ci_lo_bp": 4.44250178451797,
+   "ex_crash_ci_hi_bp": 15.307719947800937,
+   "breakeven_slippage_ticks": 150.03782725385756,
+   "trials_per_pair": 10
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "strategy": "DRIFT",
+   "trades": 86,
+   "cycles": 86,
+   "first_entry": "2019-12-24",
+   "last_exit": "2026-10-23",
+   "mean_gross_bp": 29.872864307013614,
+   "mean_cost_bp": 7.762482368487318,
+   "mean_net_bp": 22.1103819385263,
+   "ci_lo_bp": 0.06760646832485402,
+   "ci_hi_bp": 45.9840397033872,
+   "hit_rate": 0.6395348837209303,
+   "total_net_inr": 106865.27617160688,
+   "spread_leg_share": 0.9457864028257641,
+   "sharpe_per_trade": 0.19891814373462097,
+   "deflated_sharpe_prob": 0.011528197252243945,
+   "random_entry_p": null,
+   "mean_net_bp_ex_crash": 28.984545633119417,
+   "trades_ex_crash": 78,
+   "ex_crash_ci_lo_bp": 5.088570123834363,
+   "ex_crash_ci_hi_bp": 56.516150801644834,
+   "breakeven_slippage_ticks": 3.761376645261158,
+   "trials_per_pair": 10
+  },
+  {
+   "pair": "GOLDPETAL/GOLDGUINEA",
+   "strategy": "MR walk-forward",
+   "trades": 138,
+   "cycles": 73,
+   "first_entry": "2020-06-12",
+   "last_exit": "2026-07-28",
+   "mean_gross_bp": 5.817811009922604,
+   "mean_cost_bp": 7.522964480052214,
+   "mean_net_bp": -1.7051534701296107,
+   "ci_lo_bp": -10.89052783002201,
+   "ci_hi_bp": 6.5138737101230735,
+   "hit_rate": 0.5289855072463768,
+   "total_net_inr": 58095.57657393125,
+   "spread_leg_share": 0.9964337708295644,
+   "sharpe_per_trade": -0.03252298404872783,
+   "deflated_sharpe_prob": 4.934017331953686e-08,
+   "random_entry_p": 0.0,
+   "mean_net_bp_ex_crash": -3.772955698774455,
+   "trades_ex_crash": 132,
+   "ex_crash_ci_lo_bp": -12.735223523993117,
+   "ex_crash_ci_hi_bp": 4.062285476610494,
+   "breakeven_slippage_ticks": 1.9355165309811801,
+   "trials_per_pair": 10
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "strategy": "DRIFT",
+   "trades": 24,
+   "cycles": 24,
+   "first_entry": "2025-04-02",
+   "last_exit": "2026-10-23",
+   "mean_gross_bp": 10.10993700015299,
+   "mean_cost_bp": 5.7023609720857245,
+   "mean_net_bp": 4.407576028067268,
+   "ci_lo_bp": -38.40660096288282,
+   "ci_hi_bp": 45.8066709299098,
+   "hit_rate": 0.5833333333333334,
+   "total_net_inr": 81658.06885791669,
+   "spread_leg_share": 1.4326876435602116,
+   "sharpe_per_trade": 0.04152676396892918,
+   "deflated_sharpe_prob": 0.1627077390289598,
+   "random_entry_p": null,
+   "mean_net_bp_ex_crash": 6.764777266358369,
+   "trades_ex_crash": 16,
+   "ex_crash_ci_lo_bp": -27.749370136616964,
+   "ex_crash_ci_hi_bp": 38.82036568907261,
+   "breakeven_slippage_ticks": 8.732771672151202,
+   "trials_per_pair": 10
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "strategy": "MR walk-forward",
+   "trades": 40,
+   "cycles": 15,
+   "first_entry": "2025-06-03",
+   "last_exit": "2026-08-26",
+   "mean_gross_bp": 39.11217871047315,
+   "mean_cost_bp": 5.658420869129186,
+   "mean_net_bp": 33.45375784134397,
+   "ci_lo_bp": 11.427403062007102,
+   "ci_hi_bp": 58.38729354946928,
+   "hit_rate": 0.6,
+   "total_net_inr": 420954.8913341039,
+   "spread_leg_share": 1.0516186699588386,
+   "sharpe_per_trade": 0.4041330794618739,
+   "deflated_sharpe_prob": 0.9508960818169551,
+   "random_entry_p": 0.0,
+   "mean_net_bp_ex_crash": 6.809381954760773,
+   "trades_ex_crash": 28,
+   "ex_crash_ci_lo_bp": 0.48753107929576356,
+   "ex_crash_ci_hi_bp": 15.254910428162159,
+   "breakeven_slippage_ticks": 24.917891553074085,
+   "trials_per_pair": 10
+  }
+ ],
+ "delivery": [
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "entry": "early (60+ days)",
+   "cycles": 16,
+   "entry_premium_bp": 87.43785069354085,
+   "futures_inr_g": 123.49947308062416,
+   "making_net_inr_g": -5.0,
+   "headroom_inr_g": 69.02309398091427,
+   "breakeven_coin_premium_pct": 0.4666819777504706,
+   "breakeven_min_pct": -0.3907774106491184,
+   "breakeven_max_pct": 1.6323882667601257,
+   "retail_coin_premium_pct": 3.6,
+   "retail_net_inr_g": -416.2783375940722,
+   "retail_profitable_share": 0.0
+  },
+  {
+   "pair": "GOLDGUINEA/GOLDTEN",
+   "entry": "last pre-tender day",
+   "cycles": 18,
+   "entry_premium_bp": 68.31819514702896,
+   "futures_inr_g": 95.44654876276849,
+   "making_net_inr_g": -5.0,
+   "headroom_inr_g": 42.20473722093165,
+   "breakeven_coin_premium_pct": 0.27047102993233785,
+   "breakeven_min_pct": -0.4395554458053429,
+   "breakeven_max_pct": 2.0794000743067667,
+   "retail_coin_premium_pct": 3.6,
+   "retail_net_inr_g": -427.44132410653003,
+   "retail_profitable_share": 0.0
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "entry": "early (60+ days)",
+   "cycles": 16,
+   "entry_premium_bp": 96.68363056246501,
+   "futures_inr_g": 157.5267923952418,
+   "making_net_inr_g": 70.0,
+   "headroom_inr_g": 177.17423842763793,
+   "breakeven_coin_premium_pct": 1.2799931681935597,
+   "breakeven_min_pct": 0.4913240866249895,
+   "breakeven_max_pct": 2.4496955002350713,
+   "retail_coin_premium_pct": 5.5,
+   "retail_net_inr_g": -564.2585042563691,
+   "retail_profitable_share": 0.0
+  },
+  {
+   "pair": "GOLDPETAL/GOLDTEN",
+   "entry": "last pre-tender day",
+   "cycles": 18,
+   "entry_premium_bp": 81.21231025481684,
+   "futures_inr_g": 132.56067801628967,
+   "making_net_inr_g": 70.0,
+   "headroom_inr_g": 153.4419534816227,
+   "breakeven_coin_premium_pct": 1.1259481130619167,
+   "breakeven_min_pct": 0.22103761895629231,
+   "breakeven_max_pct": 3.754811473099659,
+   "retail_coin_premium_pct": 5.5,
+   "retail_net_inr_g": -564.0728624353326,
+   "retail_profitable_share": 0.0
+  }
+ ],
+ "validation": {
+  "errors": {},
+  "warnings": {
+   "futures.cross_contract_outlier": 2,
+   "spot.twin_mismatch": 2,
+   "settlement.partial_polls": 1,
+   "anatomy.loose_fit": 5
+  },
+  "info": {
+   "futures.no_trade_days": 7162,
+   "spec.version_not_held": 228,
+   "futures.expiry_brought_forward": 6,
+   "spot.carried_forward_days": 664,
+   "spot.frozen": 23,
+   "settlement.stale_spot": 12,
+   "anatomy.curve_days": 1744,
+   "convergence.cycles": 174,
+   "backtest.trades": 1879
+  },
+  "passed": [
+   "anatomy.waterfall_identity",
+   "convergence.same_reference_settles_apart",
+   "futures.missing_days",
+   "futures.ohlc_inconsistent",
+   "futures.vwap_outside_range",
+   "settlement.close_differs_from_ddr",
+   "settlement.rebuilt"
+  ]
+ },
+ "coverage": {
+  "GOLD": {
+   "first": "2019-02-18",
+   "last": "2026-10-23",
+   "contracts": 47
+  },
+  "GOLDGUINEA": {
+   "first": "2019-10-03",
+   "last": "2026-10-23",
+   "contracts": 87
+  },
+  "GOLDM": {
+   "first": "2019-11-06",
+   "last": "2026-10-23",
+   "contracts": 87
+  },
+  "GOLDPETAL": {
+   "first": "2019-10-03",
+   "last": "2026-10-23",
+   "contracts": 87
+  },
+  "GOLDTEN": {
+   "first": "2025-03-31",
+   "last": "2026-10-23",
+   "contracts": 24
+  }
+ },
+ "settlement_check": {
+  "checked": 145,
+  "matched": 145
+ },
+ "spec_versions": 15,
+ "tables": {
+  "futures_daily": 34415,
+  "spot_polls": 14533,
+  "settlement": 302,
+  "contracts": 332,
+  "basis_daily": 27253,
+  "curve_daily": 1851,
+  "tbill_3m": 242,
+  "convergence_daily": 14710,
+  "convergence_cycles": 177,
+  "convergence_summary": 4,
+  "convergence_profile": 24,
+  "convergence_live": 21,
+  "wf_trades": 2086,
+  "wf_summary": 6,
+  "delivery_cycles": 68,
+  "delivery_summary": 4
+ }
+}

@@ -1,0 +1,1674 @@
+{
+ "asof": "2026-10-23",
+ "summary": {
+  "from": "2025-04-01",
+  "to": "2026-10-23",
+  "trading_days": 403,
+  "alert_days": 101,
+  "quiet_days": 302,
+  "by_type": {
+   "tender": 84,
+   "swing": 49,
+   "control": 28,
+   "settlement": 4
+  }
+ },
+ "rules": {
+  "swing": "premium beyond 1.5 sd of its last 40 eligible days (most liquid expiry)",
+  "tender": "5 trading days before a live contract's tender window",
+  "control": "GOLD vs GOLDM beyond 10 bp",
+  "settlement": "same-reference pair settled more than 20 bp apart"
+ },
+ "alerts": [
+  {
+   "date": "2026-10-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-10-30",
+   "title": "GOLDGUINEA Oct 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Oct 2026; exit by 27 Oct 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-10-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-10-30",
+   "title": "GOLDPETAL Oct 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Oct 2026; exit by 27 Oct 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-10-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-10-30",
+   "title": "GOLDTEN Oct 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Oct 2026; exit by 27 Oct 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-10-14",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-10-30",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+64 bp over GOLDTEN (Oct 2026), vs +45 bp average of the last 40 days (z = +2.0)",
+   "value_bp": 63.62796597316978
+  },
+  {
+   "date": "2026-10-14",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-10-30",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+58 bp over GOLDTEN (Oct 2026), vs +44 bp average of the last 40 days (z = +2.0)",
+   "value_bp": 58.45776288759153
+  },
+  {
+   "date": "2026-10-09",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-10-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+32 bp over GOLDTEN (Oct 2026), vs +46 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 31.80268378760953
+  },
+  {
+   "date": "2026-09-25",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-10-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+25 bp over GOLDTEN (Oct 2026), vs +49 bp average of the last 40 days (z = -2.0)",
+   "value_bp": 24.819790301442435
+  },
+  {
+   "date": "2026-09-25",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-10-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+28 bp over GOLDTEN (Oct 2026), vs +49 bp average of the last 40 days (z = -1.7)",
+   "value_bp": 27.522935779815683
+  },
+  {
+   "date": "2026-09-23",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2026-10-05",
+   "title": "GOLD Oct 2026: tender window in 5 trading days",
+   "detail": "Tender opens 30 Sep 2026; exit by 29 Sep 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-09-23",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-10-05",
+   "title": "GOLDM Oct 2026: tender window in 5 trading days",
+   "detail": "Tender opens 30 Sep 2026; exit by 29 Sep 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-09-22",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-09-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+20 bp over GOLDTEN (Sep 2026), vs +39 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 19.808193924180095
+  },
+  {
+   "date": "2026-09-22",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-09-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+11 bp over GOLDTEN (Sep 2026), vs +38 bp average of the last 40 days (z = -2.1)",
+   "value_bp": 11.30962887420095
+  },
+  {
+   "date": "2026-09-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-09-30",
+   "title": "GOLDGUINEA Sep 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Sep 2026; exit by 25 Sep 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-09-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-09-30",
+   "title": "GOLDPETAL Sep 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Sep 2026; exit by 25 Sep 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-09-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-09-30",
+   "title": "GOLDTEN Sep 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Sep 2026; exit by 25 Sep 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-09-18",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-09-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+14 bp over GOLDTEN (Sep 2026), vs +42 bp average of the last 40 days (z = -1.9)",
+   "value_bp": 13.533440695394638
+  },
+  {
+   "date": "2026-09-16",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-10-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2026: -11 bp; it should sit near 0",
+   "value_bp": -10.613763824099953
+  },
+  {
+   "date": "2026-09-16",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-09-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+15 bp over GOLDTEN (Sep 2026), vs +43 bp average of the last 40 days (z = -2.0)",
+   "value_bp": 15.318547225640078
+  },
+  {
+   "date": "2026-09-10",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-10-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2026: -12 bp; it should sit near 0",
+   "value_bp": -11.670677095967363
+  },
+  {
+   "date": "2026-09-08",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-10-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2026: -11 bp; it should sit near 0",
+   "value_bp": -11.390938312177967
+  },
+  {
+   "date": "2026-08-31",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-10-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2026: -10 bp; it should sit near 0",
+   "value_bp": -10.34794981244258
+  },
+  {
+   "date": "2026-08-31",
+   "type": "settlement",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDPETAL settled -26 bp away from GOLDTEN",
+   "detail": "Same settlement rule, different poll: the spot polls were taken at different times on the settlement day",
+   "value_bp": -25.555741052279977
+  },
+  {
+   "date": "2026-08-26",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-09-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+31 bp over GOLDTEN (Sep 2026), vs +59 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 30.76576745582038
+  },
+  {
+   "date": "2026-08-26",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-09-04",
+   "title": "GOLDM Sep 2026: tender window in 5 trading days",
+   "detail": "Tender opens 02 Sep 2026; exit by 01 Sep 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-08-20",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+29 bp over GOLDTEN (Aug 2026), vs +52 bp average of the last 40 days (z = -1.7)",
+   "value_bp": 29.099190283401466
+  },
+  {
+   "date": "2026-08-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-08-31",
+   "title": "GOLDGUINEA Aug 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 Aug 2026; exit by 26 Aug 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-08-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-08-31",
+   "title": "GOLDPETAL Aug 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 Aug 2026; exit by 26 Aug 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-08-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDTEN Aug 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 Aug 2026; exit by 26 Aug 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-08-10",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+35 bp over GOLDTEN (Aug 2026), vs +58 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 35.09881006473093
+  },
+  {
+   "date": "2026-08-06",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-10-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2026: +13 bp; it should sit near 0",
+   "value_bp": 13.386340551193587
+  },
+  {
+   "date": "2026-08-05",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+13 bp over GOLDTEN (Aug 2026), vs +58 bp average of the last 40 days (z = -2.5)",
+   "value_bp": 13.117881046442736
+  },
+  {
+   "date": "2026-08-05",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+26 bp over GOLDTEN (Aug 2026), vs +61 bp average of the last 40 days (z = -2.4)",
+   "value_bp": 25.93030043850586
+  },
+  {
+   "date": "2026-07-30",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +11 bp; it should sit near 0",
+   "value_bp": 11.18318049653455
+  },
+  {
+   "date": "2026-07-28",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+31 bp over GOLDTEN (Aug 2026), vs +62 bp average of the last 40 days (z = -1.7)",
+   "value_bp": 30.993979914357705
+  },
+  {
+   "date": "2026-07-28",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-08-31",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+35 bp over GOLDTEN (Aug 2026), vs +67 bp average of the last 40 days (z = -2.1)",
+   "value_bp": 35.11132603073675
+  },
+  {
+   "date": "2026-07-27",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +11 bp; it should sit near 0",
+   "value_bp": 11.406578026591507
+  },
+  {
+   "date": "2026-07-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2026-08-05",
+   "title": "GOLD Aug 2026: tender window in 5 trading days",
+   "detail": "Tender opens 03 Aug 2026; exit by 31 Jul 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-07-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-08-05",
+   "title": "GOLDM Aug 2026: tender window in 5 trading days",
+   "detail": "Tender opens 03 Aug 2026; exit by 31 Jul 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-07-24",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-07-31",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+39 bp over GOLDTEN (Jul 2026), vs +62 bp average of the last 40 days (z = -1.5)",
+   "value_bp": 39.37696272827029
+  },
+  {
+   "date": "2026-07-22",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +18 bp; it should sit near 0",
+   "value_bp": 18.22370456967981
+  },
+  {
+   "date": "2026-07-22",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-07-31",
+   "title": "GOLDGUINEA Jul 2026: tender window in 5 trading days",
+   "detail": "Tender opens 29 Jul 2026; exit by 28 Jul 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-07-22",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-07-31",
+   "title": "GOLDPETAL Jul 2026: tender window in 5 trading days",
+   "detail": "Tender opens 29 Jul 2026; exit by 28 Jul 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-07-22",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-07-31",
+   "title": "GOLDTEN Jul 2026: tender window in 5 trading days",
+   "detail": "Tender opens 29 Jul 2026; exit by 28 Jul 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-07-17",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-07-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+87 bp over GOLDTEN (Jul 2026), vs +54 bp average of the last 40 days (z = +1.8)",
+   "value_bp": 87.34630239892294
+  },
+  {
+   "date": "2026-07-08",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +11 bp; it should sit near 0",
+   "value_bp": 11.145864535948569
+  },
+  {
+   "date": "2026-07-03",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +12 bp; it should sit near 0",
+   "value_bp": 12.092391304348027
+  },
+  {
+   "date": "2026-06-30",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +11 bp; it should sit near 0",
+   "value_bp": 11.238243743458831
+  },
+  {
+   "date": "2026-06-30",
+   "type": "settlement",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-06-30",
+   "title": "GOLDPETAL settled -21 bp away from GOLDTEN",
+   "detail": "Same settlement rule, different poll: the spot polls were taken at different times on the settlement day",
+   "value_bp": -20.504843385420468
+  },
+  {
+   "date": "2026-06-25",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-07-31",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+26 bp over GOLDTEN (Jul 2026), vs +66 bp average of the last 40 days (z = -2.0)",
+   "value_bp": 26.169789594892023
+  },
+  {
+   "date": "2026-06-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-07-03",
+   "title": "GOLDM Jul 2026: tender window in 5 trading days",
+   "detail": "Tender opens 01 Jul 2026; exit by 30 Jun 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-06-19",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-06-30",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+82 bp over GOLDTEN (Jun 2026), vs +48 bp average of the last 40 days (z = +2.1)",
+   "value_bp": 82.18890905091757
+  },
+  {
+   "date": "2026-06-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-06-30",
+   "title": "GOLDGUINEA Jun 2026: tender window in 5 trading days",
+   "detail": "Tender opens 26 Jun 2026; exit by 25 Jun 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-06-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-06-30",
+   "title": "GOLDPETAL Jun 2026: tender window in 5 trading days",
+   "detail": "Tender opens 26 Jun 2026; exit by 25 Jun 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-06-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-06-30",
+   "title": "GOLDTEN Jun 2026: tender window in 5 trading days",
+   "detail": "Tender opens 26 Jun 2026; exit by 25 Jun 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-06-10",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-06-30",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+76 bp over GOLDTEN (Jun 2026), vs +49 bp average of the last 40 days (z = +1.6)",
+   "value_bp": 76.0812532793631
+  },
+  {
+   "date": "2026-06-04",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2026: +10 bp; it should sit near 0",
+   "value_bp": 10.415294169316969
+  },
+  {
+   "date": "2026-05-29",
+   "type": "settlement",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-05-29",
+   "title": "GOLDPETAL settled -22 bp away from GOLDTEN",
+   "detail": "Same settlement rule, different poll: the spot polls were taken at different times on the settlement day",
+   "value_bp": -21.776475020914845
+  },
+  {
+   "date": "2026-05-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-06-05",
+   "title": "GOLDM Jun 2026: tender window in 5 trading days",
+   "detail": "Tender opens 03 Jun 2026; exit by 02 Jun 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-05-26",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-06-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+38 bp over GOLDTEN (Jun 2026), vs +69 bp average of the last 40 days (z = -1.7)",
+   "value_bp": 38.148988454744796
+  },
+  {
+   "date": "2026-05-25",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2026-06-05",
+   "title": "GOLD Jun 2026: tender window in 5 trading days",
+   "detail": "Tender opens 01 Jun 2026; exit by 29 May 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-05-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-05-29",
+   "title": "GOLDGUINEA May 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 May 2026; exit by 26 May 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-05-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-05-29",
+   "title": "GOLDPETAL May 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 May 2026; exit by 26 May 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-05-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-05-29",
+   "title": "GOLDTEN May 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 May 2026; exit by 26 May 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-05-11",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-06-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Jun 2026: +14 bp; it should sit near 0",
+   "value_bp": 14.207044869498642
+  },
+  {
+   "date": "2026-04-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-05-05",
+   "title": "GOLDM May 2026: tender window in 5 trading days",
+   "detail": "Tender opens 01 May 2026; exit by 30 Apr 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-04-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-04-30",
+   "title": "GOLDGUINEA Apr 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Apr 2026; exit by 27 Apr 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-04-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-04-30",
+   "title": "GOLDPETAL Apr 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Apr 2026; exit by 27 Apr 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-04-21",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-04-30",
+   "title": "GOLDTEN Apr 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Apr 2026; exit by 27 Apr 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-04-14",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-04-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+32 bp over GOLDTEN (Apr 2026), vs +128 bp average of the last 40 days (z = -1.5)",
+   "value_bp": 32.38460135011722
+  },
+  {
+   "date": "2026-04-09",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-04-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+43 bp over GOLDTEN (Apr 2026), vs +136 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 43.16907971594786
+  },
+  {
+   "date": "2026-04-09",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-04-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+63 bp over GOLDTEN (Apr 2026), vs +172 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 62.61239384114603
+  },
+  {
+   "date": "2026-03-25",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-04-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+58 bp over GOLDTEN (Apr 2026), vs +170 bp average of the last 40 days (z = -4.0)",
+   "value_bp": 58.44200294349289
+  },
+  {
+   "date": "2026-03-25",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-04-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+95 bp over GOLDTEN (Apr 2026), vs +197 bp average of the last 40 days (z = -2.8)",
+   "value_bp": 95.49235034397752
+  },
+  {
+   "date": "2026-03-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-04-03",
+   "title": "GOLDM Apr 2026: tender window in 5 trading days",
+   "detail": "Tender opens 31 Mar 2026; exit by 30 Mar 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-03-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2026-04-02",
+   "title": "GOLD Apr 2026: tender window in 5 trading days",
+   "detail": "Tender opens 27 Mar 2026; exit by 26 Mar 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-03-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-03-31",
+   "title": "GOLDGUINEA Mar 2026: tender window in 5 trading days",
+   "detail": "Tender opens 26 Mar 2026; exit by 25 Mar 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-03-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-03-31",
+   "title": "GOLDPETAL Mar 2026: tender window in 5 trading days",
+   "detail": "Tender opens 26 Mar 2026; exit by 25 Mar 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-03-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-03-31",
+   "title": "GOLDTEN Mar 2026: tender window in 5 trading days",
+   "detail": "Tender opens 26 Mar 2026; exit by 25 Mar 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-03-02",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-06-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Jun 2026: -15 bp; it should sit near 0",
+   "value_bp": -15.265830960280447
+  },
+  {
+   "date": "2026-02-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-03-05",
+   "title": "GOLDM Mar 2026: tender window in 5 trading days",
+   "detail": "Tender opens 03 Mar 2026; exit by 02 Mar 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-02-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-02-27",
+   "title": "GOLDGUINEA Feb 2026: tender window in 5 trading days",
+   "detail": "Tender opens 25 Feb 2026; exit by 24 Feb 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-02-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-02-27",
+   "title": "GOLDPETAL Feb 2026: tender window in 5 trading days",
+   "detail": "Tender opens 25 Feb 2026; exit by 24 Feb 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-02-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-02-27",
+   "title": "GOLDTEN Feb 2026: tender window in 5 trading days",
+   "detail": "Tender opens 25 Feb 2026; exit by 24 Feb 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-01-30",
+   "type": "settlement",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-01-30",
+   "title": "GOLDPETAL settled -166 bp away from GOLDTEN",
+   "detail": "Same settlement rule, different poll: the spot polls were taken at different times on the settlement day",
+   "value_bp": -166.01029990911843
+  },
+  {
+   "date": "2026-01-28",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-02-05",
+   "title": "GOLDM Feb 2026: tender window in 5 trading days",
+   "detail": "Tender opens 03 Feb 2026; exit by 02 Feb 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-01-23",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2026-02-05",
+   "title": "GOLD Feb 2026: tender window in 5 trading days",
+   "detail": "Tender opens 01 Feb 2026; exit by 30 Jan 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-01-21",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-02-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Feb 2026: -31 bp; it should sit near 0",
+   "value_bp": -31.237568556354844
+  },
+  {
+   "date": "2026-01-21",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-02-27",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+371 bp over GOLDTEN (Feb 2026), vs +121 bp average of the last 40 days (z = +4.6)",
+   "value_bp": 371.323003427404
+  },
+  {
+   "date": "2026-01-20",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-02-27",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+208 bp over GOLDTEN (Feb 2026), vs +116 bp average of the last 40 days (z = +3.1)",
+   "value_bp": 208.22588963383294
+  },
+  {
+   "date": "2026-01-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2026-01-30",
+   "title": "GOLDGUINEA Jan 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Jan 2026; exit by 27 Jan 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-01-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2026-01-30",
+   "title": "GOLDPETAL Jan 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Jan 2026; exit by 27 Jan 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-01-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2026-01-30",
+   "title": "GOLDTEN Jan 2026: tender window in 5 trading days",
+   "detail": "Tender opens 28 Jan 2026; exit by 27 Jan 2026 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2026-01-12",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2026-02-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Feb 2026: +20 bp; it should sit near 0",
+   "value_bp": 20.03555605722962
+  },
+  {
+   "date": "2025-12-29",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2026-01-30",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+146 bp over GOLDTEN (Jan 2026), vs +95 bp average of the last 40 days (z = +3.3)",
+   "value_bp": 146.17685631345577
+  },
+  {
+   "date": "2025-12-26",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-01-30",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+141 bp over GOLDTEN (Jan 2026), vs +87 bp average of the last 40 days (z = +2.6)",
+   "value_bp": 141.23538637011768
+  },
+  {
+   "date": "2025-12-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-01-05",
+   "title": "GOLDM Jan 2026: tender window in 5 trading days",
+   "detail": "Tender opens 01 Jan 2026; exit by 31 Dec 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-12-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-12-31",
+   "title": "GOLDGUINEA Dec 2025: tender window in 5 trading days",
+   "detail": "Tender opens 29 Dec 2025; exit by 26 Dec 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-12-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-12-31",
+   "title": "GOLDPETAL Dec 2025: tender window in 5 trading days",
+   "detail": "Tender opens 29 Dec 2025; exit by 26 Dec 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-12-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-12-31",
+   "title": "GOLDTEN Dec 2025: tender window in 5 trading days",
+   "detail": "Tender opens 29 Dec 2025; exit by 26 Dec 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-12-18",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-12-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+117 bp over GOLDTEN (Dec 2025), vs +81 bp average of the last 40 days (z = +1.7)",
+   "value_bp": 116.67481478695896
+  },
+  {
+   "date": "2025-12-16",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-12-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+110 bp over GOLDTEN (Dec 2025), vs +79 bp average of the last 40 days (z = +1.5)",
+   "value_bp": 109.98578402244385
+  },
+  {
+   "date": "2025-12-10",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-12-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+110 bp over GOLDTEN (Dec 2025), vs +77 bp average of the last 40 days (z = +1.7)",
+   "value_bp": 110.15567374509816
+  },
+  {
+   "date": "2025-12-08",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-12-31",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+114 bp over GOLDTEN (Dec 2025), vs +86 bp average of the last 40 days (z = +1.5)",
+   "value_bp": 113.92699372239079
+  },
+  {
+   "date": "2025-11-26",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-12-05",
+   "title": "GOLDM Dec 2025: tender window in 5 trading days",
+   "detail": "Tender opens 03 Dec 2025; exit by 02 Dec 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-11-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2025-12-05",
+   "title": "GOLD Dec 2025: tender window in 5 trading days",
+   "detail": "Tender opens 01 Dec 2025; exit by 28 Nov 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-11-19",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-12-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Dec 2025: +12 bp; it should sit near 0",
+   "value_bp": 11.960554579182325
+  },
+  {
+   "date": "2025-11-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-11-28",
+   "title": "GOLDTEN Nov 2025: tender window in 5 trading days",
+   "detail": "Tender opens 26 Nov 2025; exit by 25 Nov 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-11-17",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-12-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Dec 2025: +11 bp; it should sit near 0",
+   "value_bp": 11.238791748446886
+  },
+  {
+   "date": "2025-11-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-11-28",
+   "title": "GOLDGUINEA Nov 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Nov 2025; exit by 21 Nov 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-11-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-11-28",
+   "title": "GOLDPETAL Nov 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Nov 2025; exit by 21 Nov 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-11-14",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-11-28",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+110 bp over GOLDTEN (Nov 2025), vs +65 bp average of the last 40 days (z = +2.3)",
+   "value_bp": 109.64664253861444
+  },
+  {
+   "date": "2025-11-14",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-11-28",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+114 bp over GOLDTEN (Nov 2025), vs +71 bp average of the last 40 days (z = +2.4)",
+   "value_bp": 114.39281328766037
+  },
+  {
+   "date": "2025-10-31",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-11-28",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+81 bp over GOLDTEN (Nov 2025), vs +55 bp average of the last 40 days (z = +1.5)",
+   "value_bp": 81.20597142668996
+  },
+  {
+   "date": "2025-10-31",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-11-28",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+86 bp over GOLDTEN (Nov 2025), vs +62 bp average of the last 40 days (z = +1.7)",
+   "value_bp": 86.24662584765241
+  },
+  {
+   "date": "2025-10-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-11-05",
+   "title": "GOLDM Nov 2025: tender window in 5 trading days",
+   "detail": "Tender opens 03 Nov 2025; exit by 31 Oct 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-10-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-10-31",
+   "title": "GOLDGUINEA Oct 2025: tender window in 5 trading days",
+   "detail": "Tender opens 27 Oct 2025; exit by 24 Oct 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-10-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-10-31",
+   "title": "GOLDPETAL Oct 2025: tender window in 5 trading days",
+   "detail": "Tender opens 27 Oct 2025; exit by 24 Oct 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-10-20",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-10-31",
+   "title": "GOLDTEN Oct 2025: tender window in 5 trading days",
+   "detail": "Tender opens 27 Oct 2025; exit by 24 Oct 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-10-15",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-10-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+85 bp over GOLDTEN (Oct 2025), vs +46 bp average of the last 40 days (z = +1.7)",
+   "value_bp": 84.82508022399583
+  },
+  {
+   "date": "2025-10-09",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-10-31",
+   "title": "GOLDPETAL premium unusually high",
+   "detail": "+79 bp over GOLDTEN (Oct 2025), vs +52 bp average of the last 40 days (z = +1.9)",
+   "value_bp": 78.96924355777158
+  },
+  {
+   "date": "2025-10-07",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-10-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+76 bp over GOLDTEN (Oct 2025), vs +42 bp average of the last 40 days (z = +2.0)",
+   "value_bp": 75.78834803368962
+  },
+  {
+   "date": "2025-09-30",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-10-31",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+66 bp over GOLDTEN (Oct 2025), vs +38 bp average of the last 40 days (z = +1.7)",
+   "value_bp": 65.80467392885537
+  },
+  {
+   "date": "2025-09-23",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-10-03",
+   "title": "GOLDM Oct 2025: tender window in 5 trading days",
+   "detail": "Tender opens 30 Sep 2025; exit by 29 Sep 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-09-19",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-10-03",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2025: +12 bp; it should sit near 0",
+   "value_bp": 12.031171672060026
+  },
+  {
+   "date": "2025-09-19",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-09-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+14 bp over GOLDTEN (Sep 2025), vs +51 bp average of the last 40 days (z = -1.9)",
+   "value_bp": 14.449159858598293
+  },
+  {
+   "date": "2025-09-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2025-10-03",
+   "title": "GOLD Oct 2025: tender window in 5 trading days",
+   "detail": "Tender opens 26 Sep 2025; exit by 25 Sep 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-09-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-09-30",
+   "title": "GOLDGUINEA Sep 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Sep 2025; exit by 23 Sep 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-09-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-09-30",
+   "title": "GOLDPETAL Sep 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Sep 2025; exit by 23 Sep 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-09-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-09-30",
+   "title": "GOLDTEN Sep 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Sep 2025; exit by 23 Sep 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-09-15",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-09-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "-1 bp over GOLDTEN (Sep 2025), vs +32 bp average of the last 40 days (z = -1.7)",
+   "value_bp": -1.383044329973382
+  },
+  {
+   "date": "2025-09-11",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-10-03",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2025: +10 bp; it should sit near 0",
+   "value_bp": 10.195646183521756
+  },
+  {
+   "date": "2025-09-03",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-10-03",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2025: +11 bp; it should sit near 0",
+   "value_bp": 10.739633918566138
+  },
+  {
+   "date": "2025-08-29",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-10-03",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Oct 2025: +10 bp; it should sit near 0",
+   "value_bp": 10.22001966871855
+  },
+  {
+   "date": "2025-08-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-09-05",
+   "title": "GOLDM Sep 2025: tender window in 5 trading days",
+   "detail": "Tender opens 03 Sep 2025; exit by 02 Sep 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-08-19",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2025-08-29",
+   "title": "GOLDGUINEA premium unusually high",
+   "detail": "+72 bp over GOLDTEN (Aug 2025), vs +37 bp average of the last 40 days (z = +2.1)",
+   "value_bp": 71.62052530169439
+  },
+  {
+   "date": "2025-08-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-08-29",
+   "title": "GOLDGUINEA Aug 2025: tender window in 5 trading days",
+   "detail": "Tender opens 25 Aug 2025; exit by 22 Aug 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-08-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-08-29",
+   "title": "GOLDPETAL Aug 2025: tender window in 5 trading days",
+   "detail": "Tender opens 25 Aug 2025; exit by 22 Aug 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-08-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-08-29",
+   "title": "GOLDTEN Aug 2025: tender window in 5 trading days",
+   "detail": "Tender opens 25 Aug 2025; exit by 22 Aug 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-08-04",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-08-29",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+34 bp over GOLDTEN (Aug 2025), vs +73 bp average of the last 40 days (z = -1.7)",
+   "value_bp": 33.55771330990187
+  },
+  {
+   "date": "2025-07-29",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2025: +14 bp; it should sit near 0",
+   "value_bp": 13.859872611463597
+  },
+  {
+   "date": "2025-07-25",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-08-05",
+   "title": "GOLDM Aug 2025: tender window in 5 trading days",
+   "detail": "Tender opens 01 Aug 2025; exit by 31 Jul 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-07-23",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2025-08-05",
+   "title": "GOLD Aug 2025: tender window in 5 trading days",
+   "detail": "Tender opens 30 Jul 2025; exit by 29 Jul 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-07-21",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-08-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Aug 2025: +11 bp; it should sit near 0",
+   "value_bp": 11.18759889938259
+  },
+  {
+   "date": "2025-07-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-07-31",
+   "title": "GOLDGUINEA Jul 2025: tender window in 5 trading days",
+   "detail": "Tender opens 25 Jul 2025; exit by 24 Jul 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-07-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-07-31",
+   "title": "GOLDPETAL Jul 2025: tender window in 5 trading days",
+   "detail": "Tender opens 25 Jul 2025; exit by 24 Jul 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-07-18",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-07-31",
+   "title": "GOLDTEN Jul 2025: tender window in 5 trading days",
+   "detail": "Tender opens 25 Jul 2025; exit by 24 Jul 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-06-25",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-07-04",
+   "title": "GOLDM Jul 2025: tender window in 5 trading days",
+   "detail": "Tender opens 02 Jul 2025; exit by 01 Jul 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-06-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-06-30",
+   "title": "GOLDGUINEA Jun 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Jun 2025; exit by 23 Jun 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-06-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-06-30",
+   "title": "GOLDPETAL Jun 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Jun 2025; exit by 23 Jun 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-06-17",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-06-30",
+   "title": "GOLDTEN Jun 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Jun 2025; exit by 23 Jun 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-06-13",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-06-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+25 bp over GOLDTEN (Jun 2025), vs +78 bp average of the last 40 days (z = -1.8)",
+   "value_bp": 24.65325102220639
+  },
+  {
+   "date": "2025-06-04",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDPETAL/GOLDTEN",
+   "expiry": "2025-06-30",
+   "title": "GOLDPETAL premium unusually low",
+   "detail": "+31 bp over GOLDTEN (Jun 2025), vs +85 bp average of the last 40 days (z = -1.6)",
+   "value_bp": 30.782403066007546
+  },
+  {
+   "date": "2025-05-28",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-06-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Jun 2025: +11 bp; it should sit near 0",
+   "value_bp": 10.611807474494306
+  },
+  {
+   "date": "2025-05-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-06-05",
+   "title": "GOLDM Jun 2025: tender window in 5 trading days",
+   "detail": "Tender opens 03 Jun 2025; exit by 02 Jun 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-05-23",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-06-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Jun 2025: +22 bp; it should sit near 0",
+   "value_bp": 21.931192183763937
+  },
+  {
+   "date": "2025-05-23",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLD",
+   "expiry": "2025-06-05",
+   "title": "GOLD Jun 2025: tender window in 5 trading days",
+   "detail": "Tender opens 30 May 2025; exit by 29 May 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-05-21",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-06-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Jun 2025: +13 bp; it should sit near 0",
+   "value_bp": 13.197448493291741
+  },
+  {
+   "date": "2025-05-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-05-30",
+   "title": "GOLDGUINEA May 2025: tender window in 5 trading days",
+   "detail": "Tender opens 26 May 2025; exit by 23 May 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-05-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-05-30",
+   "title": "GOLDPETAL May 2025: tender window in 5 trading days",
+   "detail": "Tender opens 26 May 2025; exit by 23 May 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-05-19",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-05-30",
+   "title": "GOLDTEN May 2025: tender window in 5 trading days",
+   "detail": "Tender opens 26 May 2025; exit by 23 May 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-04-24",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2025-05-05",
+   "title": "GOLDM May 2025: tender window in 5 trading days",
+   "detail": "Tender opens 01 May 2025; exit by 30 Apr 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-04-16",
+   "type": "control",
+   "severity": "info",
+   "subject": "GOLD/GOLDM",
+   "expiry": "2025-06-05",
+   "title": "Control pair away from zero",
+   "detail": "GOLD (1 kg) vs GOLDM (100 g), Jun 2025: +11 bp; it should sit near 0",
+   "value_bp": 10.883556411356299
+  },
+  {
+   "date": "2025-04-16",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDGUINEA",
+   "expiry": "2025-04-30",
+   "title": "GOLDGUINEA Apr 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Apr 2025; exit by 23 Apr 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-04-16",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDPETAL",
+   "expiry": "2025-04-30",
+   "title": "GOLDPETAL Apr 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Apr 2025; exit by 23 Apr 2025 to avoid delivery",
+   "value_bp": null
+  },
+  {
+   "date": "2025-04-16",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDTEN",
+   "expiry": "2025-04-30",
+   "title": "GOLDTEN Apr 2025: tender window in 5 trading days",
+   "detail": "Tender opens 24 Apr 2025; exit by 23 Apr 2025 to avoid delivery",
+   "value_bp": null
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # Tola web app
 
-The fair-price desk for MCX gold: a static React + Vite site. It has no server. Everything it shows is read at build time from `../data/export/*.json`, which `python -m tola.refresh` (or `python -m tola.export`) writes from the committed data snapshot.
+The fair-price desk for MCX gold: a static React + Vite site. It has no server. Everything it shows is read at build time from `web/data/*.json`. That folder is a committed copy of `../data/export/` (written by `python -m tola.refresh` or `python -m tola.export` from the data snapshot); `npm run dev`, `build` and `test` re-sync it first, so `web/` also builds on its own, with no files from outside the folder.
 
 ```bash
 cd web
@@ -27,9 +27,9 @@ npm run build     # static files in web/dist/
 
 ## Deploy (Vercel)
 
-Import the repo, set **Root Directory** to `web`, framework **Vite**, and keep "Include files outside the root directory" on, because the build reads `../data/export`. Build command `npm run build`, output `dist`.
+Import the repo, set **Root Directory** to `web`, framework **Vite**. Build command `npm run build`, output `dist`. Nothing outside `web/` is needed.
 
-To update the site, run `python -m tola.refresh` on a laptop (MCX blocks cloud fetchers), commit `data/`, and push.
+To update the site, run `python -m tola.refresh` on a laptop (MCX blocks cloud fetchers), commit `data/` and `web/data/` (run `npm run sync-data` in `web/` if you only ran `tola.export`), and push.
 
 ## Design
 
