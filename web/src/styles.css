@@ -65,7 +65,7 @@ a:hover { color: var(--accent-hover); }
 .brand { display: flex; align-items: baseline; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 18px; letter-spacing: -0.3px; }
 .brand small { font-weight: 500; font-size: 12px; color: var(--muted); letter-spacing: 0; }
 .tabs { display: flex; height: 100%; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
-.tab { display: flex; align-items: center; padding: 0 12px; color: var(--muted); text-decoration: none; font-weight: 500; font-size: 14px; white-space: nowrap; border-bottom: 2px solid var(--accent); transition: color 120ms var(--ease); }
+.tab { display: flex; align-items: center; padding: 0 12px; color: var(--muted); font-weight: 500; font-size: 14px; white-space: nowrap; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; transition: color 120ms var(--ease); }
 .tab:hover { color: var(--accent); }
 .tab[aria-current='page'] { color: var(--ink); }
 .tab[aria-current='page']:hover { color: var(--accent); }
