@@ -33,7 +33,7 @@ def _clean(v):
     if isinstance(v, (np.integer,)):
         return int(v)
     if isinstance(v, (np.floating, float)):
-        return None if not np.isfinite(v) else round(float(v), 6)
+        return None if not np.isfinite(v) else float(v)   # full precision: the app's port must match tola.chooser
     if isinstance(v, (np.bool_,)):
         return bool(v)
     if v is pd.NA or v is pd.NaT:
@@ -48,6 +48,46 @@ def records(df):
 def write(name, obj):
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{name}.json").write_text(json.dumps(obj, indent=1, ensure_ascii=False, default=_clean), encoding="utf-8")
+
+
+def _settlement_check(st):
+    """Before Oct 2023 MCX published the DDR as the last-day close: how many rebuilt DDRs can be checked, and match."""
+    t = st[st.close_is_ddr_era & st.ddr_reliable]
+    return {"checked": int(len(t)), "matched": int(t.ddr_matches_close.sum())}
+
+
+def evidence(read, basis, curve, conv, cycles, asof):
+    """Figures for the Overview, Basis, Convergence, Verdict and Method pages, all from the snapshot."""
+    summ, prof, live = read("convergence_summary"), read("convergence_profile"), read("convergence_live")
+    wf, dlv = read("wf_summary"), read("delivery_summary")
+    same = ["GOLDGUINEA/GOLDTEN", "GOLDPETAL/GOLDTEN"]
+    exp = cycles[cycles.pair.isin(same + ["GOLD/GOLDM"]) & cycles.counts & (cycles.status == "expired")]
+    e = conv[conv.eligible & conv.pair.isin(same) & (conv.expiry >= chooser.CURRENT_ERA)]
+    monthly = (e.assign(month=pd.to_datetime(e.date).dt.to_period("M").astype(str))
+               .groupby(["pair", "month"]).premium_vwap_bp.median().reset_index())
+    # Today's waterfall: the most liquid live expiry per symbol
+    today = basis[basis.date == asof].sort_values("value_lakh", ascending=False).drop_duplicates("symbol")
+    carry = curve[curve.carry_source == "fit"][["date", "carry_pa", "rf_pct", "timing_bp"]]
+    carry = carry.assign(month=pd.to_datetime(carry.date).dt.to_period("M").astype(str)).groupby("month").median(numeric_only=True).reset_index()
+    resid = basis[(basis.value_lakh >= 100) & ~basis.in_tender].dropna(subset=["residual_bp"])
+    resid = resid.assign(year=pd.to_datetime(resid.date).dt.year).groupby(["year", "symbol"]).residual_bp.median().reset_index()
+    manifest = json.loads((SNAP / "manifest.json").read_text(encoding="utf-8"))
+    return {
+        "asof": str(asof),
+        "summary": records(summ), "profile": records(prof), "live": records(live),
+        "cycles": records(exp[["pair", "expiry", "mean_vwap_bp", "eligible_days", "settlement_gap_bp", "given_up_bp", "given_up_inr_g",
+                               "last_premium_vwap_bp"]]),
+        "monthly": records(monthly),
+        "waterfall_today": records(today[["symbol", "expiry", "close_g999", "ref_spot_g999", "fair_g999", "basis_total_bp", "timing_bp",
+                                          "carry_bp", "reference_bp", "residual_bp", "making_charge_inr_g", "making_charge_bp", "value_lakh"]]),
+        "carry_monthly": records(carry),
+        "residual_by_year": records(resid),
+        "walk_forward": records(wf), "delivery": records(dlv),
+        "validation": manifest["validation"], "coverage": manifest["coverage"],
+        "settlement_check": _settlement_check(read("settlement")),
+        "spec_versions": sum(len(v["versions"]) for v in specs.load().values()),
+        "tables": {k: v["rows"] for k, v in manifest["tables"].items()},
+    }
 
 
 def run(log=print):
@@ -84,6 +124,7 @@ def run(log=print):
         "control": f"GOLD vs GOLDM beyond {alerts.CONTROL_BP:g} bp", "settlement": f"same-reference pair settled more than {alerts.SETTLE_BP:g} bp apart"},
         "alerts": records(log_df)})
     write("calendar", {"asof": str(asof), "contracts": records(alerts.calendar(contracts, live))})
+    write("evidence", evidence(read, basis, curve, conv, cycles, asof))
     manifest = json.loads((SNAP / "manifest.json").read_text(encoding="utf-8"))
     write("meta", {"asof": str(asof), "data_asof": manifest["data_asof"], "spot_asof": manifest["spot_asof"],
                    "built_at": manifest["built_at"], "exported_at": datetime.now().astimezone().isoformat(timespec="seconds")})

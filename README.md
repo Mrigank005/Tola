@@ -37,6 +37,12 @@ Who pays it:
 
 Full write-up: [G0_RESULTS.md](PS%20Research/g0_gate/G0_RESULTS.md).
 
+What the Round 2 build added on top of G0 (each milestone has its own write-up):
+- **Where the premium comes from** ([M2](PS%20Research/m2_basis/M2_RESULTS.md)): every price split into timing, carry, settlement reference and premium. Carry peaked near 17% a year in Jan 2026 against T-bills near 5.3%.
+- **How it behaves** ([M3](PS%20Research/m3_convergence/M3_RESULTS.md)): present in every cycle, removed in one step at settlement.
+- **Who can collect it** ([M4](PS%20Research/m4_verdict/M4_RESULTS.md)): to profit from delivery you would need coins under 0.27% (8 g) or 1.13% (1 g) over spot; the cheapest retail coins are 3.6% and 5.5%, so it paid in 0 of 18 cycles. Trading the premium's swings earned a small edge, mostly in Jan–Mar 2026. A forward test is pre-registered for the finale ([FORWARD_TEST_PREREGISTRATION.md](PS%20Research/m4_verdict/FORWARD_TEST_PREREGISTRATION.md)).
+- **What to do about it** ([M5](PS%20Research/m5_chooser/M5_CHOOSER.md)): the chooser, the quiet notice log and the contract calendar.
+
 ---
 
 ## What Tola does
@@ -81,7 +87,7 @@ Gotchas this repo handles:
 - **Positions are keyed by `(symbol, expiry)`**, never by a continuous series.
 - **Contract specs change between versions:** the tender window went from 5 to 3 days and the tender margin from 5% to 8.34%.
 
-Raw MCX responses are cached in `PS Research/g0_gate/raw/`, so the G0 analysis reruns offline. Please fetch politely: one session and at least 1.5 s between calls.
+Raw MCX responses are cached in `data/raw/` (not in git; their hashes are in `data/snapshot/raw_index.json`). The validated snapshot in `data/snapshot/` is committed, so everything rebuilds offline. Please fetch politely: one session and at least 1.5 s between calls. Details: [data/README.md](data/README.md).
 
 ---
 
@@ -102,7 +108,7 @@ flowchart LR
     end
 
     subgraph STORE["Store"]
-        C[("DuckDB + Parquet<br/>keyed by symbol, expiry, date<br/>spec_versions, events")]
+        C[("Parquet snapshot<br/>keyed by symbol, expiry, date<br/>validated before publish")]
     end
 
     subgraph MODEL["Model"]
@@ -137,7 +143,7 @@ flowchart LR
     R["Refresh script<br/>fetch, rebuild, redeploy"] -.-> B
 ```
 
-**Stack:** Python 3.12 · curl_cffi · DuckDB · pandas · statsmodels · arch · bidask · pytest · React · Vite · ECharts
+**Stack:** Python 3.12 · curl_cffi · pandas · pyarrow · SciPy · bidask · PyYAML · pytest · React 19 · Vite · ECharts · Hairline (landing figures) · Vitest
 
 ---
 
@@ -157,7 +163,7 @@ python fetch_g0.py           # optional: refresh from MCX (only fetches what isn
 
 Results are written to `PS Research/g0_gate/results/`.
 
-### Run the app (coming with the Round 2 build)
+### Run the app
 
 ```bash
 git clone https://github.com/Mrigank005/Tola.git
@@ -165,35 +171,32 @@ cd Tola
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-python -m tola.refresh            # fetch → rebuild JSON
-pytest                            # includes the look-ahead truncation test
+python -m pytest -q               # 45 tests, including the look-ahead truncation test
+python -m tola.refresh --offline  # optional: rebuild data/snapshot and data/export from the local cache
+python -m tola.refresh            # optional: fetch the latest MCX days first (run from India; MCX blocks most cloud IPs)
 
-cd web && npm install && npm run dev
+cd web && npm install && npm run dev   # http://localhost:5173
 ```
+
+The committed snapshot already holds MCX data to 23 Oct 2026, so the app runs without fetching anything. Web app details and deploy steps: [web/README.md](web/README.md).
 
 ---
 
 ## Repository layout
 
-Today:
-
 ```
-PS Research/
-  00_index.md … 07_sources.md   research notes (repos, papers, patents, market, data, sources)
-  research_summary.html         visual summary and scope
-  data_probe/                   first MCX data probes
-  g0_gate/                      G0 pre-registration, fetch/analysis scripts, raw cache, results
-Tola_PS03_Pitch_NumeroUno.pptx  pitch deck
-```
-
-Planned (Round 2 build):
-
-```
-tola/          fetcher, storage, decomposition, backtest, chooser
-specs/         versioned contract specs (YAML, each value cites its source)
-data/          committed Parquet snapshot
-web/           static frontend
-tests/
+tola/              fetcher, parser, specs, snapshot build, basis anatomy, convergence,
+                   walk-forward backtest, delivery economics, chooser, alerts, JSON export
+tests/             pytest suite (parser, specs, snapshot, anatomy, convergence, backtest, chooser)
+data/specs/        versioned contract specs, costs and rates (YAML, each value cites its source)
+data/raw/specs/    the 15 MCX spec PDFs behind data/specs/gold.yaml
+data/snapshot/     committed Parquet snapshot, manifest and VALIDATION.md
+data/export/       JSON the web app reads at build time
+web/               React + Vite static site (landing, chooser, rates, evidence pages, notices, method)
+PS Research/       research notes, G0 gate, and the M2 to M5 write-ups
+Design/            gold-terminal design system (palette and components)
+DESIGN.md          web app design decisions; PRODUCT.md the product brief
+Round1/            Round 1 pitch deck
 ```
 
 ---
@@ -203,11 +206,13 @@ tests/
 - [x] Research and scope
 - [x] G0 premium gate (GO on both pairs)
 - [x] 18-cycle settlement-reference check (passed)
-- [x] Pitch deck
-- [ ] Basis Anatomy and convergence monitor
-- [ ] Walk-forward verdict with measured costs and the delivery leg
-- [ ] Chooser, alert log and contract calendar
-- [ ] Finale: daily cron, silver extension, spec-change annotator
+- [x] Round 1 pitch deck
+- [x] M1 data layer: fetcher, versioned specs, validated snapshot
+- [x] M2 basis anatomy and M3 convergence monitor
+- [x] M4 walk-forward verdict with measured costs and the delivery leg
+- [x] M5 chooser, quiet notice log and contract calendar
+- [x] Web app: landing page, chooser, rate board, evidence pages, notices, method
+- [ ] Finale (20 Nov): forward test results, daily refresh, silver extension, spec-change annotator
 
 ## Team: Numero Uno
 
