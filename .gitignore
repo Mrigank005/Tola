@@ -26,8 +26,7 @@ data/snapshot/VALIDATION_FAILED.md
 
 # Web app build output
 web/dist/
-# Impeccable: review captures and decision mocks are working files
-.impeccable/review/
-.impeccable/mocks/
+# Impeccable working files (design sidecar, surface briefs, review captures) stay local
+.impeccable/
 # Impeccable skill is installed per machine: npx skills add pbakaus/impeccable
 .claude/skills/

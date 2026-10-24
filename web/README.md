@@ -33,4 +33,4 @@ To update the site, run `python -m tola.refresh` on a laptop (MCX blocks cloud f
 
 ## Design
 
-Palette: `Design/Design-gold-terminal.md`. Direction (the Zaveri Bazaar rate board) and system decisions: `DESIGN.md` and `.impeccable/surfaces/web-src-app-jsx.md`, produced with the [Impeccable](https://impeccable.style) skill. To use it here, install it with `npx skills add pbakaus/impeccable` (it is not committed).
+Palette: `Design/Design-gold-terminal.md`. Direction (the Zaveri Bazaar rate board) and system decisions: `DESIGN.md` and `PRODUCT.md`, produced with the [Impeccable](https://impeccable.style) skill. To use it here, install it with `npx skills add pbakaus/impeccable` (it is not committed).
