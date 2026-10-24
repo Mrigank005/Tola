@@ -1,5 +1,5 @@
 /* Tola: the rate board. Palette pinned to Design/Design-gold-terminal.md. */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
   color-scheme: dark;
@@ -106,7 +106,7 @@ a:hover { color: var(--accent-hover); }
 /* one fixed magnitude ramp for premium size, everywhere: the track spans 0 to 160 bp */
 .ramp { display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; }
 .ramp .track { position: relative; display: inline-block; width: 160px; height: 6px; border-radius: 3px; background: var(--raised); }
-.ramp .track i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: var(--body); }
+.ramp .track i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: var(--ink); }
 .ramp.neg .track i { background: transparent; box-shadow: inset 0 0 0 1.5px var(--ink); min-width: 10px; }
 .ramp b { color: var(--ink); font-weight: 600; min-width: 4.5em; }
 .show-sm { display: none; }

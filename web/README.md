@@ -14,7 +14,8 @@ npm run build     # static files in web/dist/
 
 | Route | Page | Data |
 |---|---|---|
-| `#/` | Rates: today's rate board, the docked chooser, latest notices | `chooser.json`, `alerts.json` |
+| `#/` | Landing: the product tour from data to decision (M1 to M5), with a working chooser strip and a link into every page. Figures are [Hairline](https://github.com/lucasmarkes/hairline) (MIT) | all exports |
+| `#/rates` | Today's rate board | `chooser.json` |
 | `#/choose?g=100&d=20&m=exit` | Which contract to hold, ranked by all-in ₹/g; rows expand to the cost breakdown | `chooser.json` |
 | `#/basis` | Why prices differ: timing, carry, reference, premium; carry vs T-bill | `evidence.json` |
 | `#/convergence` | The premium today vs history, by month, by days to expiry | `evidence.json` |

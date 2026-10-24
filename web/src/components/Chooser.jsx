@@ -14,7 +14,7 @@ export function readParams(search) {
   return { g: n('g'), d: n('d'), m: p.get('m') === 'deliver' ? 'deliver' : 'exit' }
 }
 
-export function ChooserForm({ initial, onSubmit, compact = false }) {
+export function ChooserForm({ initial, onSubmit, compact = false, slim = false }) {
   const [g, setG] = useState(String(initial.g))
   const [d, setD] = useState(String(initial.d))
   const [m, setM] = useState(initial.m)
@@ -23,7 +23,7 @@ export function ChooserForm({ initial, onSubmit, compact = false }) {
   const dBad = !Number.isInteger(dN) || dN < LIMITS.d[0] || dN > LIMITS.d[1]
   const submit = (e) => { e.preventDefault(); if (!gBad && !dBad) onSubmit({ g: gN, d: dN, m }) }
   return (
-    <form className={compact ? 'dock' : ''} onSubmit={submit} noValidate style={compact ? undefined : { display: 'grid', gap: 18 }}>
+    <form className={compact ? `dock${slim ? ' slim' : ''}` : ''} onSubmit={submit} noValidate style={compact ? undefined : { display: 'grid', gap: 18 }}>
       <label className="field">
         <span>Gold you want</span>
         <span className="input-wrap">
@@ -47,12 +47,14 @@ export function ChooserForm({ initial, onSubmit, compact = false }) {
           <button type="button" aria-pressed={m === 'deliver'} onClick={() => setM('deliver')}>Take delivery</button>
         </div>
       </div>
-      <label className="field">
-        <span>Broker</span>
-        <select className="select" defaultValue="zerodha" aria-describedby="broker-note">
-          {Object.entries(chooser.costs.brokers).map(([k, b]) => <option key={k} value={k}>{b.label}</option>)}
-        </select>
-      </label>
+      {!slim && (
+        <label className="field">
+          <span>Broker</span>
+          <select className="select" defaultValue="zerodha">
+            {Object.entries(chooser.costs.brokers).map(([k, b]) => <option key={k} value={k}>{b.label}</option>)}
+          </select>
+        </label>
+      )}
       <button className="btn btn-primary" type="submit" disabled={gBad || dBad}>Compare contracts</button>
     </form>
   )

@@ -11,6 +11,7 @@ const ICON = { swing: [AlertTriangle, 'var(--caution)'], tender: [CalendarClock,
 
 export default function Alerts() {
   const [type, setType] = useState('all')
+  const [shown, setShown] = useState(12)
   const list = alerts.alerts.filter((a) => type === 'all' || a.type === type)
   const s = alerts.summary
   const asof = alerts.asof
@@ -23,7 +24,7 @@ export default function Alerts() {
             <p className="caption num">{s.quiet_days} of {s.trading_days} trading days since {date(s.from)} had no notice.</p>
             <div className="seg" role="group" aria-label="Filter notices">
               {TYPES.map(([k, l]) => (
-                <button key={k} type="button" aria-pressed={type === k} onClick={() => setType(k)}>
+                <button key={k} type="button" aria-pressed={type === k} onClick={() => { setType(k); setShown(12) }}>
                   {l}{k !== 'all' && <span className="dim num"> {s.by_type[k] ?? 0}</span>}
                 </button>
               ))}
@@ -31,7 +32,7 @@ export default function Alerts() {
           </div>
           {list.length ? (
             <ul className="log" style={{ marginTop: 12 }}>
-              {list.slice(0, 80).map((a, i) => {
+              {list.slice(0, shown).map((a, i) => {
                 const [I, c] = ICON[a.type]
                 return (
                   <li key={i}>
@@ -43,7 +44,7 @@ export default function Alerts() {
               })}
             </ul>
           ) : <p className="prose" style={{ padding: '18px 0' }}>No notices of this kind since {date(s.from)}.</p>}
-          {list.length > 80 && <p className="caption" style={{ padding: '10px 0 6px' }}>Showing the latest 80 of {list.length}.</p>}
+          {list.length > shown && <p style={{ padding: '14px 0 6px' }}><button type="button" className="btn btn-ghost" onClick={() => setShown(shown + 25)}>Show 25 more ({list.length - shown} older)</button></p>}
         </div>
       </Board>
 

@@ -1,8 +1,8 @@
 import { AlertTriangle, CheckCircle2, Info, XCircle } from 'lucide-react'
 import { bp, date, LOT, SERIES } from '../lib/format.js'
 
-// Premium size on one fixed ramp everywhere: the track is 160 bp end to end; a negative premium is drawn hollow.
-export const RAMP_FULL_BP = 160
+// Premium size on one fixed ramp everywhere: the track is 100 bp end to end; a negative premium is drawn hollow.
+export const RAMP_FULL_BP = 100
 export function Ramp({ value, label, className = '' }) {
   if (value == null) return <span className="na">—</span>
   const share = Math.min(1, Math.abs(value) / RAMP_FULL_BP)

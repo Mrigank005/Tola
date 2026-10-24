@@ -179,7 +179,7 @@ The palette is pinned by the user from the teammate's gold-terminal document (`D
 **Key Characteristics:**
 - A posted rate board leads every page: title, posted date stamp, ruled rows, a source note at its foot.
 - One condensed 32px figure (₹ per gram) owns each row; all numerals are tabular and right-aligned.
-- Premium size reads on one fixed magnitude ramp (0 to 160 bp) on every page.
+- Premium size reads on one fixed magnitude ramp (0 to 100 bp) on every page.
 - Row state is told by the form of the rule above it: solid live, dashed thin turnover, struck code in tender.
 - Gold is only for what you press, the focus ring and the selected underline.
 - Flat, dark only: canvas, surface, raised. No light theme.
@@ -298,12 +298,21 @@ Plain, confident, one per board.
 The container every page leads with. Card Charcoal, 12px corners, Steel Hairline border. Its head carries the title (Headline or Title) on the left and the posted stamp on the right ("Posted **22 Oct 2026** · MCX close", date in ink at 600, the rest muted), above a Strong Rule. The body is a ruled table: uppercase 12px column headers, contract code in mono with its series dot and a muted expiry and lot line under it, the rate in condensed 32px ink, and every number right-aligned and tabular. A 13px muted note at the foot says where the numbers come from.
 
 ### The Magnitude Ramp (signature)
-Premium size, drawn the same way everywhere: a 160px, 6px Raised Steel track that spans 0 to 160 bp, filled from the left in Body Slate to the premium's size (at least 1.5%), followed by the signed value in ink at 600. A negative premium is drawn hollow, as a 1.5px ink outline, so direction is told by form and sign, never by hue. The track shortens to 64px on mobile. The scale is fixed: never rescale a ramp to its own data.
+Premium size, drawn the same way everywhere: a 160px, 6px Raised Steel track that spans 0 to 100 bp, filled from the left in ink to the premium's size (at least 1.5%), followed by the signed value in ink at 600. A negative premium is drawn hollow, as a 1.5px ink outline, so direction is told by form and sign, never by hue. The track shortens to 64px on mobile. The scale is fixed: never rescale a ramp to its own data.
 
 ### Quote Rows (chooser results)
 A ranked board of what each contract costs. Each row leads with a 24px rank circle (rank one ringed in gold, the rest in Strong Rule) and is pressable: click, Enter or Space expands it in place to a breakdown (17px/600 figures over 13px muted labels, each under a Strong Rule) and a one-line comparison. While a row is open, the open row and its detail take Row Focus, and every other row steps down: its text to Muted Slate, its rate to Body Slate. The chevron turns 90° over 200ms. Contracts that cannot fill the request close the board as dashed rows with the reason.
 
 **Motion:** the one authored motion in the system. When a quote arrives, ranked rows resolve in rank order, rising 6px and fading in over 260ms on cubic-bezier(0.16, 1, 0.3, 1), staggered 50ms per rank. Under reduced motion all transitions and animations are off.
+
+### The Landing Page (Persuade surface, `web/src/pages/Landing.jsx`)
+The one Persuade surface; every other page stays Operate. It keeps the palette and the rate-board vocabulary and adds four parts, all in `landing.css`.
+- **Display headline.** Archivo at heavy weight (800) and extended width (`font-stretch` 108-118%), sized `clamp(1.7rem, 3vw, 2.5rem)` for sections and up to 4.4rem for the hero, with negative tracking above -0.04em. Condensed (82-84%) is kept for numerals, so extended headlines and condensed figures read as one family.
+- **Posting strip.** The hero's working surface: a board holding the chooser's inputs (the gold Compare button is the only gold in the first viewport) over five contract cells, each a code, a condensed rate and a magnitude ramp. Ramps grow in once on load.
+- **Pipeline index.** A ruled six-step list (Collect, Explain, Converge, Test, Decide, Watch). Numerals appear because the order carries information. Each step is a button that scrolls to its stage; a gold top rule shows on hover and focus.
+- **Stage.** A section with a heading, a lede, three numbered "how" steps, three ruled facts (figure first, then its meaning), one gold CTA into the working page and a Hairline figure on the other side, alternating. No cards.
+- **Hairline figures** (`@lucasmarkes/hairline`, MIT, via `Figure.jsx`): isometric line figures drawn in neutral ink only (`--hairline-hi #EAECEF`, `-edge #C3CAD4`, `-mid #7B8696`, `-lo #424B58`, plate = canvas), never gold or a contract colour. They play on their own and answer the pointer; each carries the caption "Illustration, not data." They are metaphors, never charts.
+- **Reveal.** Sections fade up once on first view (`Reveal.jsx`, 700ms, exponential ease-out); a `motion-ok` class on `<html>` gates all of it, so reduced motion shows everything immediately.
 
 ### Notice Log
 A ruled list: 13px muted date, a 16px status icon in its hue, then a 600 ink title over a 14px Body Slate line. Quiet by default; the count of quiet days is stated beside it.
@@ -316,7 +325,7 @@ ECharts on SVG inside a board, always with a Chart / Table segmented switch so e
 ### Do:
 - **Do** lead every page with a rate board that carries a posted date stamp and a source note.
 - **Do** set rates in Archivo 700 at 32px, width 82%, tabular, right-aligned, with a muted "/g".
-- **Do** draw every premium on the fixed 0–160 bp ramp, hollow when negative.
+- **Do** draw every premium on the fixed 0–100 bp ramp, hollow when negative.
 - **Do** tell row state by rule form: solid live, dashed thin, struck code in tender.
 - **Do** keep Warm Gold (#F0B90B) for things you press, the focus ring and the selected underline, with Near-Black text on it.
 - **Do** give every status an icon and a label, and every chart a table view.

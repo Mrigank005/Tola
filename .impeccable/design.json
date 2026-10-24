@@ -555,7 +555,7 @@
     "keyCharacteristics": [
       "A posted rate board leads every page: title, posted date stamp, ruled rows, a source note at its foot.",
       "One condensed 32px figure (₹ per gram) owns each row; all numerals are tabular and right-aligned.",
-      "Premium size reads on one fixed magnitude ramp (0 to 160 bp) on every page.",
+      "Premium size reads on one fixed magnitude ramp (0 to 100 bp) on every page.",
       "Row state is told by the form of the rule above it: solid live, dashed thin turnover, struck code in tender.",
       "Gold is only for what you press, the focus ring and the selected underline.",
       "Flat, dark only: canvas, surface, raised. No light theme.",
@@ -601,7 +601,7 @@
     "dos": [
       "**Do** lead every page with a rate board that carries a posted date stamp and a source note.",
       "**Do** set rates in Archivo 700 at 32px, width 82%, tabular, right-aligned, with a muted \"/g\".",
-      "**Do** draw every premium on the fixed 0–160 bp ramp, hollow when negative.",
+      "**Do** draw every premium on the fixed 0–100 bp ramp, hollow when negative.",
       "**Do** tell row state by rule form: solid live, dashed thin, struck code in tender.",
       "**Do** keep Warm Gold (#F0B90B) for things you press, the focus ring and the selected underline, with Near-Black text on it.",
       "**Do** give every status an icon and a label, and every chart a table view.",

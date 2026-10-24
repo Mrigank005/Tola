@@ -2564,6 +2564,11 @@
    "contracts": 24
   }
  },
+ "settlement_check": {
+  "checked": 145,
+  "matched": 145
+ },
+ "spec_versions": 15,
  "tables": {
   "futures_daily": 34385,
   "spot_polls": 14519,

@@ -50,6 +50,12 @@ def write(name, obj):
     (OUT / f"{name}.json").write_text(json.dumps(obj, indent=1, ensure_ascii=False, default=_clean), encoding="utf-8")
 
 
+def _settlement_check(st):
+    """Before Oct 2023 MCX published the DDR as the last-day close: how many rebuilt DDRs can be checked, and match."""
+    t = st[st.close_is_ddr_era & st.ddr_reliable]
+    return {"checked": int(len(t)), "matched": int(t.ddr_matches_close.sum())}
+
+
 def evidence(read, basis, curve, conv, cycles, asof):
     """Figures for the Overview, Basis, Convergence, Verdict and Method pages, all from the snapshot."""
     summ, prof, live = read("convergence_summary"), read("convergence_profile"), read("convergence_live")
@@ -78,6 +84,8 @@ def evidence(read, basis, curve, conv, cycles, asof):
         "residual_by_year": records(resid),
         "walk_forward": records(wf), "delivery": records(dlv),
         "validation": manifest["validation"], "coverage": manifest["coverage"],
+        "settlement_check": _settlement_check(read("settlement")),
+        "spec_versions": sum(len(v["versions"]) for v in specs.load().values()),
         "tables": {k: v["rows"] for k, v in manifest["tables"].items()},
     }
 
