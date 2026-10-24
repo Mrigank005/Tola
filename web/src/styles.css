@@ -69,6 +69,8 @@ a:hover { color: var(--accent-hover); }
 .tab:hover { color: var(--accent); }
 .tab[aria-current='page'] { color: var(--ink); }
 .tab[aria-current='page']:hover { color: var(--accent); }
+.menu-btn { display: none; margin-left: auto; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px; background: none; border: 0; border-radius: var(--r-sm); color: var(--ink); cursor: pointer; }
+.menu-btn:hover { color: var(--accent); }
 .stamp { margin-left: 4px; white-space: nowrap; color: var(--muted); font-size: 13px; }
 .stamp b { color: var(--body); font-weight: 500; }
 .page { max-width: 1280px; margin: 0 auto; padding: 32px var(--page-x) 64px; }
@@ -223,7 +225,10 @@ tr.q:first-child .rank { border-color: var(--accent); color: var(--ink); }
   .rates .code { white-space: normal; }
   .rates .code .exp span:not(.sep) { display: block; white-space: nowrap; }
   .rates .code .sep { display: none; }
-  .tabs { mask-image: linear-gradient(90deg, #000 85%, transparent); -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 24px; }
+  .menu-btn { display: inline-flex; }
+  .tabs { display: none; position: absolute; top: 56px; left: 0; right: 0; height: auto; flex-direction: column; gap: 0; margin: 0; padding: 8px var(--page-x) 16px; background: var(--surface); border-bottom: 1px solid var(--hairline); box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5); }
+  .tabs.open { display: flex; }
+  .tab { padding: 14px 0; font-size: 16px; }
   .log li { grid-template-columns: 20px minmax(0, 1fr); }
   .log time { grid-column: 2; }
   .brand small { display: none; }

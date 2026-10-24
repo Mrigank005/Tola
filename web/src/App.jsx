@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
 import { meta } from './lib/data.js'
 import { date } from './lib/format.js'
 import Landing from './pages/Landing.jsx'
@@ -32,9 +33,14 @@ export default function App() {
   }, [])
   const go = (to) => { window.location.hash = to }
   const [, , Page] = ROUTES.find(([p]) => p === route.path)
+  const [open, setOpen] = useState(false)
+  useEffect(() => { setOpen(false) }, [route.path])
   useEffect(() => {
-    document.querySelector('.tab[aria-current="page"]')?.scrollIntoView({ block: 'nearest', inline: 'center' })
-  }, [route.path])
+    if (!open) return
+    const esc = (e) => { if (e.key === 'Escape') setOpen(false) }
+    window.addEventListener('keydown', esc)
+    return () => window.removeEventListener('keydown', esc)
+  }, [open])
   useEffect(() => {
     const name = ROUTES.find(([p]) => p === route.path)[1]
     document.title = route.path === '/' ? 'Tola · one gram of gold, five prices' : `${name} · Tola`
@@ -45,7 +51,11 @@ export default function App() {
       <header className="nav">
         <div className="nav-in">
           <a className="brand" href="#/">Tola <small>fair-price desk for MCX gold</small></a>
-          <nav className="tabs" aria-label="Pages">
+          <button type="button" className="menu-btn" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen((o) => !o)}>
+            {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+            <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
+          </button>
+          <nav id="site-nav" className={`tabs${open ? ' open' : ''}`} aria-label="Pages">
             {ROUTES.slice(1).map(([p, label]) => (
               <a key={p} className="tab" href={`#${p}`} aria-current={route.path === p ? 'page' : undefined}>{label}</a>
             ))}
