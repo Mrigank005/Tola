@@ -30,3 +30,10 @@ web/dist/
 .impeccable/
 # Impeccable skill is installed per machine: npx skills add pbakaus/impeccable
 .claude/skills/
+
+# Launch video (brag-slim): output and the scene app that renders it
+brag-output/
+web/brag/
+# Agent skills installed per machine (npx skills add ...)
+.agents/
+skills-lock.json

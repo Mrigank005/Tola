@@ -14,14 +14,18 @@ export default function Choose({ query, go }) {
             <ChooserForm key={query} initial={p} onSubmit={({ g, d, m }) => go(`/choose?g=${g}&d=${d}&m=${m}`)} />
           </div>
         </Board>
-        <Board title={title} posted={<Posted asof={chooser.asof} label="Prices" />}
-          note={deliver
-            ? 'Delivery cost: the premium you pay is lost at settlement, plus the making charge (₹30/g GOLDTEN, ₹25/g GOLDGUINEA, ₹100/g GOLDPETAL), 3% GST, margin funding and an assumed ₹10/g for vault, assay and transport.'
-            : 'Exit before the tender window opens, or you may be marked for compulsory delivery. Some brokers close positions earlier; check yours. Exit-by dates do not know future MCX holidays.'}>
-          <QuoteBoard key={query} params={p} />
+        <Board title={title} posted={<Posted asof={chooser.asof} label="Prices" />} className="quotes-card">
+          <div className="quote-scroll">
+            <QuoteBoard key={query} params={p} />
+            <p className="board-note">
+              {deliver
+                ? 'Delivery cost: the premium you pay is lost at settlement, plus the making charge (₹30/g GOLDTEN, ₹25/g GOLDGUINEA, ₹100/g GOLDPETAL), 3% GST, margin funding and an assumed ₹10/g for vault, assay and transport.'
+                : 'Exit before the tender window opens, or you may be marked for compulsory delivery. Some brokers close positions earlier; check yours. Exit-by dates do not know future MCX holidays.'}
+            </p>
+          </div>
         </Board>
       </div>
-      <section className="prose">
+      <section className="prose cost-how">
         <h2 className="section-h">How the cost is worked out</h2>
         <p><strong>Trading:</strong> CTT, stamp duty, MCX and SEBI fees, GST, and brokerage at 0.03% or ₹20 per order, plus one tick of slippage. Charges follow Zerodha's published schedule, not yet checked against a contract note.</p>
         <p><strong>Premium change:</strong> the small contracts' premium over GOLDTEN drifts while you hold. We charge its average change over your holding period since April 2025, and show one standard deviation as risk. GOLDTEN, GOLDM and GOLD are the reference, so they carry none.</p>

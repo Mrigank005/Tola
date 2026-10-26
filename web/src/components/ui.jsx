@@ -40,9 +40,9 @@ export function Chip({ tone = 'info', children }) {
   )
 }
 
-export function Board({ title, as: H = 'h2', posted, note, children, actions }) {
+export function Board({ title, as: H = 'h2', posted, note, children, actions, className = '' }) {
   return (
-    <section className="board">
+    <section className={`board ${className}`.trim()}>
       <header className="board-head">
         <H>{title}</H>
         <span className="posted">{posted}</span>

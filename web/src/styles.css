@@ -166,6 +166,16 @@ tr.q:first-child .rank { border-color: var(--accent); color: var(--ink); }
 /* ---------- layout helpers ---------- */
 .dock { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) auto minmax(0, 1.3fr) auto; gap: 16px; align-items: end; padding: 20px 28px 24px; }
 .split { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px; align-items: start; }
+/* Choose: the answers card is as tall as the form card and scrolls inside */
+@media (min-width: 1025px) {
+  .split:has(.quotes-card) { align-items: stretch; }
+  .quotes-card { display: flex; flex-direction: column; height: 0; min-height: 100%; }
+  .quotes-card .quote-scroll { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--hairline-strong) transparent; }
+}
+.prose.cost-how { max-width: none; width: 100%; align-items: start; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 40px; }
+.cost-how .section-h { grid-column: 1 / -1; }
+.prose.cost-how p + p { margin-top: 0; }
+@media (max-width: 1024px) { .cost-how { grid-template-columns: minmax(0, 1fr); } .prose.cost-how p + p { margin-top: 10px; } }
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
 .prose { max-width: 68ch; color: var(--body); }
 .prose p + p { margin-top: 10px; }
