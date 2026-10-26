@@ -36,8 +36,8 @@ export default function Method() {
       </Board>
 
       <div className="two">
-        <Board title="Checks that passed" posted={`${v.passed.length} checks, 0 errors`}>
-          <div className="board-body">
+        <Board title="Checks that passed" posted={`${v.passed.length} checks, 0 errors`} className="checks-card">
+          <div className="board-body check-scroll">
             <ul className="log">
               {v.passed.map((k) => (
                 <li key={k} style={{ gridTemplateColumns: '20px minmax(0,1fr)' }}>

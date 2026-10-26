@@ -56,7 +56,7 @@ export default function Convergence() {
         </div>
       </Board>
 
-      <p className="lede">
+      <p className="lede wide">
         Over 18 expired cycles GOLDGUINEA ran <strong>{bp(g.pooled_vwap_bp)} [{g.ci_lo_bp.toFixed(0)}, {g.ci_hi_bp.toFixed(0)}]</strong> and GOLDPETAL <strong>{bp(pt.pooled_vwap_bp)} [{pt.ci_lo_bp.toFixed(0)}, {pt.ci_hi_bp.toFixed(0)}]</strong> over GOLDTEN, positive in every cycle.
         At settlement GOLDGUINEA and GOLDTEN land on the same price per gram (never more than {g.settlement_gap_bp_maxabs.toFixed(2)} bp apart), so holding into settlement gives up about <strong>{perGram(g.given_up_inr_g_mean)}</strong> on GOLDGUINEA and <strong>{perGram(pt.given_up_inr_g_mean)}</strong> on GOLDPETAL.
       </p>

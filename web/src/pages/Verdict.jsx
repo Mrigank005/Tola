@@ -32,7 +32,7 @@ export default function Verdict() {
         </div>
       </Board>
 
-      <p className="lede">
+      <p className="lede wide">
         <strong>Only a coin maker can collect it.</strong> The premium is the market price of small gold, set near what it costs to make 1 g and 8 g coins.
         A trader can't arbitrage it away, but can avoid paying it: hold GOLDTEN or GOLDM unless you need under 10 g.
       </p>

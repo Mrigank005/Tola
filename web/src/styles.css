@@ -181,6 +181,7 @@ tr.q:first-child .rank { border-color: var(--accent); color: var(--ink); }
 .prose p + p { margin-top: 10px; }
 .prose strong { color: var(--ink); font-weight: 600; }
 .lede { font-size: 17px; line-height: 1.55; color: var(--body); max-width: 70ch; }
+.lede.wide { max-width: none; text-align: justify; hyphens: auto; }
 .lede strong { color: var(--ink); font-weight: 600; }
 .section-h { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
@@ -249,3 +250,10 @@ tr.q:first-child .rank { border-color: var(--accent); color: var(--ink); }
 @media (max-width: 720px) { .limits { grid-template-columns: minmax(0, 1fr); } }
 
 .prose.wide { max-width: none; }
+
+/* Method: checks card is as tall as the coverage card and scrolls inside */
+@media (min-width: 1025px) {
+  .two:has(.checks-card) { align-items: stretch; }
+  .checks-card { display: flex; flex-direction: column; height: 0; min-height: 100%; }
+  .checks-card .check-scroll { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--hairline-strong) transparent; }
+}
