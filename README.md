@@ -8,6 +8,14 @@ Tola breaks every price gap into the parts that are fair and the part that isn't
 
 Built by team **Numero Uno** for **Hack in Hills '26, PS03: Commodity Derivatives Intelligence**.
 
+**Live:** [tola-gold.vercel.app](https://tola-gold.vercel.app) (MCX data to 27 Oct 2026)
+
+| Round 2 submission | |
+|---|---|
+| Elevator pitch video | [Round2/Tola_ElevatorPitch.mp4](Round2/Tola_ElevatorPitch.mp4) |
+| Working prototype demo | [Round2/Tola_Prototype_Demo.mp4](Round2/Tola_Prototype_Demo.mp4) |
+| Deck | [Round2/Tola_PS03_Round2_NumeroUno.pptx](Round2/Tola_PS03_Round2_NumeroUno.pptx) |
+
 ---
 
 ## Key finding
@@ -178,7 +186,7 @@ python -m tola.refresh            # optional: fetch the latest MCX days first (r
 cd web && npm install && npm run dev   # http://localhost:5173
 ```
 
-The committed snapshot already holds MCX data to 23 Oct 2026, so the app runs without fetching anything. Web app details and deploy steps: [web/README.md](web/README.md).
+The committed snapshot already holds MCX data to 27 Oct 2026, so the app runs without fetching anything. Web app details and deploy steps: [web/README.md](web/README.md).
 
 ---
 
@@ -197,6 +205,7 @@ PS Research/       research notes, G0 gate, and the M2 to M5 write-ups
 Design/            gold-terminal design system (palette and components)
 DESIGN.md          web app design decisions; PRODUCT.md the product brief
 Round1/            Round 1 pitch deck
+Round2/            Round 2 deck, elevator pitch video and prototype demo video
 ```
 
 ---
