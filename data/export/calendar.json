@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-23",
+ "asof": "2026-10-27",
  "contracts": [
   {
    "symbol": "GOLDGUINEA",
@@ -9,7 +9,7 @@
    "last_trading_day": "2026-10-30",
    "tender_days": 3,
    "exit_by": "2026-10-27",
-   "value_lakh": 10214.63,
+   "value_lakh": 14539.73,
    "thin": false,
    "traded_latest_day": true
   },
@@ -21,7 +21,7 @@
    "last_trading_day": "2026-10-30",
    "tender_days": 3,
    "exit_by": "2026-10-27",
-   "value_lakh": 23509.95,
+   "value_lakh": 25370.3,
    "thin": false,
    "traded_latest_day": true
   },
@@ -33,7 +33,7 @@
    "last_trading_day": "2026-10-30",
    "tender_days": 3,
    "exit_by": "2026-10-27",
-   "value_lakh": 23829.92,
+   "value_lakh": 28703.99,
    "thin": false,
    "traded_latest_day": true
   },
@@ -45,7 +45,7 @@
    "last_trading_day": "2026-11-05",
    "tender_days": 3,
    "exit_by": "2026-11-02",
-   "value_lakh": 553872.9,
+   "value_lakh": 486448.62,
    "thin": false,
    "traded_latest_day": true
   },
@@ -57,7 +57,7 @@
    "last_trading_day": "2026-11-30",
    "tender_days": 3,
    "exit_by": "2026-11-25",
-   "value_lakh": 9540.87,
+   "value_lakh": 16906.04,
    "thin": false,
    "traded_latest_day": true
   },
@@ -69,7 +69,7 @@
    "last_trading_day": "2026-11-30",
    "tender_days": 3,
    "exit_by": "2026-11-25",
-   "value_lakh": 22500.1,
+   "value_lakh": 33596.96,
    "thin": false,
    "traded_latest_day": true
   },
@@ -81,7 +81,7 @@
    "last_trading_day": "2026-11-30",
    "tender_days": 3,
    "exit_by": "2026-11-25",
-   "value_lakh": 21771.22,
+   "value_lakh": 45404.21,
    "thin": false,
    "traded_latest_day": true
   },
@@ -93,7 +93,7 @@
    "last_trading_day": "2026-12-04",
    "tender_days": 3,
    "exit_by": "2026-12-01",
-   "value_lakh": 914730.14,
+   "value_lakh": 848538.42,
    "thin": false,
    "traded_latest_day": true
   },
@@ -105,7 +105,7 @@
    "last_trading_day": "2026-12-04",
    "tender_days": 3,
    "exit_by": "2026-12-01",
-   "value_lakh": 251470.36,
+   "value_lakh": 302880.9,
    "thin": false,
    "traded_latest_day": true
   },
@@ -117,7 +117,7 @@
    "last_trading_day": "2026-12-31",
    "tender_days": 3,
    "exit_by": "2026-12-28",
-   "value_lakh": 3034.45,
+   "value_lakh": 4369.99,
    "thin": false,
    "traded_latest_day": true
   },
@@ -129,7 +129,7 @@
    "last_trading_day": "2026-12-31",
    "tender_days": 3,
    "exit_by": "2026-12-28",
-   "value_lakh": 8200.52,
+   "value_lakh": 7169.78,
    "thin": false,
    "traded_latest_day": true
   },
@@ -141,7 +141,7 @@
    "last_trading_day": "2026-12-31",
    "tender_days": 3,
    "exit_by": "2026-12-28",
-   "value_lakh": 7822.06,
+   "value_lakh": 8047.02,
    "thin": false,
    "traded_latest_day": true
   },
@@ -153,7 +153,7 @@
    "last_trading_day": "2027-01-05",
    "tender_days": 3,
    "exit_by": "2026-12-31",
-   "value_lakh": 39785.76,
+   "value_lakh": 32092.15,
    "thin": false,
    "traded_latest_day": true
   },
@@ -165,7 +165,7 @@
    "last_trading_day": "2027-01-29",
    "tender_days": 3,
    "exit_by": "2027-01-26",
-   "value_lakh": 1121.99,
+   "value_lakh": 1065.26,
    "thin": false,
    "traded_latest_day": true
   },
@@ -177,7 +177,7 @@
    "last_trading_day": "2027-01-29",
    "tender_days": 3,
    "exit_by": "2027-01-26",
-   "value_lakh": 3059.54,
+   "value_lakh": 1908.18,
    "thin": false,
    "traded_latest_day": true
   },
@@ -189,7 +189,7 @@
    "last_trading_day": "2027-01-29",
    "tender_days": 3,
    "exit_by": "2027-01-26",
-   "value_lakh": 4197.83,
+   "value_lakh": 2918.97,
    "thin": false,
    "traded_latest_day": true
   },
@@ -201,7 +201,7 @@
    "last_trading_day": "2027-02-05",
    "tender_days": 3,
    "exit_by": "2027-02-02",
-   "value_lakh": 40239.06,
+   "value_lakh": 49291.94,
    "thin": false,
    "traded_latest_day": true
   },
@@ -213,7 +213,7 @@
    "last_trading_day": "2027-02-05",
    "tender_days": 3,
    "exit_by": "2027-02-02",
-   "value_lakh": 17944.04,
+   "value_lakh": 10443.98,
    "thin": false,
    "traded_latest_day": true
   },
@@ -225,7 +225,7 @@
    "last_trading_day": "2027-02-26",
    "tender_days": 3,
    "exit_by": "2027-02-23",
-   "value_lakh": 863.77,
+   "value_lakh": 320.02,
    "thin": false,
    "traded_latest_day": true
   },
@@ -237,7 +237,7 @@
    "last_trading_day": "2027-02-26",
    "tender_days": 3,
    "exit_by": "2027-02-23",
-   "value_lakh": 2001.95,
+   "value_lakh": 1382.74,
    "thin": false,
    "traded_latest_day": true
   },
@@ -249,7 +249,7 @@
    "last_trading_day": "2027-02-26",
    "tender_days": 3,
    "exit_by": "2027-02-23",
-   "value_lakh": 1849.7,
+   "value_lakh": 1119.39,
    "thin": false,
    "traded_latest_day": true
   },
@@ -261,7 +261,7 @@
    "last_trading_day": "2027-03-05",
    "tender_days": 3,
    "exit_by": "2027-03-02",
-   "value_lakh": 5081.31,
+   "value_lakh": 2003.84,
    "thin": false,
    "traded_latest_day": true
   },
@@ -273,8 +273,8 @@
    "last_trading_day": "2027-03-31",
    "tender_days": 3,
    "exit_by": "2027-03-26",
-   "value_lakh": 228.29,
-   "thin": false,
+   "value_lakh": 62.22,
+   "thin": true,
    "traded_latest_day": true
   },
   {
@@ -285,7 +285,7 @@
    "last_trading_day": "2027-03-31",
    "tender_days": 3,
    "exit_by": "2027-03-26",
-   "value_lakh": 1109.13,
+   "value_lakh": 767.1,
    "thin": false,
    "traded_latest_day": true
   },
@@ -297,7 +297,7 @@
    "last_trading_day": "2027-03-31",
    "tender_days": 3,
    "exit_by": "2027-03-26",
-   "value_lakh": 559.1,
+   "value_lakh": 235.75,
    "thin": false,
    "traded_latest_day": true
   },
@@ -309,7 +309,7 @@
    "last_trading_day": "2027-04-05",
    "tender_days": 3,
    "exit_by": "2027-03-31",
-   "value_lakh": 1325.12,
+   "value_lakh": 1484.1,
    "thin": false,
    "traded_latest_day": true
   },
@@ -321,7 +321,7 @@
    "last_trading_day": "2027-04-05",
    "tender_days": 3,
    "exit_by": "2027-03-31",
-   "value_lakh": 2099.41,
+   "value_lakh": 1307.39,
    "thin": false,
    "traded_latest_day": true
   },
@@ -333,7 +333,7 @@
    "last_trading_day": "2027-06-04",
    "tender_days": 3,
    "exit_by": "2027-06-01",
-   "value_lakh": 298.88,
+   "value_lakh": 300.1,
    "thin": false,
    "traded_latest_day": true
   },

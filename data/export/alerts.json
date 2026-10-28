@@ -1,14 +1,14 @@
 {
- "asof": "2026-10-23",
+ "asof": "2026-10-27",
  "summary": {
   "from": "2025-04-01",
-  "to": "2026-10-23",
-  "trading_days": 403,
-  "alert_days": 101,
-  "quiet_days": 302,
+  "to": "2026-10-27",
+  "trading_days": 405,
+  "alert_days": 102,
+  "quiet_days": 303,
   "by_type": {
-   "tender": 84,
-   "swing": 49,
+   "tender": 85,
+   "swing": 50,
    "control": 28,
    "settlement": 4
   }
@@ -20,6 +20,26 @@
   "settlement": "same-reference pair settled more than 20 bp apart"
  },
  "alerts": [
+  {
+   "date": "2026-10-27",
+   "type": "swing",
+   "severity": "caution",
+   "subject": "GOLDGUINEA/GOLDTEN",
+   "expiry": "2026-11-30",
+   "title": "GOLDGUINEA premium unusually low",
+   "detail": "+30 bp over GOLDTEN (Nov 2026), vs +50 bp average of the last 40 days (z = -2.6)",
+   "value_bp": 29.73736897891932
+  },
+  {
+   "date": "2026-10-27",
+   "type": "tender",
+   "severity": "info",
+   "subject": "GOLDM",
+   "expiry": "2026-11-05",
+   "title": "GOLDM Nov 2026: tender window in 5 trading days",
+   "detail": "Tender opens 03 Nov 2026; exit by 02 Nov 2026 to avoid delivery",
+   "value_bp": null
+  },
   {
    "date": "2026-10-21",
    "type": "tender",

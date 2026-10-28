@@ -1,16 +1,16 @@
 {
- "built_at": "2026-10-24T12:50:04+05:30",
- "data_asof": "2026-10-23",
- "spot_asof": "2026-10-23",
+ "built_at": "2026-10-28T09:19:21+05:30",
+ "data_asof": "2026-10-27",
+ "spot_asof": "2026-10-27",
  "spec_file_sha256": "05343adf91db8f002e7e68c4bf2b94298de917e0f9fc9a711c250b7cd0b70082",
  "tables": {
   "futures_daily": {
-   "rows": 34415,
-   "sha256": "c60a070e0e3b02c5093471b04281340996d03515d368ea0ace8d8ab224518b56"
+   "rows": 34475,
+   "sha256": "a48cda3800a86716c4f3a83c421eda6caf0a573f28c73714ca119a88e7beb7e3"
   },
   "spot_polls": {
-   "rows": 14533,
-   "sha256": "a49ffdc652644733687ccb05b628e9e7d52717def0927f43f33e5d785ebda668"
+   "rows": 14561,
+   "sha256": "db05f1caccc2396c357eb0c20883a0379be5586165dabfc8f3b080f92ae57f31"
   },
   "settlement": {
    "rows": 302,
@@ -18,27 +18,27 @@
   },
   "contracts": {
    "rows": 332,
-   "sha256": "6cc3bdee8d3eb67b8059df2b728b5709f1a2e71a9199c82209c03adb0000707b"
+   "sha256": "9c3fbec677cd6c72a995a1e0011b54706fca7b39db7e284c9be64b7d035a888a"
   },
   "basis_daily": {
-   "rows": 27253,
-   "sha256": "6bf7d0bcef841499529b4598e183bd1f2d7f3a641b89652fca116fe8b68e3115"
+   "rows": 27308,
+   "sha256": "7fef3e12e7a82c2184f582db3284483ddf71453ac950a37f6ec8c507be00b3ac"
   },
   "curve_daily": {
-   "rows": 1851,
-   "sha256": "a96c7ea884f840082c64ee439818447381c3323e9cfd350e5d7e244573ece2c9"
+   "rows": 1853,
+   "sha256": "cd6acafcb4aac3b64e5a448a2b4b60393ca4d3d5d914db4bd1848f97b215b29a"
   },
   "tbill_3m": {
-   "rows": 242,
-   "sha256": "06a7f4491ba0acf018f7a66c7c63636e86581dd7f8602faacd86df342645ab7c"
+   "rows": 243,
+   "sha256": "27a3a6939ebbc44117317c6e35558e8bc6326f90fea3f6ef14856089f5f8f304"
   },
   "convergence_daily": {
-   "rows": 14710,
-   "sha256": "a536bd8198993aea95869354df235c570a6ec463553d9f1c6cb99add2a9e5d5d"
+   "rows": 14752,
+   "sha256": "4f92649ee65817d9513d3e59c22cd0c6c8281ba26714e6e816c12f3e556afa13"
   },
   "convergence_cycles": {
    "rows": 177,
-   "sha256": "4e0ab8cb16e4fc02c2d6889be045fc5a32c0b2e7058186154a9363cf53ddc802"
+   "sha256": "af74a6c1169bb1f760630773c0a8f9ccf302f7f0cf401bab39af94faf5a7ea5e"
   },
   "convergence_summary": {
    "rows": 4,
@@ -50,15 +50,15 @@
   },
   "convergence_live": {
    "rows": 21,
-   "sha256": "2edbc2756afabc4deca027e8a8c15bb4f0ce05d143c572560f7eba10f87009ae"
+   "sha256": "343f6dc2a84f8aa9c5c885a091f2ec26d1239ffa86507f1bdfdc087d6d637048"
   },
   "wf_trades": {
-   "rows": 2086,
-   "sha256": "ebc7a6f8f50af09d407d31c426db4e182322312b7e05e68910692a0e5b4425c6"
+   "rows": 2099,
+   "sha256": "10893af184f0974a2c84e15e9dd26cea1b0eb14133c5d8e662ba7d2068959592"
   },
   "wf_summary": {
    "rows": 6,
-   "sha256": "ec7333d8f8f6a43a7b278d375baebbd5b330c3c6b0c40dbfc204fd638034ce07"
+   "sha256": "6597ce6d37b1dca9e4b177d378636d21092bd56bf91d72019382c208e39a8c4f"
   },
   "delivery_cycles": {
    "rows": 68,
@@ -72,27 +72,27 @@
  "coverage": {
   "GOLD": {
    "first": "2019-02-18",
-   "last": "2026-10-23",
+   "last": "2026-10-27",
    "contracts": 47
   },
   "GOLDGUINEA": {
    "first": "2019-10-03",
-   "last": "2026-10-23",
+   "last": "2026-10-27",
    "contracts": 87
   },
   "GOLDM": {
    "first": "2019-11-06",
-   "last": "2026-10-23",
+   "last": "2026-10-27",
    "contracts": 87
   },
   "GOLDPETAL": {
    "first": "2019-10-03",
-   "last": "2026-10-23",
+   "last": "2026-10-27",
    "contracts": 87
   },
   "GOLDTEN": {
    "first": "2025-03-31",
-   "last": "2026-10-23",
+   "last": "2026-10-27",
    "contracts": 24
   }
  },
@@ -105,15 +105,15 @@
    "anatomy.loose_fit": 5
   },
   "info": {
-   "futures.no_trade_days": 7162,
+   "futures.no_trade_days": 7167,
    "spec.version_not_held": 228,
    "futures.expiry_brought_forward": 6,
    "spot.carried_forward_days": 664,
    "spot.frozen": 23,
    "settlement.stale_spot": 12,
-   "anatomy.curve_days": 1744,
+   "anatomy.curve_days": 1746,
    "convergence.cycles": 174,
-   "backtest.trades": 1879
+   "backtest.trades": 1892
   },
   "passed": [
    "anatomy.waterfall_identity",
@@ -125,6 +125,6 @@
    "settlement.rebuilt"
   ]
  },
- "raw_files": 469,
- "raw_sha256": "e74434647e02829015bad662f5bc375d47a5d2effd3222c2c46217083944c95e"
+ "raw_files": 472,
+ "raw_sha256": "1a8e27f890614dc1c1d85c9d689588a19e9be7de88bfdff6d02d05bfd9e8bab3"
 }
